@@ -11,10 +11,45 @@
 }
 .card {
   box-decoration-break: clone;
--webkit-box-decoration-break: clone;
-box-shadow: 8px 8px 10px 0 #ff1492, -5px -5px 5px 0 #00f, 5px 5px 15px 0 #ff0;
+  -webkit-box-decoration-break: clone;
+  box-shadow: 8px 8px 10px 0 #ff1492, -5px -5px 5px 0 #00f, 8px 8px 10px 0 #ff0;
+  transition: 0.2s;
 }
 
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 8px 8px 10px 0 #00f, -5px -5px 5px 0 #ff1492, 8px 8px 10px 0 #ff0;
+}
+.child {
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 5;
+  padding-left: 15px;
+  padding-right: 315px;
+}
+.idcon {
+  bottom: 15%;
+  position: relative;
+  animation: linear reverse infinite;
+  animation-name: run;
+  padding-left: 300px;
+  padding-right: auto;
+  animation-duration: 30s;
+
+}
+@keyframes run{
+  0% {
+    left: -15%;
+  }
+  50% {
+    left: 60%;
+  }
+  100% {
+    left: 0;    
+  }
+
+}
   </style>
 
   <head>
@@ -25,7 +60,6 @@ box-shadow: 8px 8px 10px 0 #ff1492, -5px -5px 5px 0 #00f, 5px 5px 15px 0 #ff0;
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-17BZLDSXT2');
 </script>
 
@@ -33,47 +67,47 @@ box-shadow: 8px 8px 10px 0 #ff1492, -5px -5px 5px 0 #00f, 5px 5px 15px 0 #ff0;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Favicon Link -->
-    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/image/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/image/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/image/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/image/apple-icon-76x76.png" />
     <link
       rel="apple-touch-icon"
       sizes="114x114"
-      href="apple-icon-114x114.png"
+      href="/image/apple-icon-114x114.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="120x120"
-      href="apple-icon-120x120.png"
+      href="/image/apple-icon-120x120.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="144x144"
-      href="apple-icon-144x144.png"
+      href="/image/apple-icon-144x144.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="152x152"
-      href="apple-icon-152x152.png"
+      href="/image/apple-icon-152x152.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="apple-icon-180x180.png"
+      href="/image/apple-icon-180x180.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="192x192"
-      href="android-icon-192x192.png"
+      href="/image/android-icon-192x192.png"
     />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/image/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/image/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/image/favicon-16x16.png" />
     <link rel="manifest" href="manifest.json" />
     <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="ms-icon-144x144.png" />
+    <meta name="msapplication-TileImage" content="/image/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
 
     <!-- Bootstrap CSS -->
@@ -93,16 +127,20 @@ box-shadow: 8px 8px 10px 0 #ff1492, -5px -5px 5px 0 #00f, 5px 5px 15px 0 #ff0;
       </div>
     </div>
     <br />
-    <div class="text-center">
-      <a
-        ><img
-          class="border border-danger border-2"
-          src="my_image.jpeg"
+    <div class="container-fluid">
+      <div class="idcon my-auto">
+        <div class="child">
+      <img
+          class="card border border-danger border-2"
+          src="/image/my_image.jpeg"
           width="300"
           height="auto"
           alt="..."
         />
-      </a>
+      
+    </div>
+  </div>
+    </div>
       <br/>
       <br/>
     <div class="container mx-auto ">
@@ -148,7 +186,7 @@ box-shadow: 8px 8px 10px 0 #ff1492, -5px -5px 5px 0 #00f, 5px 5px 15px 0 #ff0;
         <!-- facebook -->
         <div class="col mb-5 mx-10">
         <div class="card mx-auto my-auto" style="width: 19rem">
-          <a href="https://www.facebook.com/profile.php?id=100070987314075"
+          <a href="https://www.facebook.com/profile.php?id=100070987314075" 
             ><img
               src="https://cdn.dribbble.com/users/411475/screenshots/14278604/media/4a42e1b9b36826aa5a0811cec1cd5d87.jpg?compress=1&resize=400x300"
               class="card-img-top rounded"
