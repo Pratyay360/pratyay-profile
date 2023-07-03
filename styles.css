@@ -1,0 +1,33 @@
+body {
+    background-image: url("https://images.unsplash.com/photo-1581881067989-7e3eaf45f4f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80");
+  }
+  h1, h2 {
+  background-color: rgba(176, 230, 192, 0.849); 
+  text-shadow: 2px 2px blue;
+  font-family:arial, sans-serif;
+}
+.card {
+box-decoration-break: clone;
+-webkit-box-decoration-break: clone;
+box-shadow: 8px 8px 10px 0 #ff1492, -5px -5px 5px 0 #00f, 8px 8px 10px 0 #ff0;
+transition: 0.2s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+box-shadow: 8px 8px 10px 0 #00f, -5px -5px 5px 0 #ff1492, 8px 8px 10px 0 #ff0;
+}
+.child {
+    display: block;
+width: 100px;
+left: 50%;
+right: 50%;
+transform: translate(-50%, 0);
+position: relative;
+padding: 5;
+}
+.idcon {
+bottom: 15%;
+position: relative;
+right: 10%;
+}
