@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import social from './social.json';
 import './styles.css';
 export default function Contact() {
@@ -9,7 +8,7 @@ export default function Contact() {
       {social.map((icon, index) => (
         <div key={index} className="cont" >
           <a href={icon.link}>
-            <image src={icon.image} alt={icon.name}/>
+            <img src={icon.image} alt={icon.name}/>
           </a>
         </div>
       ))}
