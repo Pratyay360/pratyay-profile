@@ -1,16 +1,16 @@
 [
     {
-        "category": "CATEGORY",
-        "title": "The Catalyzer",
-        "description": "Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.",
-        "imageSrc": "https://dummyimage.com/720x400",
-        "link": "https://google.com"
+        "category": "Collaboration project",
+        "title": "Bing Rewards",
+        "description": "Collaborated with a friend to hemp everyone collecting reward points easily.",
+        "imageSrc": "https://github.com/microsoft-farmer/bing-rewards/raw/master/asset/image.png",
+        "link": "https://bing-rewards.pages.dev/"
     },
     {
-        "category": "CATEGORY",
-        "title": "The Catalyzer",
-        "description": "Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.",
-        "imageSrc": "https://dummyimage.com/720x400",
-        "link": "https://google.com"
+        "category": "Private project",
+        "title": "Epair.in (Not Hosting)",
+        "description": "Dummy service selling platform using django, where one can but and sell services",
+        "imageSrc": "https://github.com/Pratyay360/epair/raw/master/image.png",
+        "link": "https://github.com/Pratyay360/epair"
     }
 ]

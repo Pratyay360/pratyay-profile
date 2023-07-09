@@ -10,7 +10,7 @@ import Contact from './contact';
 export default function Navbar() {
     return (
         <>
-            <header className="text-white-600  body-font sticky top-0 backdrop-filter backdrop-blur-lg border-gray-200 opacity-70 bg-gray-900">
+            <header className="text-white-600 z-20 body-font sticky top-1 backdrop-filter backdrop-blur-lg border-gray-200 opacity-70 bg-gray-900">
                 <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
                     <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
                         <Link href="#aboutme">
@@ -21,6 +21,9 @@ export default function Navbar() {
                         </Link>
                         <Link href="#skills">
                             <span className="mr-5 hover:text-gray-500 cursor-pointer">Skills</span>
+                        </Link>
+                        <Link href="#certificate">
+                            <span className="mr-5 hover:text-gray-500 cursor-pointer">Certificates</span>
                         </Link>
                         <Link href="#projects">
                             <span className="mr-5 hover:text-gray-500 cursor-pointer">Projects</span>

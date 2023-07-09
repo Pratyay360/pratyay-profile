@@ -1,0 +1,117 @@
+[
+  {
+    "href": "https://developer.android.com",
+    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg",
+    "alt": "android"
+  },
+  {
+    "href": "https://www.gnu.org/software/bash/",
+    "src": "https://icon-library.com/images/bash-icon/bash-icon-24.jpg",
+    "alt": "bash"
+  },
+  {
+    "href": "https://www.cprogramming.com/",
+    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg",
+    "alt": "c"
+  },
+  {
+    "href": "https://www.w3schools.com/cpp/",
+    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg",
+    "alt": "cplusplus"
+  },
+  {
+    "href": "https://www.w3schools.com/css/",
+    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg",
+    "alt": "css3"
+  },
+  {
+    "href": "https://dart.dev",
+    "src": "https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg",
+    "alt": "dart"
+  },
+  {
+    "href": "https://www.djangoproject.com/",
+    "src": "https://cdn.worldvectorlogo.com/logos/django.svg",
+    "alt": "django"
+  },
+  {
+    "href": "https://flutter.dev",
+    "src": "https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg",
+    "alt": "flutter"
+  },
+  {
+    "href": "https://git-scm.com/",
+    "src": "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",
+    "alt": "git"
+  },
+  {
+    "href": "https://heroku.com",
+    "src": "https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg",
+    "alt": "heroku"
+  },
+  {
+    "href": "https://www.java.com",
+    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
+    "alt": "java"
+  },
+  {
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+    "alt": "javascript"
+  },
+  {
+    "href": "https://www.linux.org/",
+    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg",
+    "alt": "linux"
+  },
+  {
+    "href": "https://www.mysql.com/",
+    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
+    "alt": "mysql"
+  },
+  {
+    "href": "https://nodejs.org",
+    "src": "https://nodejs.org/static/images/logo.svg",
+    "alt": "nodejs"
+  },
+  {
+    "href": "https://www.php.net",
+    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg",
+    "alt": "php"
+  },
+  {
+    "href": "https://www.postgresql.org",
+    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg",
+    "alt": "postgresql"
+  },
+  {
+    "href": "https://postman.com",
+    "src": "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+    "alt": "postman"
+  },
+  {
+    "href": "https://www.python.org",
+    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+    "alt": "python"
+  },
+  {
+    "href": "https://reactjs.org/",
+    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+    "alt": "react"
+  },
+  {
+    "href": "https://www.sqlite.org/",
+    "src": "https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg",
+    "alt": "sqlite"
+  },
+  {
+    "href": "https://www.typescriptlang.org/",
+    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+    "alt": "typescript"
+  },
+  {
+    "href": "https://nextjs.org",
+    "src": "https://www.rlogical.com/wp-content/uploads/2023/03/Rlogical-Blog-Images-thumbnail.webp",
+    "alt": "nextjs"
+  }
+]

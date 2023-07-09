@@ -6,6 +6,7 @@ import Education from './education'
 import Aboutme from './aboutme'
 import Resume from './resume'
 import Skills from './skills'
+import Certificates from './certificates'
 export default function Home() {
   return (
     <>
@@ -19,6 +20,9 @@ export default function Home() {
     </section>
     <section id="skills" className="snap-center">
       <Skills />
+    </section>
+    <section id="certificate" className="snap-center">
+    <Certificates  />
     </section>
     <section id="projects" className="snap-center">
       <Projects />
