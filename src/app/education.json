@@ -1,0 +1,20 @@
+[
+  {
+    "category": "College",
+    "date": "2021-2024",
+    "title": "Persuing my Bachelors in Computer Science (B.Sc)",
+    "description": "Still Persuing my college degree in Computer Science from University of Kalyani. I am currently in my 2nd year of college."
+  },
+  {
+    "category": "School 10+2",
+    "date": "2019-2021",
+    "title": "Completed my Higher Secondary Education",
+    "description": "Completed my Higher Secondary Education from Birnagar High School (WBCHSE) with 74% marks in Science Stream. (PCMB)"
+  },
+  {
+    "category": "School 10",
+    "date": "2018-2019",
+    "title": "Completed my Secondary Education",
+    "description": "Completed my Secondary Education from Birnagar High School (WBBSE) with 76% marks."
+  }
+]
