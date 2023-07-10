@@ -4,7 +4,7 @@ export default function Certificates() {
     return (
         <>
             <>
-                <h1 className="flex text-center items-center justify-center top-36 tracking-[20px] text-gray-500 text-2xl">CERTIFICATES</h1>
+                <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-gray-500 text-2xl overflow-auto">CERTIFICATES</h1>
                 <section className="text-gray-300 body-font">
                     <div className="container px-5 py-24 mx-auto">
                         <div className="flex flex-wrap -m-4">
