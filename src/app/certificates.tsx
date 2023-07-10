@@ -4,8 +4,8 @@ import { useEffect } from 'react';
 export default function Certificates() {
     return (
         <>
-        <div className="flex flex-wrap text-center items-center justify-center">
-          <h1 className="top-36 tracking-[20px] text-gray-500 text-3xl ml-2 overflow-auto">CERTIFICATES</h1>
+        <div className="flex flex-column text-center items-center justify-center lg:text-3xl">
+          <h1 className="top-36 tracking-[20px] text-gray-500 ml-2">CERTIFICATES</h1>
         </div>
             <section className="text-gray-300 body-font">
                 <div className="container px-5 py-24 mx-auto">
