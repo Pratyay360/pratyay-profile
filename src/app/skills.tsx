@@ -9,7 +9,7 @@ export default function Skills() {
             </h1>
             <div className="flex flex-wrap text-center items-center justify-center ">
                 {data.map((item, index) => (
-                    <div key={index} className="cont mr-4 mb-10 mt-10 transform transition-all hover:scale-110" style={{ marginRight: "10px" }}>
+                    <div key={index} className="cont mr-4 mb-10 mt-10 transform-gpu transition-all hover:scale-125" style={{ marginRight: "10px" }}>
                         <a href={item.href} target="_blank" rel="noreferrer">
                             <img
                                 src={item.src}
