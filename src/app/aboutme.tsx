@@ -23,7 +23,7 @@ export default function Aboutme() {
     return (
         <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
             <Backgroundcircles />
-            <img className="rounded-full h-32 w-32 mx-auto object-cover" src="../icons/img.jpg"></img>
+            <img className="rounded-full h-32 w-32 mx-auto object-cover transform-gpu transition-all hover:scale-125" src="../icons/img.jpg"></img>
             <div>
                 <h1 className="text-2xl text-gray-300"> HI, I am Pratyay Mitra Mustafi 👋👋👋👋 </h1>
                 <h1 className="text-3xl lg:text-4xl font-semibold px-5">
