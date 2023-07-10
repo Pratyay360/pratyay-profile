@@ -2,7 +2,7 @@
     {
         "title": "Learning C",
         "description": "C Language course",
-        "imageSrc": "https://media.licdn.com/dms/image/C4D1FAQGmGk7oC17aFA/feedshare-document-cover-images_1280/0/1669116515251?e=1689523200&v=beta&t=O4gEUDAdXc1JnZli92BhgUmBGhhul1CZqyaqin4DGrI",
+        "imageSrc": "../icons/cert1.png",   
         "link": "https://www.linkedin.com/learning/certificates/5cbf5e5c38f54fb40a7b121fdcf9d392bb8077745991bdfeca35932dd4634ff5?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BJErK3t39SwyeBYaf4NNF2A%3D%3D"
     }
 ]
