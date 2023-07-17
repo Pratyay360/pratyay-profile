@@ -1,7 +1,7 @@
 import React from 'react';
 
 import cards from './projects.json'
-import { block } from 'million';
+import { block } from 'million/react';
 const proj =  block(function Projects() { 
     return (
         <>
