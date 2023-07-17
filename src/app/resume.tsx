@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
-
-function Resume() {
+import { block } from 'million/react';
+const resume =  block(function Resume() {
     const handleDownload = () => {
         window.open("https://drive.google.com/file/d/1Kb_cOhevNgiif-lV3LPJFPjStCKEd0dt/view?usp=sharing", "_blank");
     };
@@ -17,6 +17,6 @@ function Resume() {
             </div>
         </>
     );
-}
+});
 
-export default Resume;
+export default resume;

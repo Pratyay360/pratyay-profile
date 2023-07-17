@@ -1,10 +1,11 @@
 "use client"
 import { motion } from "framer-motion"
 import { type } from "os"
+import { block } from "million/react"
 import { Cursor, useTypewriter } from "react-simple-typewriter"
 import Backgroundcircles from "./Backgroundcircles"
 import icons from "./social.json"
-export default function Aboutme() {
+const about =  block(function Aboutme() {
     const [text, count] = useTypewriter({
         words: [
             "I am a student at the University of Kalyani studying CS 📖📖📖",
@@ -34,4 +35,6 @@ export default function Aboutme() {
             </div>
         </div>
     )
-};
+});
+
+export default about;

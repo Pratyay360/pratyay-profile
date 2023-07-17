@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image'
 import Navbar from './navbar'
 import Projects from './projects'
@@ -7,8 +8,8 @@ import Aboutme from './aboutme'
 import Resume from './resume'
 import Skills from './skills'
 import Certificates from './certificates'
-
-export default function Home() {
+import {block} from 'million/react';
+const hom =  block(function Home() {
   return (
         <>
         <header>
@@ -43,4 +44,5 @@ export default function Home() {
         </div>
     </>
   );
-}
+});
+export default hom;

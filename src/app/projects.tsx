@@ -1,6 +1,7 @@
 import React from 'react';
 import cards from './projects.json'
-export default function Projects() { 
+import { block } from 'million';
+const proj =  block(function Projects() { 
     return (
         <>
          <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl">PROJECTS</h1>
@@ -34,5 +35,5 @@ export default function Projects() {
             </section>
         </>
     )
-
-};
+});
+export default proj;

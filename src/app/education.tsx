@@ -1,5 +1,6 @@
 import edu from './education.json';
-export default function Education() {
+import { block } from 'million/react';
+const educ = block(function Education() {
     return (
         <>
         <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-gray-500 lg:text-3xl ml-3">EDUCATION</h1>
@@ -23,4 +24,5 @@ export default function Education() {
             </section>
         </>
     )
-};
+});
+export default educ;

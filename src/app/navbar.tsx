@@ -1,13 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
-import Image from 'next/image';
-import Aboutme from './aboutme';
-import Education from './education';
-import Projects from './projects';
-import Resume from './resume';
-import Contact from './contact';
-export default function Navbar() {
+import { block } from 'million/react';
+const nav =  block(function Navbar() {
     return (
         <>
             <header className="text-white-600 z-20 body-font sticky top-1 backdrop-filter backdrop-blur-lg border-gray-200 opacity-70 bg-gray-900">
@@ -39,4 +34,5 @@ export default function Navbar() {
             </header>
         </>
     )
-};
+});
+export default nav;

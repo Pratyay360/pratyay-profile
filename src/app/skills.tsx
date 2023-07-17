@@ -1,7 +1,8 @@
 "use client"
 import React from "react";
 import data from './technology.json'
-export default function Skills() {
+import { block } from "million/react";
+const skill = block(function Skills() {
     return (
         <>
             <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl">
@@ -23,4 +24,5 @@ export default function Skills() {
             </div>
         </>
     );
-}
+});
+export default skill;

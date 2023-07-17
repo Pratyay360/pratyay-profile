@@ -1,7 +1,8 @@
 import React from 'react';
 import cards from './cert.json'
 import { useEffect } from 'react';
-export default function Certificates() {
+import { block } from 'million/react';
+const cert =  block(function Certificates() {
     return (
         <>
         <div className="flex flex-column text-center items-center justify-center lg:text-3xl">
@@ -34,4 +35,5 @@ export default function Certificates() {
             </section>
         </>
     )
-};
+});
+export default cert;
