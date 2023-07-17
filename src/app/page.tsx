@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image'
 import React from "react"
 import Navbar from './navbar'
@@ -8,8 +9,7 @@ import Aboutme from './aboutme'
 import Resume from './resume'
 import Skills from './skills'
 import Certificates from './certificates'
-import {block} from 'million/react';
-export default block(function Home() {
+export default function Home() {
   return (
         <>
         <header>
@@ -44,4 +44,4 @@ export default block(function Home() {
         </div>
     </>
   );
-});
+};
