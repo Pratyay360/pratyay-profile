@@ -13,7 +13,7 @@ export default function Education() {
                                     <span className="mt-1 text-gray-500 text-sm">{item.date}</span>
                                 </div>
                                 <div className="md:flex-grow">
-                                    <h2 className="text-2xl font-medium text-gray-100 title-font mb-2">{item.title}</h2>
+                                    <h2 className="font-medium text-gray-100 title-font mb-2">{item.title}</h2>
                                     <p className="leading-relaxed">{item.description}</p>
                                 </div>
                             </div>

@@ -1,5 +1,6 @@
 import social from './social.json';
 import './styles.css';
+import Image from 'next/image';
 export default function Contact() {
   return (
     <>
@@ -9,7 +10,7 @@ export default function Contact() {
                 {social.map((item, index) => (
                     <div key={index} className="cont mr-4 mb-10 mt-10 transform-gpu transition-all hover:scale-125" style={{ marginRight: "10px" }}>
                         <a href={item.link} target="_blank" rel="noreferrer">
-                            <img
+                            <Image
                                 src={item.image}
                                 alt={item.name}
                                 width={40}

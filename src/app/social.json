@@ -2,46 +2,46 @@
   {
     "name": "Instagram",
     "link": "https://www.instagram.com/realpratyay/",
-    "image": "../icons/instagram.png"
+    "image": "/icons/instagram.png"
   },
   {
     "name": "Twitter",
     "link": "https://twitter.com/realPratyay",
-    "image": "../icons/twitter.png"
+    "image": "/icons/twitter.png"
   },
   {
     "name": "Facebook",
     "link": "https://www.facebook.com/profile.php?id=100070987314075",
-    "image": "../icons/facebook.png"
+    "image": "/icons/facebook.png"
   },
   {
     "name": "LinkedIn",
     "link": "https://www.linkedin.com/in/pratyay360",
-    "image": "../icons/linkedin.png"
+    "image": "/icons/linkedin.png"
   },
   {
     "name": "GitHub",
     "link": "https://github.com/Pratyay360",
-    "image": "../icons/github.png"
+    "image": "/icons/github.png"
   },
   {
     "name": "Threads",
     "link": "https://www.threads.net/@realpratyay",
-    "image": "../icons/threads.png"
+    "image": "/icons/threads.png"
   },
   {
     "name": "My Blog",
     "link": "https://pratyaywrites.hashnode.dev/",
-    "image": "../icons/blog.png"
+    "image": "/icons/blog.png"
   },
   {
     "name": "Stack Overflow",
     "link": "https://stackoverflow.com/users/13852334/pratyay360",
-    "image": "../icons/stackoverflow.png"
+    "image": "/icons/stackoverflow.png"
   },
   {
     "name": "Email",
     "link": "mailto:pratyaymustafi@outlook.com",
-    "image": "../icons/mail.png"
+    "image": "/icons/mail.png"
   }  
 ]
