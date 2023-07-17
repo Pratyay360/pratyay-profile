@@ -1,5 +1,6 @@
 "use client"
 import Image from 'next/image'
+import React from "react"
 import Navbar from './navbar'
 import Projects from './projects'
 import Contact from './contact'
@@ -9,7 +10,7 @@ import Resume from './resume'
 import Skills from './skills'
 import Certificates from './certificates'
 import {block} from 'million/react';
-const Home =  block( ({ params, searchParams }) =>{
+const hom =  block(function Home() {
   return (
         <>
         <header>
@@ -45,4 +46,4 @@ const Home =  block( ({ params, searchParams }) =>{
     </>
   );
 });
-export default Home;
+export default hom;

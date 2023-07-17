@@ -14,8 +14,8 @@ const con =  block(function Contact() {
                             <Image
                                 src={item.image}
                                 alt={item.name}
-                                width={40}
-                                height={40}
+                                width={35}
+                                height={35}
                             />
                         </a>
                     </div>
