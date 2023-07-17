@@ -2,7 +2,7 @@
     {
         "title": "Learning C",
         "description": "C Language course",
-        "imageSrc": "../icons/cert1.png",   
+        "imageSrc": "/icons/cert1.png",   
         "link": "https://www.linkedin.com/learning/certificates/5cbf5e5c38f54fb40a7b121fdcf9d392bb8077745991bdfeca35932dd4634ff5?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BJErK3t39SwyeBYaf4NNF2A%3D%3D"
     }
 ]

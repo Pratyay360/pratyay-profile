@@ -1,6 +1,7 @@
 "use client"
 import React from "react";
 import data from './technology.json'
+import Image from "next/image";
 import { block } from "million/react";
 const skill = block(function Skills() {
     return (
@@ -12,7 +13,7 @@ const skill = block(function Skills() {
                 {data.map((item, index) => (
                     <div key={index} className="cont mr-4 mb-10 mt-10 transform-gpu transition-all hover:scale-125" style={{ marginRight: "10px" }}>
                         <a href={item.href} target="_blank" rel="noreferrer">
-                            <img
+                            <Image
                                 src={item.src}
                                 alt={item.alt}
                                 width={40}
