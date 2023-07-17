@@ -9,7 +9,7 @@ import Resume from './resume'
 import Skills from './skills'
 import Certificates from './certificates'
 import {block} from 'million/react';
-const hom =  block(function Home() {
+const Home =  block( ({ params, searchParams }) =>{
   return (
         <>
         <header>
@@ -45,4 +45,4 @@ const hom =  block(function Home() {
     </>
   );
 });
-export default hom;
+export default Home;
