@@ -10,7 +10,7 @@ import Resume from './resume'
 import Skills from './skills'
 import Certificates from './certificates'
 import {block} from 'million/react';
-const hom =  block(function Home() {
+export default block(function Home() {
   return (
         <>
         <header>
@@ -46,4 +46,3 @@ const hom =  block(function Home() {
     </>
   );
 });
-export default hom;
