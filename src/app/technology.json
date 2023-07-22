@@ -6,7 +6,7 @@
   },
   {
     "href": "https://www.gnu.org/software/bash/",
-    "src": "https://icon-library.com/images/bash-icon/bash-icon-24.jpg",
+    "src": "/icons/bash.jpg",
     "alt": "bash"
   },
   {
@@ -26,12 +26,12 @@
   },
   {
     "href": "https://dart.dev",
-    "src": "https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg",
+    "src": "/icons/dart.svg",
     "alt": "dart"
   },
   {
     "href": "https://www.djangoproject.com/",
-    "src": "https://cdn.worldvectorlogo.com/logos/django.svg",
+    "src": "/icons/django.svg",
     "alt": "django"
   },
   {
@@ -41,7 +41,7 @@
   },
   {
     "href": "https://git-scm.com/",
-    "src": "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",
+    "src": "/icons/git.svg",
     "alt": "git"
   },
   {
@@ -61,17 +61,17 @@
   },
   {
     "href": "https://www.linux.org/",
-    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg",
+    "src": "/icons/linux.svg",
     "alt": "linux"
   },
   {
     "href": "https://www.mysql.com/",
-    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
+    "src": "/icons/mysql.svg",
     "alt": "mysql"
   },
   {
     "href": "https://nodejs.org",
-    "src": "https://nodejs.org/static/images/logo.svg",
+    "src": "/icons/node.svg",
     "alt": "nodejs"
   },
   {
@@ -101,17 +101,17 @@
   },
   {
     "href": "https://www.sqlite.org/",
-    "src": "https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg",
+    "src": "/icons/sqll.svg",
     "alt": "sqlite"
   },
   {
     "href": "https://www.typescriptlang.org/",
-    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+    "src": "/icons/ts.svg",
     "alt": "typescript"
   },
   {
     "href": "https://nextjs.org",
-    "src": "https://www.rlogical.com/wp-content/uploads/2023/03/Rlogical-Blog-Images-thumbnail.webp",
+    "src": "/icons/next.webp",
     "alt": "nextjs"
   }
 ]
