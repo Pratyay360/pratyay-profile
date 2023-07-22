@@ -24,7 +24,7 @@ const about =  block(function Aboutme() {
     return (
         <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
             <Backgroundcircles />
-            <img className="rounded-full h-32 w-32 mx-auto object-cover transform-gpu transition-all hover:scale-125" src={"/icons/img.jpg"}></img>
+            <img className="rounded-full h-32 w-32 mx-auto object-cover transform-gpu transition-all hover:scale-125" src={"/icons/img.webp"} alt={"..."}></img>
             <div>
                 <h1 className="text-3xl lg:text-4xl text-gray-300"> HI, I am Pratyay Mitra Mustafi 👋👋👋👋 </h1>
                 <h1 className="text-2xl lg:text-3xl font-semibold py-6 px-5 text-gray-400">
