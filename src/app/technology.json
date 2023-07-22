@@ -6,7 +6,7 @@
   },
   {
     "href": "https://www.gnu.org/software/bash/",
-    "src": "/icons/bash.jpg",
+    "src": "/icons/bash.webp",
     "alt": "bash"
   },
   {
@@ -106,7 +106,7 @@
   },
   {
     "href": "https://www.typescriptlang.org/",
-    "src": "/icons/ts.svg",
+    "src": "/icons/ts.webp",
     "alt": "typescript"
   },
   {
