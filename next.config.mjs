@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
 
-    domains: ['raw.githubusercontent.com', 'icon-library.com', 'www.vectorlogo.zone', 'nodejs.org', 'www.rlogical.com', 'github.com', 'cdn.worldvectorlogo.com'],
+    domains: ['raw.githubusercontent.com','github.com'],
   },
 };
 export default million.next(nextConfig);

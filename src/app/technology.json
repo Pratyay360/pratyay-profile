@@ -1,7 +1,7 @@
 [
   {
     "href": "https://developer.android.com",
-    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg",
+    "src": "/icons/android.svg",
     "alt": "android"
   },
   {
@@ -11,17 +11,17 @@
   },
   {
     "href": "https://www.cprogramming.com/",
-    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg",
+    "src": "/icons/c.svg",
     "alt": "c"
   },
   {
     "href": "https://www.w3schools.com/cpp/",
-    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg",
+    "src": "/icons/cpp.svg",
     "alt": "cplusplus"
   },
   {
     "href": "https://www.w3schools.com/css/",
-    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg",
+    "src": "/icons/css.svg",
     "alt": "css3"
   },
   {
@@ -36,7 +36,7 @@
   },
   {
     "href": "https://flutter.dev",
-    "src": "https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg",
+    "src": "/icons/flutter.svg",
     "alt": "flutter"
   },
   {
@@ -46,17 +46,17 @@
   },
   {
     "href": "https://heroku.com",
-    "src": "https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg",
+    "src": "/icons/heroku.svg",
     "alt": "heroku"
   },
   {
     "href": "https://www.java.com",
-    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
+    "src": "/icons/java.svg",
     "alt": "java"
   },
   {
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+    "src": "/icons/javas.svg",
     "alt": "javascript"
   },
   {
@@ -76,27 +76,27 @@
   },
   {
     "href": "https://www.php.net",
-    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg",
+    "src": "/icons/php.svg",
     "alt": "php"
   },
   {
     "href": "https://www.postgresql.org",
-    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg",
+    "src": "/icons/postgresql.svg",
     "alt": "postgresql"
   },
   {
     "href": "https://postman.com",
-    "src": "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+    "src": "/icons/postman.svg",
     "alt": "postman"
   },
   {
     "href": "https://www.python.org",
-    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+    "src": "/icons/python.svg",
     "alt": "python"
   },
   {
     "href": "https://reactjs.org/",
-    "src": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+    "src": "/icons/react.svg",
     "alt": "react"
   },
   {
