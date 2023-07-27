@@ -1,5 +1,5 @@
 import social from './social.json';
-import './styles.css';
+import '../styles.css';
 import {block} from 'million/react';
 import Image from 'next/image';
 const con =  block(function Contact() {

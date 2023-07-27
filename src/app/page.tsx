@@ -1,14 +1,14 @@
 "use client"
 import Image from 'next/image'
 import React from "react"
-import Navbar from './navbar'
-import Projects from './projects'
-import Contact from './contact'
-import Education from './education'
-import Aboutme from './aboutme'
-import Resume from './resume'
-import Skills from './skills'
-import Certificates from './certificates'
+import Navbar from './navbar/navbar'
+import Projects from './normal_pages/projects'
+import Contact from './normal_pages/contact'
+import Education from './normal_pages/education'
+import Aboutme from './about/index'
+import Resume from './normal_pages/resume'
+import Skills from './normal_pages/skills'
+import Certificates from './normal_pages/certificates'
 export default function Home() {
   return (
         <>

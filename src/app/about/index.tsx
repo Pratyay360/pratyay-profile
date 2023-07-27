@@ -4,8 +4,7 @@ import { type } from "os"
 import { block } from "million/react"
 import Image from "next/image"
 import { Cursor, useTypewriter } from "react-simple-typewriter"
-import Backgroundcircles from "./Backgroundcircles"
-import icons from "./social.json"
+import Backgroundcircles from "../animation/index"
 const about =  block(function Aboutme() {
     const [text, count] = useTypewriter({
         words: [
