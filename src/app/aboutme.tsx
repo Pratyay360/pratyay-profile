@@ -26,7 +26,7 @@ const about =  block(function Aboutme() {
         <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
             <Backgroundcircles />
             <Image className="h-32 w-auto object-cover rounded-full transform-gpu transition-all hover:scale-125" 
-            src={"/icons/img.webp"}
+            src={"https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/img.webp"}
             alt={"..."}
             width={350}
             height={350}/>

@@ -1,117 +1,117 @@
 [
   {
-    "href": "https://developer.android.com",
-    "src": "/icons/android.svg",
+    "href": "https:/developer.android.com",
+    "src": "https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/android.svg",
     "alt": "android"
   },
   {
-    "href": "https://www.gnu.org/software/bash/",
-    "src": "/icons/bash.webp",
+    "href": "https:/www.gnu.org/software/bash/",
+    "src": "https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/bash.webp",
     "alt": "bash"
   },
   {
-    "href": "https://www.cprogramming.com/",
-    "src": "/icons/c.svg",
+    "href": "https:/www.cprogramming.com/",
+    "src": "https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/c.svg",
     "alt": "c"
   },
   {
-    "href": "https://www.w3schools.com/cpp/",
-    "src": "/icons/cpp.svg",
+    "href": "https:/www.w3schools.com/cpp/",
+    "src": "https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/cpp.svg",
     "alt": "cplusplus"
   },
   {
-    "href": "https://www.w3schools.com/css/",
-    "src": "/icons/css.svg",
+    "href": "https:/www.w3schools.com/css/",
+    "src": "https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/css.svg",
     "alt": "css3"
   },
   {
-    "href": "https://dart.dev",
-    "src": "/icons/dart.svg",
+    "href": "https:/dart.dev",
+    "src": "https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/dart.svg",
     "alt": "dart"
   },
   {
-    "href": "https://www.djangoproject.com/",
-    "src": "/icons/django.svg",
+    "href": "https:/www.djangoproject.com/",
+    "src": "https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/django.svg",
     "alt": "django"
   },
   {
-    "href": "https://flutter.dev",
-    "src": "/icons/flutter.svg",
+    "href": "https:/flutter.dev",
+    "src": "https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/flutter.svg",
     "alt": "flutter"
   },
   {
-    "href": "https://git-scm.com/",
-    "src": "/icons/git.svg",
+    "href": "https:/git-scm.com/",
+    "src": "https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/git.svg",
     "alt": "git"
   },
   {
-    "href": "https://heroku.com",
-    "src": "/icons/heroku.svg",
+    "href": "https:/heroku.com",
+    "src": "https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/heroku.svg",
     "alt": "heroku"
   },
   {
-    "href": "https://www.java.com",
-    "src": "/icons/java.svg",
+    "href": "https:/www.java.com",
+    "src": "https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/java.svg",
     "alt": "java"
   },
   {
-    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-    "src": "/icons/javas.svg",
+    "href": "https:/developer.mozilla.org/en-US/docs/Web/JavaScript",
+    "src": "https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/javas.svg",
     "alt": "javascript"
   },
   {
-    "href": "https://www.linux.org/",
-    "src": "/icons/linux.svg",
+    "href": "https:/www.linux.org/",
+    "src": "https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/linux.svg",
     "alt": "linux"
   },
   {
-    "href": "https://www.mysql.com/",
-    "src": "/icons/mysql.svg",
+    "href": "https:/www.mysql.com/",
+    "src": "https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/mysql.svg",
     "alt": "mysql"
   },
   {
-    "href": "https://nodejs.org",
-    "src": "/icons/node.svg",
+    "href": "https:/nodejs.org",
+    "src": "https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/node.svg",
     "alt": "nodejs"
   },
   {
-    "href": "https://www.php.net",
-    "src": "/icons/php.svg",
+    "href": "https:/www.php.net",
+    "src": "https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/php.svg",
     "alt": "php"
   },
   {
-    "href": "https://www.postgresql.org",
-    "src": "/icons/postgresql.svg",
+    "href": "https:/www.postgresql.org",
+    "src": "https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/postgresql.svg",
     "alt": "postgresql"
   },
   {
-    "href": "https://postman.com",
-    "src": "/icons/postman.svg",
+    "href": "https:/postman.com",
+    "src": "https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/postman.svg",
     "alt": "postman"
   },
   {
-    "href": "https://www.python.org",
-    "src": "/icons/python.svg",
+    "href": "https:/www.python.org",
+    "src": "https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/python.svg",
     "alt": "python"
   },
   {
-    "href": "https://reactjs.org/",
-    "src": "/icons/react.svg",
+    "href": "https:/reactjs.org/",
+    "src": "https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/react.svg",
     "alt": "react"
   },
   {
-    "href": "https://www.sqlite.org/",
-    "src": "/icons/sqll.svg",
+    "href": "https:/www.sqlite.org/",
+    "src": "https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/sqll.svg",
     "alt": "sqlite"
   },
   {
-    "href": "https://www.typescriptlang.org/",
-    "src": "/icons/ts.svg",
+    "href": "https:/www.typescriptlang.org/",
+    "src": "https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/ts.svg",
     "alt": "typescript"
   },
   {
-    "href": "https://nextjs.org",
-    "src": "/icons/next.webp",
+    "href": "https:/nextjs.org",
+    "src": "https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/next.webp",
     "alt": "nextjs"
   }
 ]
