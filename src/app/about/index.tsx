@@ -24,7 +24,7 @@ const about = block(function Aboutme() {
         fetchData();
     }, []);
     return (
-        <div className="flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+        <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
             <Backgroundcircles />
             <Image className="h-32 w-auto object-cover rounded-full transform-gpu transition-all hover:scale-125"
                 src={"https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/img.webp"}

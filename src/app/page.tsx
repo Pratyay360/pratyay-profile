@@ -20,7 +20,7 @@ export default function Home() {
         </header>
         <div className="bg-black">
           <Navbar />
-          <section id="aboutme" className="snap-center justify-center pt-20">
+          <section id="aboutme" className="snap-center justify-center">
             <Aboutme />
           </section>
           <section id="education" className="snap-center justify-center pt-20">
