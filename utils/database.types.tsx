@@ -47,7 +47,8 @@ export interface Database {
 			education: {
 				Row: {
 					category: string | null
-					date: string | null
+					date_from: number | null
+					date_to: number | null
 					description: string | null
 					title: string | null
 				}
