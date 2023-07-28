@@ -18,22 +18,13 @@ const about = block(function Aboutme() {
             if (error) {
                 console.error(error);
             } else {
-                // console.log(data);
                 setText(data);
             }
         }
         fetchData();
     }, []);
-    // const wordsArray =   {wor.map((c) => (c.word || ''))};
-    // const [text, count] = useTypewriter({
-    //     words: wordsArray,
-    //     loop: true,
-    //     delaySpeed: 2000,
-    //     deleteSpeed: 50,
-    //     typeSpeed: 100
-    // });
     return (
-        <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+        <div className="flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
             <Backgroundcircles />
             <Image className="h-32 w-auto object-cover rounded-full transform-gpu transition-all hover:scale-125"
                 src={"https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/img.webp"}

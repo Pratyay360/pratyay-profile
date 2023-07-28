@@ -29,8 +29,8 @@ const a = block(function Contact() {
                             <Image
                                 src={item.image || ''}
                                 alt={item.name || ''}
-                                width={35}
-                                height={35}
+                                width={40}
+                                height={40}
                             />
                         </a>
                     </div>
