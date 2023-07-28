@@ -20,7 +20,7 @@ const a = block(function Contact() {
     }, []);
     return (
         <>
-            <h1 className="text-center shrink items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl mr-2 ml-2">CONTACT ME</h1>
+            <h1 className="text-center shrink items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl mr-2 ml-2 pb-10">CONTACT ME</h1>
             {/*  */}
             <div className="flex flex-wrap text-center items-center justify-center ">
                 {social_link.map((item, index) => (

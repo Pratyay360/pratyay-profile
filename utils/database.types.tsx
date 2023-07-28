@@ -53,7 +53,13 @@ export interface Database {
 					title: string | null
 				}
 				Relationships: []
-			}
+			},
+			description: {
+				Row: {
+					word: string | null
+				}
+				Relationships: []
+			},
 		}
 		Views: {
 			[_ in never]: never

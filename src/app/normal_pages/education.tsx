@@ -19,7 +19,7 @@ const a = block(function Education() {
     }, []);
     return (
         <>
-        <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-gray-500 lg:text-3xl ml-3">EDUCATION</h1>
+        <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-gray-500 lg:text-3xl ml-3 pt-30">EDUCATION</h1>
             <section className="text-gray-300 body-font overflow-hidden">
                 <div className="container px-5 py-24 mx-auto">
                     <div className="-my-8 divide-y-2 divide-gray-100">

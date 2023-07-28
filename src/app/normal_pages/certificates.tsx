@@ -21,7 +21,7 @@ const a = block(function Certificates() {
     return (
         <>
             <div className="flex flex-column text-center items-center justify-center lg:text-3xl">
-                <h1 className="top-36 tracking-[20px] text-gray-500 ml-2">CERTIFICATES</h1>
+                <h1 className="top-36 tracking-[20px] text-gray-500 ml-2 pb-10">CERTIFICATES</h1>
             </div>
             <section className="text-gray-300 body-font">
                 <div className="container px-5 py-24 mx-auto">
@@ -33,7 +33,7 @@ const a = block(function Certificates() {
                                         <Image
                                             className="lg:h-48 md:h-36 w-full object-cover object-center"
                                             src={c.imageSrc || ''}
-                                            alt={c.title || ''} 
+                                            alt={c.title || ''}
                                             width={350}
                                             height={250}
                                         />

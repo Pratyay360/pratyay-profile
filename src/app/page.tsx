@@ -20,25 +20,25 @@ export default function Home() {
         </header>
         <div className="bg-black">
           <Navbar />
-          <section id="aboutme" className="snap-center">
+          <section id="aboutme" className="snap-center justify-center pt-20">
             <Aboutme />
           </section>
-          <section id="education" className="snap-center">
+          <section id="education" className="snap-center justify-center pt-20">
             <Education />
           </section>
-          <section id="skills" className="snap-center">
+          <section id="skills" className="snap-center justify-center pt-20">
             <Skills />
           </section>
-          <section id="certificate" className="snap-center">
+          <section id="certificate" className="snap-center justify-center pt-20">
             <Certificates />
           </section>
-          <section id="projects" className="snap-center">
+          <section id="projects" className="snap-center justify-center pt-20">
             <Projects />
           </section>
-          <section id="resume" className="snap-center">
+          <section id="resume" className="snap-center justify-center pt-20">
             <Resume />
           </section>
-          <section id="contact" className="snap-center">
+          <section id="contact" className="snap-center justify-center pt-20">
             <Contact />
           </section>
         </div>
