@@ -8,7 +8,7 @@ const a = block(function Education() {
     const [education, cert] = useState<Database['public']['Tables']['education']['Row'][]>([]);
     useEffect(() => {
         async function fetchData() {
-            const { data, error } = await supabase.from('education').select('*');
+            const { data, error } = await supabase.from('education').select('*').order('date_from', { ascending: false });
             if (error) {
                 console.error(error);
             } else {
