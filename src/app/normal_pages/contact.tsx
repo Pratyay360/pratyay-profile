@@ -1,10 +1,9 @@
-"use client"
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { Database } from '../../../utils/database.types';
 import Image from 'next/image';
 import supabase from '../../../utils/supabase';
-import { block} from 'million/react'
+import { block } from 'million/react'
 const a = block(function Contact() {
     const [social_link, social] = useState<Database['public']['Tables']['social_link']['Row'][]>([]);
     useEffect(() => {

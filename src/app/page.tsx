@@ -1,5 +1,4 @@
 "use client"
-import Image from 'next/image'
 import React from "react"
 import Navbar from './navbar/navbar'
 import Projects from './normal_pages/projects'

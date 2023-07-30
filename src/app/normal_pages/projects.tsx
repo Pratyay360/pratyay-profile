@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Database } from '../../../utils/database.types';
 import Image from 'next/image';
 import supabase from '../../../utils/supabase';
-import { block} from 'million/react'
+import { block } from 'million/react'
 const a = block(function Projects() { 
     const [project, cert] = useState<Database['public']['Tables']['project']['Row'][]>([]);
     useEffect(() => {

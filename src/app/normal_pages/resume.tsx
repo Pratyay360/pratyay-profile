@@ -1,4 +1,3 @@
-"use client"
 import React from 'react';
 import { block } from 'million/react';
 const resume =  block(function Resume() {

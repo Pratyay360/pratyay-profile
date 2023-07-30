@@ -1,12 +1,8 @@
-"use client"
-import { motion } from "framer-motion"
-import { type } from "os"
 import { block } from "million/react"
 import Image from "next/image"
 import { useEffect, useState, useRef } from 'react';
 import { Database } from '../../../utils/database.types';
 import supabase from '../../../utils/supabase';
-import { Cursor, useTypewriter } from "react-simple-typewriter"
 import Backgroundcircles from "../animation/index"
 import Typewriter from 'typewriter-effect';
 const about = block(function Aboutme() {

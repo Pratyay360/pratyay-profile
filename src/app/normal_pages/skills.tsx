@@ -1,10 +1,9 @@
-"use client"
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { Database } from '../../../utils/database.types';
 import Image from 'next/image';
 import supabase from '../../../utils/supabase';
-import { block} from 'million/react'
+import { block } from 'million/react'
 const a = block(function Skills() {
     const [technology, cert] = useState<Database['public']['Tables']['technology']['Row'][]>([]);
     useEffect(() => {
