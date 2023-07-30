@@ -1,6 +1,6 @@
 "use client"
 import React from "react"
-import { Analytics } from '@vercel/analytics/react';
+
 import Navbar from './navbar/navbar'
 import Projects from './normal_pages/projects'
 import Contact from './normal_pages/contact'
@@ -12,7 +12,6 @@ import Certificates from './normal_pages/certificates'
 export default function Home() {
   return (
         <>
-        <Analytics/>
         <header>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta charSet="utf-8" />
