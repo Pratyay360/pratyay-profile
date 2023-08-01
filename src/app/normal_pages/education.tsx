@@ -18,10 +18,10 @@ const a = block(function Education() {
     }, []);
     return (
         <>
-        <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-gray-500 lg:text-3xl ml-3 pt-30">EDUCATION</h1>
+        <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-gray-500 lg:text-3xl text-2xl ml-3 pt-30">EDUCATION</h1>
             <section className="text-gray-300 body-font overflow-hidden">
-                <div className="container px-5 py-24 mx-auto">
-                    <div className="-my-8 divide-y-2 divide-gray-100">
+                <div className="container px-5 py-24 mx-auto items-center justify-center">
+                    <div className="-my-8 divide-y-2 divide-gray-100 px-0 sm:px-20 items-center justify-center">
                         {education.map((item, index) => (
                             <div key={index} className="py-8 flex flex-wrap md:flex-nowrap">
                                 <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">

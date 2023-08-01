@@ -60,6 +60,12 @@ export interface Database {
 				}
 				Relationships: []
 			},
+			about: {
+				Row: {
+					word: string | null
+				}
+				Relationships: []
+			},
 		}
 		Views: {
 			[_ in never]: never

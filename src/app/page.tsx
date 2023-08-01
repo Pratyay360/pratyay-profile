@@ -5,9 +5,10 @@ import Navbar from './navbar/navbar'
 import Projects from './normal_pages/projects'
 import Contact from './normal_pages/contact'
 import Education from './normal_pages/education'
-import Aboutme from './about/index'
+import Photo from './about/index'
 import Resume from './normal_pages/resume'
 import Skills from './normal_pages/skills'
+import Aboutme from './about/aboutme'
 import Certificates from './normal_pages/certificates'
 export default function Home() {
   return (
@@ -20,7 +21,10 @@ export default function Home() {
         </header>
         <div className="bg-black">
           <Navbar />
-          <section id="aboutme" className="snap-center justify-center">
+          <section id="photo" className="snap-center justify-center">
+            <Photo />
+          </section>
+          <section id="aboutme" className="snap-center justify-center pt-20">
             <Aboutme />
           </section>
           <section id="education" className="snap-center justify-center pt-20">

@@ -5,7 +5,7 @@ import { Database } from '../../../utils/database.types';
 import supabase from '../../../utils/supabase';
 import Backgroundcircles from "../animation/index"
 import Typewriter from 'typewriter-effect';
-const about = block(function Aboutme() {
+const phot = block(function Photo() {
 
     const [wor, setText] = useState<Database['public']['Tables']['description']['Row'][]>([]);
     useEffect(() => {
@@ -48,4 +48,4 @@ const about = block(function Aboutme() {
     )
 });
 
-export default about;
+export default phot;
