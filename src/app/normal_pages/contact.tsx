@@ -19,12 +19,12 @@ const a = block(function Contact() {
     }, []);
     return (
         <>
-            <h1 className="text-center shrink items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl mr-2 ml-2 pb-10">CONTACT ME</h1>
+            <h1 className="text-center shrink items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl lg:text-4xl font-bold mr-2 ml-2 pb-10">CONTACT ME</h1>
             {/*  */}
             <div className="flex flex-wrap text-center items-center justify-center ">
                 {social_link.map((item, index) => (
-                    <div key={index} className="cont mr-4 mb-10 mt-10 transform-gpu transition-all hover:scale-125" style={{ marginRight: "10px" }}>
-                        <a href={item.link || ''} target="_blank" rel="noreferrer">
+                    <div key={index} className="cont mr-5 mb-10 mt-10 transform-gpu mx-2 transition-all hover:scale-125" style={{ marginRight: "10px" }}>
+                        <a href={item.link || ''} target="_blank" rel="noreferrer" >
                             <Image
                                 src={item.image || ''}
                                 alt={item.name || ''}

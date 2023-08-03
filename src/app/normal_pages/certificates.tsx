@@ -20,11 +20,11 @@ const a = block(function Certificates() {
     return (
         <>
             <div className="flex flex-column text-center items-center justify-center">
-                <h1 className="top-36 tracking-[20px] text-gray-500 lg:text-3xl ml-2 pb-10">CERTIFICATES</h1>
+                <h1 className="top-36 tracking-[20px] text-gray-500 lg:text-4xl font-bold ml-2 pb-10 whitespace-break-spaces">CERTIFICATES</h1>
             </div>
             <section className="text-gray-300 body-font">
                 <div className="container px-5 py-24 mx-auto">
-                    <div className="flex flex-wrap -m-4 justify-center">
+                    <div className="flex flex-wrap -m-4 justify-center whitespace-break-spaces">
                         {certificate.map((c, index) => (
                             <div className="p-4 md:w-1/3" key={index}>
                                 <a href={c.link || ''} className="block" target="_blank" rel="noopener noreferrer">

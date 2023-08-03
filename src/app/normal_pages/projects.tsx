@@ -19,7 +19,7 @@ const a = block(function Projects() {
     }, []);
     return (
         <>
-         <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl">PROJECTS</h1>
+         <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl lg:text-4xl font-bold">PROJECTS</h1>
             <section className="text-gray-300 body-font">
                 <div className="container px-5 py-24 mx-auto">
                     <div className="flex flex-wrap -m-4 justify-center">

@@ -27,11 +27,11 @@ const phot = block(function Photo() {
                 alt={"..."}
                 width={350}
                 height={350} />
-            <div>
-                <h1 className="text-4xl lg:text-5xl text-gray-300"> HI, I am Pratyay Mitra Mustafi 👋👋👋👋</h1>
-              
-                    <h1 className="text-2xl lg:text-3xl font-semibold py-6 px-5 text-gray-400 animate-type group-hover:animate-type-reverse whitespace-nowrap text-brand-accent">
-                        <span className="text-gray-400 text-3xl lg:text-4xl">
+            <div className="container my-auto ">
+                <h1 className="text-4xl md:text-3xl lg:text-5xl text-gray-300 overflow-visible"> HI, I am Pratyay Mitra Mustafi 👋👋👋👋</h1>
+              <div className="py-10 flex flex-wrap md:flex-nowrap items-center justify-center text-center overflow-visible">
+                    <h1 className="font-semibold text-gray-400 animate-type group-hover:animate-type-reverse whitespace-break-spaces text-brand-accent">
+                        <span className="text-gray-400 text-2xl md:text-xl lg:text-4xl">
                         <Typewriter
                             options={{  
                                 strings: wor.map((c) => (c.word || '')),
@@ -43,6 +43,7 @@ const phot = block(function Photo() {
                         />
                         </span>
                     </h1>
+                    </div>
             </div>
         </div>
     )
