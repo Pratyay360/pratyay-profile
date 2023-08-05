@@ -27,7 +27,9 @@ const a = block(function Skills() {
             <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl lg:text-4xl font-bold">
                 SKILLS
             </h1>
-            {loading && <Skeleton count={1} height={40}/>}  
+            {loading && (<div className="p-10 mt-10">
+                    <Skeleton count={1} height={40}/>
+                    </div>)}  
             <div className="flex flex-wrap text-center px-2 sm:px-10 items-center justify-center ">              
                 {technology.map((item, index) => (
                     <div key={index} className="cont mr-4 mb-10 mt-10 transform-gpu transition-all hover:scale-125">

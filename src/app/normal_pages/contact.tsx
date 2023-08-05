@@ -23,29 +23,30 @@ const a = block(function Contact() {
     }, []);
     return (
         <>
-         <SkeletonTheme baseColor="#202020" highlightColor="#444">
-            <h1 className="text-center shrink items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl lg:text-4xl font-bold mr-2 ml-2 pb-10">CONTACT ME</h1>
-            {/*  */}
-            {loading && 
-            (
-                        <Skeleton  height={40}/>
-                
-            )}
-            <div className="flex flex-wrap text-center items-center justify-center ">
-                {social_link.map((item, index) => (
-                    <div key={index} className="cont mr-5 mb-10 mt-10 transform-gpu mx-2 transition-all hover:scale-125" style={{ marginRight: "10px" }}>
-                        <a href={item.link || ''} target="_blank" rel="noreferrer" >
-                            <Image
-                                src={item.image || ''}
-                                alt={item.name || ''}
-                                width={40}
-                                height={40}
-                            />
-                            {loading && <Skeleton width={40} height={40} />}
-                        </a>
-                    </div>
-                ))}
-            </div>
+            <SkeletonTheme baseColor="#202020" highlightColor="#444">
+                <h1 className="text-center shrink items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl lg:text-4xl font-bold mr-2 ml-2 pb-10">CONTACT ME</h1>
+                {/*  */}
+                {loading &&
+                    (
+                        (<div className="p-10 mt-10">
+                    <Skeleton count={1} height={40}/>
+                    </div>)
+                    )}
+                <div className="flex flex-wrap text-center items-center justify-center ">
+                    {social_link.map((item, index) => (
+                        <div key={index} className="cont mr-5 mb-10 mt-10 transform-gpu mx-2 transition-all hover:scale-125" style={{ marginRight: "10px" }}>
+                            <a href={item.link || ''} target="_blank" rel="noreferrer" >
+                                <Image
+                                    src={item.image || ''}
+                                    alt={item.name || ''}
+                                    width={40}
+                                    height={40}
+                                />
+                                {loading && <Skeleton width={40} height={40} />}
+                            </a>
+                        </div>
+                    ))}
+                </div>
             </SkeletonTheme>
         </>
     );

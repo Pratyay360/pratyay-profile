@@ -27,16 +27,7 @@ const a = block(function Education() {
                 <section className="text-gray-300 body-font overflow-hidden">
                     <div className="container px-5 py-24 mx-auto items-center justify-center">
                         <div className="-my-8 divide-y-2 divide-gray-100 px-0 sm:px-20 items-center justify-center">
-                            {loading && (
-                                <div className="py-8 flex flex-wrap md:flex-nowrap">
-                                    <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                                        <span className="font-semibold title-font text-gray-200 text-2xl"> <Skeleton count={1} /></span>
-                                    </div>
-                                    <div className="md:flex-grow">
-                                        <h2 className="font-medium text-gray-100 text-2xl title-font mb-2"><Skeleton count={1} /></h2>
-                                        <p className="leading-relaxed text-xl text-gray-300"><Skeleton count={3} /></p>
-                                    </div>
-                                </div>)}
+                        {loading && <Skeleton count={7}/>}
                             {education.map((item, index) => (
                                 <div key={index} className="py-8 flex flex-wrap md:flex-nowrap">
                                     <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">

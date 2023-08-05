@@ -27,9 +27,7 @@ const about = block(function Aboutme() {
             <section className="text-gray-300 body-font overflow-hidden">
                 <div className="container px-5 py-24 mx-auto">
                     <div className="-my-8 divide-y-2 divide-gray-100 px-0 sm:px-20 text-center items-center justify-center">
-                       {loading && ( 
-                                <Skeleton count={7}/>
-)}                      
+                       {loading && (<Skeleton count={7}/>)}                      
                        { about.map((item, index) => (
                         <div key={index} className="py-8 flex flex-wrap md:flex-nowrap text-left md:text-center">
                                 <p className="leading-relaxed lg:text-2xl text-xl">{item.word || ''} {loading && <Skeleton count={7}/>}</p> 
