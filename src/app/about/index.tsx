@@ -5,8 +5,10 @@ import { Database } from '../../../utils/database.types';
 import supabase from '../../../utils/supabase';
 import Backgroundcircles from "../animation/index"
 import Typewriter from 'typewriter-effect';
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css'
 const phot = block(function Photo() {
-
+    const [loading, setLoading] = useState(true);
     const [wor, setText] = useState<Database['public']['Tables']['description']['Row'][]>([]);
     useEffect(() => {
         async function fetchData() {
@@ -15,11 +17,14 @@ const phot = block(function Photo() {
                 console.error(error);
             } else {
                 setText(data);
+                setLoading(false);
             }
         }
         fetchData();
     }, []);
     return (
+        <>
+        <SkeletonTheme baseColor="#202020" highlightColor="#444">
         <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
             <Backgroundcircles />
             <Image className="h-32 w-auto object-cover rounded-full transform-gpu transition-all hover:scale-125"
@@ -32,6 +37,7 @@ const phot = block(function Photo() {
               <div className="py-10 flex flex-wrap md:flex-nowrap items-center justify-center text-center overflow-visible">
                     <h1 className="font-semibold text-gray-400 animate-type group-hover:animate-type-reverse whitespace-break-spaces text-brand-accent">
                         <span className="text-gray-400 text-2xl md:text-xl lg:text-4xl">
+                        {loading && <Skeleton  count={1} height={50}/>}
                         <Typewriter
                             options={{  
                                 strings: wor.map((c) => (c.word || '')),
@@ -46,6 +52,8 @@ const phot = block(function Photo() {
                     </div>
             </div>
         </div>
+        </SkeletonTheme>
+        </>
     )
 });
 
