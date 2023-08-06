@@ -27,11 +27,11 @@ const phot = block(function Photo() {
         <SkeletonTheme baseColor="#202020" highlightColor="#444">
         <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
             <Backgroundcircles />
-            <Image className="h-32 w-auto object-cover rounded-full transform-gpu transition-all hover:scale-125"
+            <Image className="object-cover rounded-full transform-gpu transition-all hover:scale-125"
                 src={"https://wekwttnnowtwqzntesch.supabase.co/storage/v1/object/public/images/img.webp"}
                 alt={"..."}
-                width={350}
-                height={350} />
+                width={200}
+                height={200} />
             <div className="container my-auto ">
                 <h1 className="text-4xl md:text-3xl lg:text-5xl text-gray-300 overflow-visible"> HI, I am Pratyay Mitra Mustafi 👋👋👋👋</h1>
               <div className="py-10 flex flex-wrap md:flex-nowrap items-center justify-center text-center overflow-visible">
