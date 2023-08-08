@@ -4,7 +4,6 @@ import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { useEffect, useState } from 'react';
 // import { Article, ArticleSummary, HashnodeResponse } from "../models/hashnode";
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 
 const blog = block(function Blog() {
 
