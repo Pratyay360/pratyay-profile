@@ -10,6 +10,7 @@ import Resume from './normal_pages/resume'
 import Skills from './normal_pages/skills'
 import Aboutme from './about/aboutme'
 import Certificates from './normal_pages/certificates'
+// import Blogs from './blogs/index'
 export default function Home() {
   return (
         <>
@@ -39,6 +40,9 @@ export default function Home() {
           <section id="projects" className="snap-center justify-center pt-20">
             <Projects />
           </section>
+          {/* <section id="blogs" className="snap-center justify-center pt-20">
+            <Blogs />
+          </section> */}
           <section id="resume" className="snap-center justify-center pt-20">
             <Resume />
           </section>
