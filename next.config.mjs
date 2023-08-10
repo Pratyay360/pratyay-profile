@@ -14,5 +14,10 @@ const supabase = {
       }
   }
 };
+const millionConfig = {
+  auto: true,
+  
+}
 
-export default million.next(nextConfig, supabase);
+
+export default million.next(nextConfig, supabase, millionConfig);
