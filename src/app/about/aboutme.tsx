@@ -19,9 +19,22 @@ const about = block(function Aboutme() {
             }
         }
         fetchData();
+
     }, []);
     return (
         <>
+        <script>
+                console.log(`                                                                                       
+    \n*@@@***@@m     *@@@***@@m        @@      @@@**@@**@@@     *@@@*   *@@*      @@      *@@@*   *@@*
+    \n  @@   *@@      @@   *@@m      m@@m     @*   @@   *@       @@@   m@       m@@m       @@@   m@  
+    \n  @@   m@@       @@   m@@      m@*@@!         @@             @@@ m@       m@*@@!       @@@ m@   
+    \n  @@@@@@@        !@@@@@@      m@  *@@         !@              @!@@       m@  *@@        @!@@    
+    \n  @@             !@  @@m      @@@!@!@@        !@               !@        @@@!@!@@        !@     
+    \n  @!             !@   *!@    !*      @@       !@               !@       !*      @@       !@     
+    \n  @!             !@  ! !!     !!!!@!!@        !@               !@        !!!!@!!@        !@     
+    \n  !!             !!   *!!!   !*      !!       !!               !!       !*      !!       !! 
+    `);
+        </script>
           <SkeletonTheme baseColor="#202020" highlightColor="#444">
             <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-gray-500 lg:text-5xl font-bold text-3xl ml-3">About Me</h1>
             <section className="text-gray-300 body-font overflow-hidden">
