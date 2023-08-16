@@ -8,6 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Pratyay Mitra Mustafi',
   description: 'This is portfollio website of Pratyay Mustafi',
+  manifest: '/manifest.webmanifest',
 }
 
 export default function RootLayout({
