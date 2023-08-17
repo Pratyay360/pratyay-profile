@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Database } from '../../../utils/database.types';
 const blo = block(function Blog() {
+// Added schema of Api querry to get the data from hashnode.
     const [posts, setPosts] = useState<Database['public']['Tables']['blog']['Row'][]>([]); 
     const [loading, setLoading] = useState(true);
     // just change the username to yours and you are good to go
