@@ -1,9 +1,9 @@
 import million from "million/compiler";
 import nextMDX from '@next/mdx'
 import withPWA from 'next-pwa'
+import runtimeCaching from 'next-pwa/cache.js'
 
 const isProduction = process.env.NODE_ENV === 'production'
-import runtimeCaching from 'next-pwa/cache.js'
 
 
 const withMDX = nextMDX({
@@ -17,7 +17,7 @@ const withMDX = nextMDX({
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['raw.githubusercontent.com','github.com', 'wekwttnnowtwqzntesch.supabase.co'],
+    domains: ['raw.githubusercontent.com','github.com', 'wekwttnnowtwqzntesch.supabase.co', 'cdn.hashnode.com'],
   },
 };
 const nextMdxConfig = withMDX(

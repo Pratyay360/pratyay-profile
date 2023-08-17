@@ -24,9 +24,9 @@ const nav =  block(function Navbar() {
                         <Link href="#projects">
                             <span className="mr-5 text-white hover:text-gray-500 cursor-pointer">Projects</span>
                         </Link>
-                        {/* <Link href="#blogs">
+                        <Link href="#blogs">
                             <span className="mr-5 text-white hover:text-gray-500 cursor-pointer">Blogs</span>
-                        </Link> */}
+                        </Link>
                         <Link href="#resume">
                             <span className="mr-5 text-white hover:text-gray-500 cursor-pointer">Resume</span>
                         </Link>
