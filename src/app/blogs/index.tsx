@@ -4,9 +4,9 @@ import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-
+import { Database } from '../../../utils/database.types';
 const blo = block(function Blog() {
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState<Database['public']['Tables']['blog']['Row'][]>([]); 
     const [loading, setLoading] = useState(true);
     // just change the username to yours and you are good to go
     const query = `query {
