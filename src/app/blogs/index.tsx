@@ -13,7 +13,7 @@ const blo = block(function Blog() {
     const query = `query {
         user(username: "pratyay") {
               publication {
-                posts(page: 0) {
+                posts {
                   title
                   coverImage
                   brief
