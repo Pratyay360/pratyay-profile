@@ -32,7 +32,7 @@ const a = block(function Education() {
                                 <div key={index} className="py-8 flex flex-wrap md:flex-nowrap">
                                     <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
                                         <span className="font-semibold title-font text-gray-200 text-2xl">{item.category || ''} {loading && <Skeleton count={1} />}</span>
-                                        <span className="mt-1 text-gray-500 text-md">{item.date_from || ''}-{item.date_to || ''}  {loading && <Skeleton count={1} />}</span>
+                                        <span className="mt-1 text-gray-400 text-md">{item.date_from || ''}-{item.date_to || ''}  {loading && <Skeleton count={1} />}</span>
                                     </div>
                                     <div className="md:flex-grow">
                                         <h2 className="font-medium text-gray-100 text-2xl title-font mb-2">{item.title || ''} {loading && <Skeleton count={1} />}</h2>

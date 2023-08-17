@@ -63,7 +63,7 @@ const blo = block(function Blog() {
                                                 <h1 className="title-font text-lg font-medium text-gray-300 mb-3">
                                                     {c.title || ''}{loading && <Skeleton count={1} />}
                                                 </h1>
-                                                <p className="leading-relaxed text-gray-500 mb-3">{c.brief || ''}
+                                                <p className="leading-relaxed text-gray-400 mb-3">{c.brief || ''}
                                                     {loading && <Skeleton count={3} />}
                                                 </p>
                                             </div>
