@@ -25,3 +25,13 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+.cont {
+  cursor: pointer;
+}
+
+.fifty-fifty {
+  width: 100ch;
+  overflow: hidden;
+  white-space: wrap;
+  text-overflow: inherit;
+}
