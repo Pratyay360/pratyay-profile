@@ -24,7 +24,7 @@ const a = block(function Donate() {
     return (
         <>
             <SkeletonTheme baseColor="#202020" highlightColor="#444">
-                <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl lg:text-4xl font-bold"> Want To Support My Work</h1>
+                <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl lg:text-4xl font-bold">Want To Support My Work</h1>
                 {loading && ((<div className="p-10 mt-10">
                     <Skeleton count={1} height={500} />
                 </div>))}
