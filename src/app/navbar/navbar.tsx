@@ -30,6 +30,9 @@ const nav =  block(function Navbar() {
                         <Link href="#resume">
                             <span className="mr-5 text-white hover:text-gray-500 cursor-pointer">Resume</span>
                         </Link>
+                        <Link href="#donate">
+                            <span className="mr-5 text-white hover:text-gray-500 cursor-pointer">Donate</span>
+                        </Link>
                         <Link href="#contact">
                             <span className="mr-5 text-white hover:text-gray-500 cursor-pointer">Contact Me</span>
                         </Link>

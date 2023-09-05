@@ -63,6 +63,14 @@ export interface Database {
 				}
 				Relationships: []
 			},
+			donation: {
+				Row: {
+					link: string | null
+					name: string | null
+					image: string | null
+				}
+				Relationships: []
+			},
 			description: {
 				Row: {
 					word: string | null

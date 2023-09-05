@@ -11,6 +11,7 @@ import Skills from './normal_pages/skills'
 import Aboutme from './about/aboutme'
 import Certificates from './normal_pages/certificates'
 import Blogs from './blogs/index'
+import Donate from "./normal_pages/donate"
 export default function Home() {
   return (
         <>
@@ -46,9 +47,13 @@ export default function Home() {
           <section id="resume" className="snap-center justify-center pt-20">
             <Resume />
           </section>
+          <section id="donate" className="snap-center justify-center pt-20">
+            <Donate />
+          </section>
           <section id="contact" className="snap-center justify-center pt-20">
             <Contact />
           </section>
+
         </div>
     </>
   );

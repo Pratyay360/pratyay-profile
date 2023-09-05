@@ -33,7 +33,7 @@ const a = block(function Projects() {
                         <div className="flex flex-wrap -m-4 justify-center">
                             {project.map((card, index) => (
                                 <div className="p-4 md:w-1/3" key={index}>
-                                    <a href={card.link || ''} className="block" target="_blank" rel="noopener noreferrer">
+                                    <a href={card.link || ''} className="block" target="_blank">
                                         <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden transform transition-all hover:scale-110 ">
                                             <Image
                                                 className="lg:h-48 md:h-36 w-full object-cover object-center"

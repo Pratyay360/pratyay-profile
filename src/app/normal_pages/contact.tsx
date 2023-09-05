@@ -35,7 +35,7 @@ const a = block(function Contact() {
                 <div className="flex flex-wrap text-center items-center justify-center ">
                     {social_link.map((item, index) => (
                         <div key={index} className="cont mr-5 mb-10 mt-10 transform-gpu mx-2 transition-all hover:scale-125" style={{ marginRight: "10px" }}>
-                            <a href={item.link || ''} target="_blank" rel="noreferrer" >
+                            <a href={item.link || ''} target="_blank">
                                 <Image
                                     src={item.image || ''}
                                     alt={item.name || ''}

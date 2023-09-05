@@ -33,7 +33,7 @@ const a = block(function Skills() {
             <div className="flex flex-wrap text-center px-2 sm:px-10 items-center justify-center ">              
                 {technology.map((item, index) => (
                     <div key={index} className="cont mr-4 mb-10 mt-10 transform-gpu transition-all hover:scale-125">
-                        <a href={item.href || ''} target="_blank" rel="noreferrer">
+                        <a href={item.href || ''} target="_blank">
                             <Image
                                 src={item.src || ''}
                                 alt={item.name || ''}
