@@ -1,7 +1,7 @@
 import React from 'react'
 import { block } from "million/react"
 import { motion } from 'framer-motion'
-const Backgroundcircles =  block(function Backgroundcircles() {
+const backgr =  block(function Backgroundcircles() {
   return (
     <div className="relative flex flex-wrap justify-center items-center">
         <div className="absolute border border-gray-500 rounded-full h-[200px] w-[200px] mt-52 animate-bounce"/>
@@ -12,4 +12,4 @@ const Backgroundcircles =  block(function Backgroundcircles() {
     </div>
   )
 });
-export default Backgroundcircles;
+export default backgr;
