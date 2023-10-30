@@ -1,6 +1,6 @@
 import React from 'react';
-import { block } from 'million/react';
-const resume =  block(function Resume() {
+// import { block } from 'million/react';
+export default function Resume() {
     const handleDownload = () => {
         window.open("https://drive.google.com/file/d/1Kb_cOhevNgiif-lV3LPJFPjStCKEd0dt/view?usp=sharing", "_blank");
     };
@@ -17,6 +17,4 @@ const resume =  block(function Resume() {
             </div>
         </>
     );
-});
-
-export default resume;
+};

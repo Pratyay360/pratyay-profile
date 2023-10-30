@@ -2,10 +2,10 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { Database } from '../../../utils/database.types';
 import supabase from '../../../utils/supabase';
-import { block } from 'million/react'
+// import { block } from 'million/react'
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
-const a = block(function Education() {
+export default function Education() {
     const [education, cert] = useState<Database['public']['Tables']['education']['Row'][]>([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
@@ -46,5 +46,4 @@ const a = block(function Education() {
             </SkeletonTheme>
         </>
     )
-});
-export default a;
+};

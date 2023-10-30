@@ -3,10 +3,10 @@ import { useEffect, useState } from 'react';
 import { Database } from '../../../utils/database.types';
 import Image from 'next/image';
 import supabase from '../../../utils/supabase';
-import { block } from 'million/react'
+// import { block } from 'million/react'
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
-const a = block(function Certificates() {
+export default function Certificates() {
     const [certificate, cert] = useState<Database['public']['Tables']['certificate']['Row'][]>([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
@@ -65,5 +65,4 @@ const a = block(function Certificates() {
             </SkeletonTheme>
         </>
     )
-});
-export default a;
+};

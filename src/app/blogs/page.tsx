@@ -1,11 +1,11 @@
-import { block } from "million/react";
+"use client";
 import React from "react";
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Database } from '../../../utils/database.types';
-const blo = block(function Blog() {
+export default function Home() {
 // Added schema of Api querry to get the data from hashnode.
     const [posts, setPosts] = useState<Database['public']['Tables']['blog']['Row'][]>([]); 
     const [loading, setLoading] = useState(true);
@@ -40,7 +40,7 @@ const blo = block(function Blog() {
     return (
         <>
             <SkeletonTheme baseColor="#202020" highlightColor="#444">
-                    <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl lg:text-4xl font-bold">Blogs</h1>
+                    <h1 className="text-center items-center justify-center p-10 mt-10 top-36 tracking-[20px] text-gray-500 text-3xl lg:text-4xl font-bold">Blogs By Pratyay Mitra Mustafi</h1>
                 {loading && (<div className="p-10 mt-10">
                         <Skeleton height={500} count={1} />
                     </div>)}
@@ -77,5 +77,4 @@ const blo = block(function Blog() {
             </SkeletonTheme>
         </>
     )
-});
-export default blo;
+};

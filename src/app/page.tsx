@@ -1,7 +1,6 @@
 "use client"
 import React from "react"
 
-import Navbar from './navbar/navbar'
 import Projects from './normal_pages/projects'
 import Contact from './normal_pages/contact'
 import Education from './normal_pages/education'
@@ -10,7 +9,7 @@ import Resume from './normal_pages/resume'
 import Skills from './normal_pages/skills'
 import Aboutme from './about/aboutme'
 import Certificates from './normal_pages/certificates'
-import Blogs from './blogs/index'
+import BlogsPreview from './blogs/preview'
 import Donate from "./normal_pages/donate"
 export default function Home() {
   return (
@@ -22,7 +21,6 @@ export default function Home() {
           <meta name="author" content="Pratyay Mitra Mustafi" />
         </header>
         <div className="bg-black">
-          <Navbar />
           <section id="photo" className="snap-center justify-center">
             <Photo />
           </section>
@@ -42,7 +40,7 @@ export default function Home() {
             <Projects />
           </section>
           <section id="blogs" className="snap-center justify-center pt-20">
-            <Blogs />
+            <BlogsPreview />
           </section>
           <section id="resume" className="snap-center justify-center pt-20">
             <Resume />

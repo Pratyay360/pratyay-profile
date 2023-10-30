@@ -3,10 +3,10 @@ import { useEffect, useState } from 'react';
 import { Database } from '../../../utils/database.types';
 import Image from 'next/image';
 import supabase from '../../../utils/supabase';
-import { block } from 'million/react'
+// import { block } from 'million/react'
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
-const a = block(function Skills() {
+export default function Skills() {
     const [technology, cert] = useState<Database['public']['Tables']['technology']['Row'][]>([]);
     const[loading, setLoading] = useState(true);
     useEffect(() => {
@@ -48,5 +48,4 @@ const a = block(function Skills() {
             </SkeletonTheme>
         </>
     );
-});
-export default a;
+};

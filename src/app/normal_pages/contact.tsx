@@ -3,10 +3,10 @@ import { useEffect, useState } from 'react';
 import { Database } from '../../../utils/database.types';
 import Image from 'next/image';
 import supabase from '../../../utils/supabase';
-import { block } from 'million/react'
+// import { block } from 'million/react'
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
-const a = block(function Contact() {
+export default function Contact() {
     const [loading, setLoading] = useState(true);
     const [social_link, social] = useState<Database['public']['Tables']['social_link']['Row'][]>([]);
     useEffect(() => {
@@ -50,5 +50,4 @@ const a = block(function Contact() {
             </SkeletonTheme>
         </>
     );
-});
-export default a;
+};

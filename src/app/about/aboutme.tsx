@@ -1,11 +1,12 @@
-import { block } from "million/react";
+// import { block } from "million/react";
 import { Database } from "../../../utils/database.types";
 import supabase from "../../../utils/supabase";
 import React from "react";
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { useEffect, useState } from 'react';
-const about = block(function Aboutme() {
+// const about = block(function Aboutme() {
+    export default function Aboutme() {    
     const[loading, setLoading] = useState(true);
     const [about, cert] = useState<Database['public']['Tables']['about']['Row'][]>([]);
     useEffect(() => {
@@ -52,5 +53,5 @@ const about = block(function Aboutme() {
             </SkeletonTheme>
         </>
     )
-});
-export default about;
+};
+// export default about;

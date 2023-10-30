@@ -1,4 +1,3 @@
-import { block } from "million/react"
 import Image from "next/image"
 import { useEffect, useState, useRef } from 'react';
 import { Database } from '../../../utils/database.types';
@@ -7,7 +6,7 @@ import Backgroundcircles from "../animation/index"
 import Typewriter from 'typewriter-effect';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
-const phot = block(function Photo() {
+export default function Photo() {
     const [loading, setLoading] = useState(true);
     const [wor, setText] = useState<Database['public']['Tables']['description']['Row'][]>([]);
     useEffect(() => {
@@ -55,6 +54,6 @@ const phot = block(function Photo() {
         </SkeletonTheme>
         </>
     )
-});
-
-export default phot;
+};
+// 
+// export default phot;
