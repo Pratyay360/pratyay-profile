@@ -7,7 +7,8 @@ const nextConfig = {
           {hostname: 'raw.githubusercontent.com'},
           {hostname: 'github.com'},
           {hostname: 'wekwttnnowtwqzntesch.supabase.co'}, 
-          {hostname: 'cdn.hashnode.com'}
+          {hostname: 'cdn.hashnode.com'},
+          {hostname: 'private-user-images.githubusercontent.com'},
         ],
   },
 }

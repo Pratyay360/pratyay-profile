@@ -1,7 +1,7 @@
 "use client"
 import React from "react"
 
-import Projects from './normal_pages/projects'
+import Projects from './projects/preview'
 import Contact from './normal_pages/contact'
 import Education from './normal_pages/education'
 import Photo from './about/index'

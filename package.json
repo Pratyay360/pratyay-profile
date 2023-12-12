@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@jridgewell/sourcemap-codec": "^1.4.15",
+    "@rollup/plugin-terser": "^0.4.4",
     "@supabase/supabase-js": "^2.38.4",
     "@vercel/analytics": "^1.1.1",
     "next": "14.0.0",

@@ -75,8 +75,6 @@ export default function Blog() {
                     </div>
                             {!loading && <center><a href="/blogs"><button className="button-30" role="button">See More</button></a></center>}
                 </section>
-
-
             </SkeletonTheme>
         </>
     )
