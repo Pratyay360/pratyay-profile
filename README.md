@@ -1,4 +1,5 @@
-# This is the personal social media link sharing website of mine.
+# This is the personal portfolio website of mine  
+
 ## I have created this website with next js
 
 [<img alt="Visit Website" src="https://agrilyze.ca/wp-content/uploads/2020/05/visit-website-button.png" width="200">](https://pratyay.vercel.app/)
