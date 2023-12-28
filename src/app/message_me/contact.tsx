@@ -24,7 +24,7 @@ export default function Contact() {
     return (
         <>
             <SkeletonTheme baseColor="#202020" highlightColor="#444">
-                <h1 className="text-center shrink items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl lg:text-4xl font-bold mr-2 ml-2 pb-10">CONTACT ME</h1>
+                <h1 className="text-center shrink items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl lg:text-4xl font-bold mr-2 ml-2 pb-5">CONTACT ME</h1>
                 {/*  */}
                 {loading &&
                     (
@@ -46,13 +46,12 @@ export default function Contact() {
                             </a>
                         </div>
                     ))}
-                    <br/>
-                    <div className="button ">
-                        <button className="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full">
+                </div>
+                <div className="flex fles-wrap text-center items-center justify-center p-10">
+                        <button className="border border-indigo-600 hover:bg-indigo-600 bg-black text-3xl text-white font-bold py-2 px-4 rounded-full">
                             <a href="/message_me">Message Me</a>
                         </button>
                     </div>
-                </div>
             </SkeletonTheme>
         </>
     );
