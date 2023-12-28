@@ -46,6 +46,12 @@ export default function Contact() {
                             </a>
                         </div>
                     ))}
+                    <br/>
+                    <div className="button ">
+                        <button className="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full">
+                            <a href="/message_me">Message Me</a>
+                        </button>
+                    </div>
                 </div>
             </SkeletonTheme>
         </>

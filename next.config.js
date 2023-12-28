@@ -9,6 +9,7 @@ const nextConfig = {
           {hostname: 'wekwttnnowtwqzntesch.supabase.co'}, 
           {hostname: 'cdn.hashnode.com'},
           {hostname: 'private-user-images.githubusercontent.com'},
+          {hostname: 'script.google.com'},
         ],
   },
 }
