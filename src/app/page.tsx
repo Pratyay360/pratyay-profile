@@ -2,7 +2,7 @@
 import React from "react"
 
 import Projects from './projects/preview'
-import Contact from './message_me/contact'
+import Contact from './normal_pages/contact'
 import Education from './normal_pages/education'
 import Photo from './about/index'
 import Resume from './normal_pages/resume'
