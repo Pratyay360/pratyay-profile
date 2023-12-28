@@ -5,4 +5,4 @@
 
 ##
 
-<img src="https://github.com/Pratyay360/pratyay-profile/assets/61408566/fec0be10-e3e4-4991-bbc7-f3dbabd56574" width="200" />
+<img src="https://github.com/Pratyay360/pratyay-profile/assets/61408566/6bedd827-a864-488a-95c4-5340d93b8655" />
