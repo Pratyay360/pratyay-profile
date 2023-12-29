@@ -17,6 +17,7 @@ export default function Home() {
         <header>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta charSet="utf-8" />
+          <meta name="msvalidate.01" content="C348576BB92261CC55029F04F308DB94" />
           <meta name="description" content="Pratyay Mitra Mustafi's Portfolio" />
           <meta name="author" content="Pratyay Mitra Mustafi" />
         </header>
