@@ -42,7 +42,7 @@ export default function Blog() {
         const result = await response.json();
         var a = result.data.publication.posts.edges;
         setPosts(a);
-        console.log(JSON.stringify(a));
+        // console.log(JSON.stringify(a));
         setLoading(false);
     };
     return (
