@@ -10,7 +10,7 @@ export default function Blog() {
     // Added schema of Api querry to get the data from hashnode.
     const [post, setPosts] = useState<{ node: { coverImage: { url: string | null }; title: string | null; brief: string | null; url: string | null } }[]>([]);
     const [loading, setLoading] = useState(true);
-    // just change the username to yours and you are good to go
+    // just change the blog link to yours and you are good to go
     const query = `query Publication {
         publication(host:"pratyaywrites.hashnode.dev") {
           posts (first:10){
