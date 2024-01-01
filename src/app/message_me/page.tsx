@@ -70,7 +70,7 @@ export default function Home() {
                                 <label className="font-bold text-lg text-white">Email</label>
                                 <input type="email" name="Email" id="email" placeholder="example@email.com" className="border rounded-lg py-3 px-3 mt-2 bg-black border-indigo-600 placeholder-white-500 text-white" />
                                 <label className="font-bold text-lg text-white " >Message</label>
-                                <input type="text" name="Message" placeholder="Enter Your Message" className="border rounded-lg py-3 px-3 mt-2 bg-black border-indigo-600 placeholder-white-500 text-white" />
+                                <textarea rows={5} name="Message" placeholder="Enter Your Message" className="border rounded-lg py-3 px-3 mt-2 bg-black border-indigo-600 placeholder-white-500 text-white" />
                                 <button className="border border-indigo-600 hover:bg-indigo-600 bg-black text-white rounded-lg py-3 font-semibold px-2" type="submit">Send Message</button>
                             </form>) :
                             ( 
