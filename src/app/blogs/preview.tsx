@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
@@ -7,7 +8,7 @@ import { Database } from '../../../utils/database.types';
 import './stylesheet.css'
 export default function Blog() {
     // Added schema of Api querry to get the data from hashnode.
-    const [post, setPosts] = useState<Database['public']['Tables']['blog']['data']['publication']['posts']['edges']['node'][]>([]);
+    const [post, setPosts] = useState<{ node: { coverImage: { url: string | null }; title: string | null; brief: string | null; url: string | null } }[]>([]);
     const [loading, setLoading] = useState(true);
     // just change the username to yours and you are good to go
     const query = `query Publication {

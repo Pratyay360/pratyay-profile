@@ -9,27 +9,6 @@ export type Json =
 export interface Database {
 	public: {
 		Tables: {
-			blog: {
-				data: {
-					publication: {
-						isTeam: boolean
-						title: string
-						posts: {
-							edges: {
-									node: {
-										coverImage: {
-											url : string | null
-										}
-										title: string | null
-										brief: string | null
-										url: string | null
-									}
-							}[]
-						}
-					}
-				}
-				Relationships: []
-			},
 			certificate: {
 				Row: {
 					title: string | null
