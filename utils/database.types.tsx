@@ -10,11 +10,23 @@ export interface Database {
 	public: {
 		Tables: {
 			blog: {
-				Row: {
-					title: string | null
-					coverImage: string | null
-					brief: string | null
-					slug: string | null
+				data: {
+					publication: {
+						isTeam: boolean
+						title: string
+						posts: {
+							edges: {
+									node: {
+										coverImage: {
+											url : string | null
+										}
+										title: string | null
+										brief: string | null
+										url: string | null
+									}
+							}[]
+						}
+					}
 				}
 				Relationships: []
 			},

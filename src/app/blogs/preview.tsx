@@ -7,26 +7,31 @@ import { Database } from '../../../utils/database.types';
 import './stylesheet.css'
 export default function Blog() {
     // Added schema of Api querry to get the data from hashnode.
-    const [posts, setPosts] = useState<Database['public']['Tables']['blog']['Row'][]>([]);
+    const [post, setPosts] = useState<Database['public']['Tables']['blog']['data']['publication']['posts']['edges']['node'][]>([]);
     const [loading, setLoading] = useState(true);
     // just change the username to yours and you are good to go
-    const query = `query {
-        user(username: "pratyay") {
-              publication {
-                posts {
-                  title
-                  coverImage
-                  brief
-                  slug
-                }
+    const query = `query Publication {
+        publication(host:"pratyaywrites.hashnode.dev") {
+          posts (first:10){
+            edges{
+              node {
+                coverImage {
+                  url
+                },
+                title,
+                brief,
+                url
               }
             }
-          }`;
+          }
+        }
+      }
+      `;
     useEffect(() => {
         fetchPosts();
     }, []);
     const fetchPosts = async () => {
-        const response = await fetch("https://api.hashnode.com", {
+        const response = await fetch("https://gql.hashnode.com", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -34,7 +39,9 @@ export default function Blog() {
             body: JSON.stringify({ query }),
         });
         const result = await response.json();
-        setPosts(result.data.user.publication.posts);
+        var a = result.data.publication.posts.edges;
+        setPosts(a);
+        console.log(JSON.stringify(a));
         setLoading(false);
     };
     return (
@@ -47,23 +54,23 @@ export default function Blog() {
                 <section className="text-gray-300 body-font">
                     <div className="container px-5 py-24 mx-auto">
                         <div className="flex flex-wrap -m-4 justify-center whitespace-break-spaces">
-                            {posts.slice(0, 3).map((c, index) => (
+                            {post.slice(0, 3).map((c, index) => (
                                 <div className="p-4 md:w-1/3" key={index}>
-                                    <a href={`https://pratyaywrites.hashnode.dev/${c.slug || ''}`} className="block" target="_blank">
+                                    <a href={c.node.url || ''} className="block" target="_blank">
                                         <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden transform transition-all hover:scale-110 ">
                                             <Image
                                                 className="lg:h-48 md:h-36 w-full object-cover object-center"
-                                                src={c.coverImage || ''}
-                                                alt={c.slug || ''}
+                                                src={c.node.coverImage.url || ''}
+                                                alt={c.node.title || ''}
                                                 width={350}
                                                 height={250}
                                             />
                                             {loading && <Skeleton width={350} height={250} />}
                                             <div className="p-6">
                                                 <h1 className="title-font text-lg font-medium text-gray-300 mb-3">
-                                                    {c.title || ''}{loading && <Skeleton count={1} />}
+                                                    {c.node.title || ''}{loading && <Skeleton count={1} />}
                                                 </h1>
-                                                <p className="leading-tight text-gray-400 mb-3 sm:leading-4">{c.brief || ''}
+                                                <p className="leading-tight text-gray-400 mb-3 sm:leading-4">{c.node.brief || ''}
                                                     {loading && <Skeleton count={3} />}
                                                 </p>
                                             </div>
@@ -77,5 +84,6 @@ export default function Blog() {
                 </section>
             </SkeletonTheme>
         </>
+
     )
 };
