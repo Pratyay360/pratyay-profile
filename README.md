@@ -6,4 +6,4 @@
 
 ##
 
-<img src="https://github.com/Pratyay360/pratyay-profile/assets/61408566/6bedd827-a864-488a-95c4-5340d93b8655" />
+<img src="https://github.com/Pratyay360/pratyay-profile/assets/61408566/f1bcddec-fc8e-4cb3-9449-3ec732199ee6" />
