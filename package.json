@@ -11,7 +11,9 @@
   "dependencies": {
     "@jridgewell/sourcemap-codec": "^1.4.15",
     "@rollup/plugin-terser": "^0.4.4",
-    "@supabase/supabase-js": "^2.38.4",
+    "@supabase/supabase-js": "^2.39.3",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.2.1",
     "@vercel/analytics": "^1.1.1",
     "next": "14.0.0",
     "next-pwa": "^5.6.0",
@@ -19,6 +21,7 @@
     "react-dom": "^18",
     "react-loading-skeleton": "^3.3.1",
     "supabase": "^1.106.1",
+    "tsparticles": "^3.2.1",
     "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {

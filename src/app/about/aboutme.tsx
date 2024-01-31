@@ -13,7 +13,8 @@ import { useEffect, useState } from 'react';
         async function fetchData() {
             const { data, error } = await supabase.from('about').select('*');
             if (error) {
-                console.error(error);
+                sessionStorage.setItem('error', JSON.stringify(error));
+                location.href = '/errorpage';
             } else {
                 cert(data);
                 setLoading(false);

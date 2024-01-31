@@ -13,7 +13,8 @@ export default function Contact() {
         async function fetchData() {
             const { data, error } = await supabase.from('social_link').select('*');
             if (error) {
-                console.error(error);
+                sessionStorage.setItem('error', JSON.stringify(error));
+                location.href = '/errorpage';        
             } else {
                 social(data);
                 setLoading(false);

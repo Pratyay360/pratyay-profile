@@ -13,7 +13,8 @@ export default function Photo() {
         async function fetchData() {
             const { data, error } = await supabase.from('description').select('word');
             if (error) {
-                console.error(error);
+                sessionStorage.setItem('error', JSON.stringify(error));
+                location.href = '/errorpage';
             } else {
                 setText(data);
                 setLoading(false);

@@ -13,7 +13,8 @@ export default function Skills() {
         async function fetchData() {
             const { data, error } = await supabase.from('technology').select('*');
             if (error) {
-                console.error(error);
+                sessionStorage.setItem('error', JSON.stringify(error));
+                location.href = '/errorpage';    
             } else {
                 cert(data);
                 setLoading(false);

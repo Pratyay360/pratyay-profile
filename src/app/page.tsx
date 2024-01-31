@@ -8,7 +8,7 @@ import Photo from './about/index'
 import Resume from './normal_pages/resume'
 import Skills from './normal_pages/skills'
 import Aboutme from './about/aboutme'
-import Certificates from './normal_pages/certificates'
+import Certificates from './certificates/page'
 import BlogsPreview from './blogs/preview'
 import Donate from "./normal_pages/donate"
 export default function Home() {

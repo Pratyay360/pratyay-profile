@@ -6,6 +6,7 @@ import supabase from '../../../utils/supabase';
 // import { block } from 'million/react'
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
+import '../stylesheet.css';
 export default function Projects() {
     const [project, cert] = useState<Database['public']['Tables']['project']['Row'][]>([]);
     const [loading, setLoading] = useState(true);
@@ -13,7 +14,8 @@ export default function Projects() {
         async function fetchData() {
             const { data, error } = await supabase.from('project').select('*');
             if (error) {
-                console.error(error);
+                sessionStorage.setItem('error', JSON.stringify('*'));
+                location.href = '/errorpage';        
             } else {
                 cert(data);
                 setLoading(false);

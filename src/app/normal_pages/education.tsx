@@ -12,7 +12,8 @@ export default function Education() {
         async function fetchData() {
             const { data, error } = await supabase.from('education').select('*').order('date_from', { ascending: false });
             if (error) {
-                console.error(error);
+                sessionStorage.setItem('error', JSON.stringify(error));
+                location.href = '/errorpage';    
             } else {
                 cert(data);
                 setLoading(false);

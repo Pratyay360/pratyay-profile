@@ -1,13 +1,12 @@
 "use client"
 import React from "react";
-import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
+// import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
-import Image from 'next/image';
-import { hydrateRoot } from 'react-dom/client';
+// import Image from 'next/image';
+// import { hydrateRoot } from 'react-dom/client';
 import { useEffect, useState } from 'react';
 import { FormEvent } from 'react'
-import { buildCustomRoute } from "next/dist/build";
-
+// import { buildCustomRoute } from "next/dist/build";
 export default function Home() {
     const [isClient, setIsClient] = useState(false);
     async function Submit(e: FormEvent<HTMLFormElement>) {
@@ -36,7 +35,8 @@ export default function Home() {
                     }
                 })
                 .catch((error) => {
-                    console.error("Error:", error);
+                    sessionStorage.setItem('error', JSON.stringify(error));
+                    location.href = '/errorpage';
                 });
         }
     }

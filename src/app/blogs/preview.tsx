@@ -5,7 +5,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Database } from '../../../utils/database.types';
-import './stylesheet.css'
+import '../stylesheet.css'
 export default function Blog() {
     // Added schema of Api querry to get the data from hashnode.
     const [post, setPosts] = useState<{ node: { coverImage: { url: string | null }; title: string | null; brief: string | null; url: string | null } }[]>([]);
