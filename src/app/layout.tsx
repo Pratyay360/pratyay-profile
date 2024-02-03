@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 import React from 'react'
 import Navbar from './navbar/navbar'
 import { Analytics } from '@vercel/analytics/react';
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'], display: 'swap', adjustFontFallback: false })
 
 export const metadata: Metadata = {
   title: 'Pratyay Mitra Mustafi',

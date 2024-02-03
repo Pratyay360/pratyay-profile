@@ -19,7 +19,8 @@
     "react-dom": "^18",
     "react-loading-skeleton": "^3.3.1",
     "supabase": "^1.106.1",
-    "typewriter-effect": "^2.21.0"
+    "typewriter-effect": "^2.21.0",
+    "workbox-background-sync": "^6.6.0"
   },
   "devDependencies": {
     "@types/node": "^20",

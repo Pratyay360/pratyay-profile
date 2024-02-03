@@ -10,6 +10,8 @@ const nextConfig = {
           {hostname: 'cdn.hashnode.com'},
           {hostname: 'private-user-images.githubusercontent.com'},
           {hostname: 'script.google.com'},
+          {hostname: 'fonts.gstatic.com'},
+          {hostname: 'fonts.googleapis.com'},
         ],
   },
 }
