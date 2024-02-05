@@ -78,7 +78,7 @@ export default function Home() {
                             ( 
                                 <p>Form not working properly Please report to pratyaymustafi@outlook.com</p>
                             )}
-                            <Toaster richColors closeButton position="top-right"  />
+                            <Toaster richColors closeButton position="top-right" expand={true} />
                         </div>
                         {/* Form End */}
                     </div>
