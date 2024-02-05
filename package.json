@@ -18,6 +18,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-loading-skeleton": "^3.3.1",
+    "sonner": "^1.4.0",
     "supabase": "^1.106.1",
     "typewriter-effect": "^2.21.0",
     "workbox-background-sync": "^6.6.0"

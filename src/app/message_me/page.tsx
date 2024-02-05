@@ -1,5 +1,6 @@
 "use client"
 import React from "react";
+import { Toaster, toast } from 'sonner'
 // import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 // import Image from 'next/image';
@@ -13,7 +14,7 @@ export default function Home() {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
         if (!formData.get("Name") || !formData.get("Email") || !formData.get("Message")) {
-            alert("Please fill all the fields");
+            toast.error("Please fill all the fields");
             return;
         }
         else {
@@ -27,11 +28,12 @@ export default function Home() {
                     if (response.status === 200) {
                         const formElement = document.getElementById("form") as HTMLFormElement;
                         if (formElement) {
+                            toast.success("Message Sent");
                             formElement.reset();
                         }
                     }
                     else {
-                        alert("Something went wrong");
+                        toast.error("Something went wrong");
                     }
                 })
                 .catch((error) => {
@@ -76,6 +78,7 @@ export default function Home() {
                             ( 
                                 <p>Form not working properly Please report to pratyaymustafi@outlook.com</p>
                             )}
+                            <Toaster richColors closeButton position="top-right"  />
                         </div>
                         {/* Form End */}
                     </div>
