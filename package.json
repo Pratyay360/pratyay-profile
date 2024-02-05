@@ -21,7 +21,7 @@
     "sonner": "^1.4.0",
     "supabase": "^1.106.1",
     "typewriter-effect": "^2.21.0",
-    "workbox-background-sync": "^6.6.0"
+    "workbox-background-sync": "^7.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
