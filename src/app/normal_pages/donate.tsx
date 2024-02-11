@@ -20,7 +20,7 @@ export default function Donate() {
             }
         }
         fetchData();
-    }, [donate]);
+    }, []);
     const [darkValue, setDarkValue] = useState(false);
     useEffect(()=>{
         try{

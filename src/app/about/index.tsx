@@ -20,7 +20,7 @@ export default function Photo() {
             }
         }
         fetchData();
-    }, [wor]);
+    }, []);
     const [darkValue, setDarkValue] = useState(false);
     useEffect(()=>{
         try{

@@ -20,7 +20,7 @@ export default function Contact() {
             }
         }
         fetchData();
-    }, [social_link]);
+    }, []);
     const [darkValue, setDarkValue] = useState(false);
     useEffect(() => {
         try {

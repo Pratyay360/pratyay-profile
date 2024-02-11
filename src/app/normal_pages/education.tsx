@@ -19,7 +19,7 @@ export default function Education() {
             }
         }
         fetchData();
-    }, [education]);
+    }, []);
     const [darkValue, setDarkValue] = useState(false);
     useEffect(()=>{
         try{

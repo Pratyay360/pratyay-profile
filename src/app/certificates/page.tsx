@@ -21,7 +21,7 @@ export default function Certificates() {
             }
         }
         fetchData();
-    }, [certificate]);
+    }, []);
     const [darkValue, setDarkValue] = useState(false);
     useEffect(()=>{
         try{

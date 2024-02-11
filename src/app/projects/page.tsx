@@ -21,7 +21,7 @@ export default function Projects() {
             }
         }
         fetchData();
-    }, [project]);
+    }, []);
     const [darkValue, setDarkValue] = useState(false);
     useEffect(()=>{
         try{

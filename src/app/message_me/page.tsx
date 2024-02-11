@@ -43,7 +43,7 @@ export default function Home() {
     }
     useEffect(() => {
         setIsClient(true);
-    }, [isClient]);
+    }, []);
     const [darkValue, setDarkValue] = useState(false);
     useEffect(()=>{
         try{

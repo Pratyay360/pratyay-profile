@@ -22,7 +22,7 @@ import { Session } from "inspector";
         }
         fetchData();
 
-    }, [about]);
+    }, []);
     const [darkValue, setDarkValue] = useState(false);
     useEffect(()=>{
         try{

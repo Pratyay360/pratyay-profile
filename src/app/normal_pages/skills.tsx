@@ -20,7 +20,7 @@ export default function Skills() {
             }
         }
         fetchData();
-    }, [technology]);
+    }, []);
     const [darkValue, setDarkValue] = useState(false);
     useEffect(()=>{
         try{
