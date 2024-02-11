@@ -1,6 +1,6 @@
 {
   "name": "pratyay-profile",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -15,8 +15,8 @@
     "@vercel/analytics": "^1.1.1",
     "next": "14.1.0",
     "next-pwa": "^5.6.0",
-    "react": "^18",
-    "react-dom": "^18",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
     "react-loading-skeleton": "^3.3.1",
     "sonner": "^1.4.0",
     "supabase": "^1.106.1",

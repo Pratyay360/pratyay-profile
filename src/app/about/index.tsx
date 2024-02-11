@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { Database } from '../../../utils/database.types';
 import supabase from '../../../utils/supabase';
 import Backgroundcircles from "../animation/index"
@@ -13,18 +13,29 @@ export default function Photo() {
         async function fetchData() {
             const { data, error } = await supabase.from('description').select('word');
             if (error) {
-                sessionStorage.setItem('error', JSON.stringify(error));
-                location.href = '/errorpage';
+                console.log(error)
             } else {
                 setText(data);
                 setLoading(false);
             }
         }
         fetchData();
-    }, []);
+    }, [wor]);
+    const [darkValue, setDarkValue] = useState(false);
+    useEffect(()=>{
+        try{
+            if(sessionStorage.getItem("DARK")){
+                        setDarkValue(true);
+                }else{
+                    setDarkValue(false)
+                }
+        }catch(err){
+            console.log(err);
+        }
+    },[darkValue])
     return (
         <>
-        <SkeletonTheme baseColor="#202020" highlightColor="#444">
+         <SkeletonTheme baseColor={darkValue? "#202020":"#A5A5A5"} highlightColor={darkValue?"444444":"#8e8e8e"}>
         <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
             <Backgroundcircles />
             <Image className="object-cover rounded-full transform-gpu transition-all hover:scale-125"
@@ -33,10 +44,10 @@ export default function Photo() {
                 width={300}
                 height={300} />
             <div className="container my-auto ">
-                <h1 className="text-4xl md:text-3xl lg:text-5xl text-gray-300 overflow-visible"> HI, I am Pratyay Mitra Mustafi 👋👋👋👋</h1>
+                <h1 className={darkValue?"text-4xl md:text-3xl lg:text-5xl text-gray-300 overflow-visible":"text-4xl md:text-3xl lg:text-5xl text-gray-900 overflow-visible"}> HI, I am Pratyay Mitra Mustafi 👋👋👋👋</h1>
               <div className="py-10 flex flex-wrap md:flex-nowrap items-center justify-center text-center overflow-visible">
-                    <h1 className="font-semibold text-gray-400 animate-type group-hover:animate-type-reverse whitespace-break-spaces text-brand-accent">
-                        <span className="text-gray-400 text-2xl md:text-xl lg:text-4xl">
+                    <h1 className="font-semibold animate-type group-hover:animate-type-reverse whitespace-break-spaces text-brand-accent">
+                        <span className={darkValue?"text-2xl md:text-xl lg:text-4xl text-gray-400":" text-2xl md:text-xl lg:text-4xl text-gray-800"}>
                         {loading && <Skeleton  count={1} height={50}/>}
                         <Typewriter
                             options={{  
