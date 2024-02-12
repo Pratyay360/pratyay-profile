@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-// import { block } from 'million/react';
 export default function Resume() {
     const handleDownload = () => {
         window.open("https://drive.google.com/file/d/1Kb_cOhevNgiif-lV3LPJFPjStCKEd0dt/view?usp=sharing", "_blank");
@@ -15,7 +14,7 @@ export default function Resume() {
         }catch(err){
             console.log(err);
         }
-    },[darkValue])
+    },[])
     return (
         <>
             <h1 className={darkValue?"text-center items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl lg:text-4xl font-bold":"text-center items-center justify-center top-36 tracking-[20px] text-gray-900 text-3xl lg:text-4xl font-bold"}>RESUME</h1>

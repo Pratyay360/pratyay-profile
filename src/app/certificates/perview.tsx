@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Database } from '../../../utils/database.types';
 import Image from 'next/image';
 import supabase from '../../../utils/supabase';
+import Link from 'next/link';
 // import { block } from 'million/react'
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
@@ -34,7 +35,7 @@ export default function Certificates() {
         }catch(err){
             console.log(err);
         }
-    },[darkValue])
+    },[])
     return (
         <>
             <SkeletonTheme baseColor={darkValue? "#202020":"#A5A5A5"} highlightColor={darkValue?"444444":"#8e8e8e"}>
@@ -50,7 +51,7 @@ export default function Certificates() {
                         <div className="flex flex-wrap -m-4 justify-center whitespace-break-spaces">
                             {a <= 3 ? certificate.map((c, index) => (
                             <div className="p-4 md:w-1/3" key={index}>
-                                <a href={c.link || ''} className="block" target="_blank">
+                                <Link href={c.link || ''} className="block" target="_blank">
                                     <div className={darkValue?"h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden transform transition-all hover:scale-110 ":"h-full border-2 border-black border-opacity-60 rounded-lg overflow-hidden transform transition-all hover:scale-110 bg-gray-300"}>
                                         <Image
                                             className="lg:h-48 md:h-36 w-full object-cover object-center"
@@ -69,10 +70,10 @@ export default function Certificates() {
                                             </p>
                                         </div>
                                     </div>
-                                </a>
+                                </Link>
                             </div>)) : certificate.slice(0, 3).map((c, index) => (
                                 <div className="p-4 md:w-1/3" key={index}>
-                                    <a href={c.link || ''} className="block" target="_blank">
+                                    <Link href={c.link || ''} className="block" target="_blank">
                                         <div className={darkValue?"h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden transform transition-all hover:scale-110 ":"h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden transform transition-all hover:scale-110 bg-gray-300"}>
                                             <Image
                                                 className="lg:h-48 md:h-36 w-full object-cover object-center"
@@ -91,8 +92,8 @@ export default function Certificates() {
                                                 </p>
                                             </div>
                                         </div>
-                                    </a>
-                                    {!loading && <center><a href="/certificates"><button className="button-30" role="button">See More</button></a></center>}
+                                    </Link>
+                                    {!loading && <center><Link href="/certificates"><button className="button-30" role="button">See More</button></Link></center>}
                                 </div>
                                 ))}
                         </div>

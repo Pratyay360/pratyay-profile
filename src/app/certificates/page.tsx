@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { Database } from '../../../utils/database.types';
 import Image from 'next/image';
 import supabase from '../../../utils/supabase';
-// import { block } from 'million/react'
+import Link from 'next/link';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
 export default function Certificates() {
@@ -33,7 +33,7 @@ export default function Certificates() {
         }catch(err){
             console.log(err);
         }
-    },[darkValue])
+    },[])
     return (
         <div className={darkValue?"":"bg-yellow-100"}>
             <SkeletonTheme baseColor="#202020" highlightColor="#444">
@@ -49,7 +49,7 @@ export default function Certificates() {
                         <div className="flex flex-wrap -m-4 justify-center whitespace-break-spaces">
                             {certificate.map((c, index) => (
                                 <div className="p-4 md:w-1/3" key={index}>
-                                    <a href={c.link || ''} className="block" target="_blank">
+                                    <Link href={c.link || ''} className="block" target="_blank">
                                         <div className={darkValue?"h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden transform transition-all hover:scale-110 ":"h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden transform transition-all hover:scale-110 bg-gray-300"}>
                                             <Image
                                                 className="lg:h-48 md:h-36 w-full object-cover object-center"
@@ -68,7 +68,7 @@ export default function Certificates() {
                                                 </p>
                                             </div>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                             ))}
                         </div>

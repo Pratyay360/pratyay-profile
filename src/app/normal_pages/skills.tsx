@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Database } from '../../../utils/database.types';
 import Image from 'next/image';
 import supabase from '../../../utils/supabase';
-// import { block } from 'million/react'
+import Link from 'next/link';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
 export default function Skills() {
@@ -32,7 +32,7 @@ export default function Skills() {
         }catch(err){
             console.log(err);
         }
-    },[darkValue])
+    },[])
     return (
         <>
         <SkeletonTheme baseColor={darkValue? "#202020":"#A5A5A5"} highlightColor={darkValue?"444444":"#8e8e8e"}>
@@ -45,7 +45,7 @@ export default function Skills() {
             <div className="flex flex-wrap text-center px-2 sm:px-10 items-center justify-center ">              
                 {technology.map((item, index) => (
                     <div key={index} className={darkValue?"cont mr-4 mb-10 mt-10 transform-gpu transition-all hover:scale-125":"cont mr-4 mb-10 mt-10 transform-gpu transition-all hover:scale-125 drop-shadow-2xl"}>
-                        <a href={item.href || ''} target="_blank">
+                        <Link href={item.href || ''} target="_blank">
                             <Image
                                 src={item.src || ''}
                                 alt={item.name || ''}
@@ -53,7 +53,7 @@ export default function Skills() {
                                 height={40}
                             />
                             {loading && <Skeleton width={40} height={40} />}
-                        </a>
+                        </Link>
                     </div>
                 ))}
             </div>

@@ -1,13 +1,9 @@
 "use client"
 import React from "react";
 import { Toaster, toast } from 'sonner'
-// import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
-// import Image from 'next/image';
-// import { hydrateRoot } from 'react-dom/client';
 import { useEffect, useState } from 'react';
 import { FormEvent } from 'react'
-// import { buildCustomRoute } from "next/dist/build";
 export default function Home() {
     const [isClient, setIsClient] = useState(false);
     async function Submit(e: FormEvent<HTMLFormElement>) {
@@ -55,7 +51,7 @@ export default function Home() {
         }catch(err){
             console.log(err);
         }
-    },[darkValue])
+    },[])
     return (
 
              <div className={darkValue?"":"bg-yellow-100 h-full p-20 mt-[-10]"} >

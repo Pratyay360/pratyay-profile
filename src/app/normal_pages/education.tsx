@@ -2,7 +2,6 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { Database } from '../../../utils/database.types';
 import supabase from '../../../utils/supabase';
-// import { block } from 'million/react'
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
 export default function Education() {
@@ -31,7 +30,7 @@ export default function Education() {
         }catch(err){
             console.log(err);
         }
-    },[darkValue])
+    },[])
     return (
         <>
             <SkeletonTheme baseColor={darkValue? "#202020":"#A5A5A5"} highlightColor={darkValue?"444444":"#8e8e8e"}>

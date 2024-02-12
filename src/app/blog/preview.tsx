@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Database } from '../../../utils/database.types';
 import '../stylesheet.css'
+import Link from "next/link";
 export default function Blog() {
     // Added schema of Api querry to get the data from hashnode.
     const [post, setPosts] = useState<{ node: { coverImage: { url: string | null }; title: string | null; brief: string | null; url: string | null } }[]>([]);
@@ -55,7 +56,7 @@ export default function Blog() {
         }catch(err){
             console.log(err);
         }
-    },[darkValue])
+    },[])
     return (
         <>
              <SkeletonTheme baseColor={darkValue? "#202020":"#A5A5A5"} highlightColor={darkValue?"444444":"#8e8e8e"}>
@@ -68,7 +69,7 @@ export default function Blog() {
                         <div className="flex flex-wrap -m-4 justify-center whitespace-break-spaces">
                             {post.slice(0, 3).map((c, index) => (
                                 <div className="p-4 md:w-1/3" key={index}>
-                                    <a href={c.node.url || ''} className="block" target="_blank">
+                                    <Link href={c.node.url || ''} className="block" target="_blank">
                                         <div className={darkValue?"h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden transform transition-all hover:scale-110 ":"h-full border-2 border-gray-900 border-opacity-60 rounded-lg overflow-hidden transform transition-all hover:scale-110 bg-gray-300"}>
                                             <Image
                                                 className="lg:h-48 md:h-36 w-full object-cover object-center"
@@ -87,12 +88,12 @@ export default function Blog() {
                                                 </p>
                                             </div>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                             ))}
                         </div>
                     </div>
-                            {!loading && <center><a href="/blog"><button className="button-30" role="button">See More</button></a></center>}
+                            {!loading && <center><Link href="/blog"><button className="button-30" role="button">See More</button></Link></center>}
                 </section>
             </SkeletonTheme>
         </>

@@ -34,7 +34,7 @@ import { Session } from "inspector";
         }catch(err){
             console.log(err);
         }
-    },[darkValue])
+    },[])
     return (
         <>
         <script>

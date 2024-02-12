@@ -25,7 +25,7 @@ export default function Home() {
         console.log(err)
       }
 
-  },[darkThemeBool])
+  },[])
   return (
     <>
       <header>
@@ -36,7 +36,6 @@ export default function Home() {
         <meta name="author" content="Pratyay Mitra Mustafi" />
       </header>
       <div className={darkThemeBool ? "bg-stone-950" : "bg-yellow-100"}>
-
         <section id="photo" className="snap-center justify-center">
           <Photo />
         </section>

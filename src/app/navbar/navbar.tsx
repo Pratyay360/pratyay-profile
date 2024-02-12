@@ -14,7 +14,7 @@ export default function Navbar() {
         }catch(err){
             console.log(err);
         }
-    },[darkValue])
+    },[])
     return (
         <div className="sticky top-0 z-30">
             <header className={darkValue?"border-gray-200 backdrop-opacity-10 backdrop-blur-xl bg-slate-900 opacity-80":"backdrop-opacity-10 backdrop-blur-xl opacity-80 bg-yellow-200 backdrop-brightness-75"}>

@@ -3,6 +3,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { Database } from '../../../utils/database.types';
 import Image from 'next/image';
+import Link from 'next/link';
 import supabase from '../../../utils/supabase';
 // import { block } from 'million/react'
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
@@ -33,7 +34,7 @@ export default function Projects() {
         }catch(err){
             console.log(err);
         }
-    },[darkValue])
+    },[])
     return (
         <div className={darkValue?"":"bg-yellow-100"} >
             <SkeletonTheme baseColor={darkValue? "#202020":"#A5A5A5"} highlightColor={darkValue?"444444":"#8e8e8e"}>
@@ -46,7 +47,7 @@ export default function Projects() {
                         <div className="flex flex-wrap -m-4 justify-center">
                             {project.map((card, index) => (
                                 <div className="p-4 md:w-1/3" key={index}>
-                                    <a href={card.link || ''} className="block" target="_blank">
+                                    <Link href={card.link || ''} className="block" target="_blank">
                                         <div className={darkValue?"h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden transform transition-all hover:scale-110 ":"h-full border-2 border-black border-opacity-60 rounded-lg overflow-hidden transform transition-all hover:scale-110 bg-gray-300"}>
                                             <Image
                                                 className="lg:h-48 md:h-36 w-full object-cover object-center"
@@ -69,7 +70,7 @@ export default function Projects() {
                                                     {loading && <Skeleton count={3} />}</p>
                                             </div>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                             ))}
                         </div>

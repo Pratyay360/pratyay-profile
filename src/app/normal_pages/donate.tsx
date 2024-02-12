@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Database } from '../../../utils/database.types';
 import Image from 'next/image';
 import supabase from '../../../utils/supabase';
-// import { block } from 'million/react'
+import Link from 'next/link';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
 export default function Donate() {
@@ -32,7 +32,7 @@ export default function Donate() {
         }catch(err){
             console.log(err);
         }
-    },[darkValue])
+    },[])
     return (
         <>
             <SkeletonTheme baseColor={darkValue? "#202020":"#A5A5A5"} highlightColor={darkValue?"444444":"#8e8e8e"}>
@@ -45,7 +45,7 @@ export default function Donate() {
                         <div className="flex flex-wrap -m-4 justify-center">
                             {donate.map((card, index) => (
                                 <div className="p-4 md:w-1/3" key={index}>
-                                    <a href={card.link || ''} target="_blank">
+                                    <Link href={card.link || ''} target="_blank">
                                         <div className="h-full overflow-hidden transform transition-all hover:scale-110">
                                             <Image
                                                 className="lg:h-48 md:h-36 w-full object-center"
@@ -56,7 +56,7 @@ export default function Donate() {
                                             />
                                             {loading && <Skeleton width={200} height={50} />}
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                             ))}
                         </div>
