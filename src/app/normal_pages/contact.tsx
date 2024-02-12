@@ -24,7 +24,7 @@ export default function Contact() {
     const [darkValue, setDarkValue] = useState(false);
     useEffect(() => {
         try {
-            if (sessionStorage.getItem("DARK")) {
+            if (localStorage.getItem("DARK")) {
                 setDarkValue(true);
             } else {
                 setDarkValue(false)
@@ -60,7 +60,7 @@ export default function Contact() {
                     ))}
                 </div>
                 <div className="flex fles-wrap text-center items-center justify-center p-10">
-                <Link href="/message_me"> <button className="border border-indigo-600 hover:bg-indigo-600 bg-white text-3xl text-black font-bold py-2 px-4 rounded-full">
+                    <Link href="/message_me"> <button className="border border-indigo-600 hover:bg-indigo-600 bg-white text-3xl text-black font-bold py-2 px-4 rounded-full">
                         Message Me
                     </button></Link>
                 </div>

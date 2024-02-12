@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect} from "react"
+import React, { useState, useEffect } from "react"
 import Projects from './projects/preview'
 import Contact from './normal_pages/contact'
 import Education from './normal_pages/education'
@@ -12,20 +12,20 @@ import BlogsPreview from './blog/preview'
 import Donate from "./normal_pages/donate"
 export default function Home() {
   // let darkThemeBool = false
-  const [darkThemeBool, setDarkThemeBool] = useState(false); 
-  useEffect(()=>{
-      try{
-        if(window.matchMedia("(prefers-color-scheme: dark)")?.matches){
-          setDarkThemeBool(true)
-          sessionStorage.setItem("DARK", '999');
-        }else{
-          setDarkThemeBool(false)
-        }
-      }catch(err){
-        console.log(err)
+  const [darkThemeBool, setDarkThemeBool] = useState(false);
+  useEffect(() => {
+    try {
+      if (window.matchMedia("(prefers-color-scheme: dark)")?.matches) {
+        setDarkThemeBool(true)
+        localStorage.setItem("DARK", '999');
+      } else {
+        setDarkThemeBool(false)
       }
+    } catch (err) {
+      console.log(err)
+    }
 
-  },[])
+  }, [])
   return (
     <>
       <header>
