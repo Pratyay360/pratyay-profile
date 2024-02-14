@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'This is portfollio website of Pratyay Mustafi',
   manifest: '/manifest.webmanifest',
 }
-
+export const runtime = "edge";
 export default function RootLayout({
   children,
 }: {
