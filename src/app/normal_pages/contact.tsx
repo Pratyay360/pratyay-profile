@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Database } from '../../../utils/database.types';
 import Image from 'next/image';
 import supabase from '../../../utils/supabase';
-// import { block } from 'million/react'
+import Link from 'next/link';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
 export default function Contact() {
@@ -24,7 +24,7 @@ export default function Contact() {
     const [darkValue, setDarkValue] = useState(false);
     useEffect(() => {
         try {
-            if (sessionStorage.getItem("DARK")) {
+            if (localStorage.getItem("DARK")) {
                 setDarkValue(true);
             } else {
                 setDarkValue(false)
@@ -32,7 +32,7 @@ export default function Contact() {
         } catch (err) {
             console.log(err);
         }
-    }, [darkValue])
+    }, [])
     return (
         <>
             <SkeletonTheme baseColor={darkValue ? "#202020" : "#A5A5A5"} highlightColor={darkValue ? "444444" : "#8e8e8e"}>
@@ -47,7 +47,7 @@ export default function Contact() {
                 <div className="flex flex-wrap text-center items-center justify-center drop-shadow-2xl">
                     {social_link.map((item, index) => (
                         <div key={index} className="cont mr-5 mb-10 mt-10 transform-gpu mx-2 transition-all hover:scale-125 " style={{ marginRight: "10px" }}>
-                            <a href={item.link || ''} target="_blank">
+                            <Link href={item.link || ''} target="_blank">
                                 <Image
                                     src={item.image || ''}
                                     alt={item.name || ''}
@@ -55,14 +55,14 @@ export default function Contact() {
                                     height={40}
                                 />
                                 {loading && <Skeleton width={40} height={40} />}
-                            </a>
+                            </Link>
                         </div>
                     ))}
                 </div>
                 <div className="flex fles-wrap text-center items-center justify-center p-10">
-                    <button className="border border-indigo-600 hover:bg-indigo-600 bg-white text-3xl text-black font-bold py-2 px-4 rounded-full">
-                        <a href="/message_me">Message Me</a>
-                    </button>
+                    <Link href="/message_me"> <button className="border border-indigo-600 hover:bg-indigo-600 bg-white text-3xl text-black font-bold py-2 px-4 rounded-full">
+                        Message Me
+                    </button></Link>
                 </div>
             </SkeletonTheme>
         </>

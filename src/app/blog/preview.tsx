@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Database } from '../../../utils/database.types';
 import '../stylesheet.css'
+import Link from "next/link";
 export default function Blog() {
     // Added schema of Api querry to get the data from hashnode.
     const [post, setPosts] = useState<{ node: { coverImage: { url: string | null }; title: string | null; brief: string | null; url: string | null } }[]>([]);
@@ -45,21 +46,21 @@ export default function Blog() {
         setLoading(false);
     }
     const [darkValue, setDarkValue] = useState(false);
-    useEffect(()=>{
-        try{
-            if(sessionStorage.getItem("DARK")){
-                        setDarkValue(true);
-                }else{
-                    setDarkValue(false)
-                }
-        }catch(err){
+    useEffect(() => {
+        try {
+            if (localStorage.getItem("DARK")) {
+                setDarkValue(true);
+            } else {
+                setDarkValue(false)
+            }
+        } catch (err) {
             console.log(err);
         }
-    },[darkValue])
+    }, [])
     return (
         <>
-             <SkeletonTheme baseColor={darkValue? "#202020":"#A5A5A5"} highlightColor={darkValue?"444444":"#8e8e8e"}>
-                <h1 className={darkValue?"text-center items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl lg:text-4xl font-bold":"text-center items-center justify-center top-36 tracking-[20px] text-gray-900 text-3xl lg:text-4xl font-bold"}>Blogs</h1>
+            <SkeletonTheme baseColor={darkValue ? "#202020" : "#A5A5A5"} highlightColor={darkValue ? "444444" : "#8e8e8e"}>
+                <h1 className={darkValue ? "text-center items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl lg:text-4xl font-bold" : "text-center items-center justify-center top-36 tracking-[20px] text-gray-900 text-3xl lg:text-4xl font-bold"}>Blogs</h1>
                 {loading && (<div className="p-10 mt-10">
                     <Skeleton height={500} count={1} />
                 </div>)}
@@ -68,8 +69,8 @@ export default function Blog() {
                         <div className="flex flex-wrap -m-4 justify-center whitespace-break-spaces">
                             {post.slice(0, 3).map((c, index) => (
                                 <div className="p-4 md:w-1/3" key={index}>
-                                    <a href={c.node.url || ''} className="block" target="_blank">
-                                        <div className={darkValue?"h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden transform transition-all hover:scale-110 ":"h-full border-2 border-gray-900 border-opacity-60 rounded-lg overflow-hidden transform transition-all hover:scale-110 bg-gray-300"}>
+                                    <Link href={c.node.url || ''} className="block" target="_blank">
+                                        <div className={darkValue ? "h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden transform transition-all hover:scale-110 " : "h-full border-2 border-gray-900 border-opacity-60 rounded-lg overflow-hidden transform transition-all hover:scale-110 bg-gray-300"}>
                                             <Image
                                                 className="lg:h-48 md:h-36 w-full object-cover object-center"
                                                 src={c.node.coverImage.url || ''}
@@ -79,20 +80,20 @@ export default function Blog() {
                                             />
                                             {loading && <Skeleton width={350} height={250} />}
                                             <div className="p-6">
-                                                <h1 className={darkValue?"title-font text-lg font-medium text-gray-300 mb-3":"title-font text-lg font-medium text-gray-900 mb-3"}>
+                                                <h1 className={darkValue ? "title-font text-lg font-medium text-gray-300 mb-3" : "title-font text-lg font-medium text-gray-900 mb-3"}>
                                                     {c.node.title || ''}{loading && <Skeleton count={1} />}
                                                 </h1>
-                                                <p className={darkValue?"leading-tight text-gray-400 mb-3 sm:leading-4":"leading-tight text-gray-900 mb-3 sm:leading-4"}>{c.node.brief || ''}
+                                                <p className={darkValue ? "leading-tight text-gray-400 mb-3 sm:leading-4" : "leading-tight text-gray-900 mb-3 sm:leading-4"}>{c.node.brief || ''}
                                                     {loading && <Skeleton count={3} />}
                                                 </p>
                                             </div>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                             ))}
                         </div>
                     </div>
-                            {!loading && <center><a href="/blog"><button className="button-30" role="button">See More</button></a></center>}
+                    {!loading && <center><Link href="/blog"><button className="button-30" role="button">See More</button></Link></center>}
                 </section>
             </SkeletonTheme>
         </>
