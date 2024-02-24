@@ -40,7 +40,7 @@ export default function Certificates() {
         <>
             <SkeletonTheme baseColor={darkValue ? "#202020" : "#A5A5A5"} highlightColor={darkValue ? "444444" : "#8e8e8e"}>
                 <div className="flex flex-column text-center items-center justify-center">
-                    <h1 className={darkValue ? "top-36 tracking-[20px] text-gray-500 lg:text-4xl font-bold ml-2 pb-10 whitespace-break-spaces" : "top-36 tracking-[20px] text-gray-900 lg:text-4xl font-bold ml-2 pb-10 whitespace-break-spaces"}>CERTIFICATES</h1>
+                    <h1 className={darkValue ? "text-center items-center justify-center top-36 tracking-[20px] text-gray-500 text-2xl/3 lg:text-4xl font-bold p-3 m-2 overflow-auto" : "text-center items-center justify-center top-36 tracking-[20px] text-gray-900 text-2xl/3 lg:text-4xl font-bold p-3 m-2 overflow-auto"}>CERTIFICATES</h1>
                 </div>
                 {loading && (
                     <div className="p-10 mt-10">

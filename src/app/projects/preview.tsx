@@ -37,7 +37,7 @@ export default function Projects() {
     return (
         <div className={darkValue ? "" : "bg-yellow-100"}>
             <SkeletonTheme baseColor={darkValue ? "#202020" : "#A5A5A5"} highlightColor={darkValue ? "444444" : "#8e8e8e"}>
-                <h1 className={darkValue ? "top-36 p-10 text-center items-center justify-center  tracking-[20px] text-gray-500 lg:text-5xl font-bold text-3xl ml-3" : " top-36 text-center items-center justify-center tracking-[20px] text-gray-900 lg:text-5xl font-bold text-3xl ml-3 p-10"}>PROJECTS</h1>
+                <h1 className={darkValue ? "text-center items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl lg:text-4xl font-bold" : "text-center items-center justify-center top-36 tracking-[20px] text-gray-900 text-3xl lg:text-4xl font-bold"}>PROJECTS</h1>
                 {loading && ((<div className="p-10 mt-10">
                     <Skeleton count={1} height={500} />
                 </div>))}
