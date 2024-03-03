@@ -45,6 +45,7 @@ export default function Home() {
     };
     return (
         <>
+            <div className="bg-stone-950">
             <SkeletonTheme baseColor="#202020" highlightColor="#444444">
                 <h1 className="top-36 p-10 text-center items-center justify-center  tracking-[20px] text-gray-500 lg:text-5xl font-bold text-3xl ml-3">Blogs By Pratyay Mitra Mustafi</h1>
                 {loading && (<div className="p-10 mt-10">
@@ -81,6 +82,7 @@ export default function Home() {
                     </div>
                 </section>
             </SkeletonTheme>
+            </div>
         </>
     )
 };

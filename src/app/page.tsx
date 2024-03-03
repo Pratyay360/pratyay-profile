@@ -11,31 +11,17 @@ import Certificates from './certificates/perview'
 import BlogsPreview from './blog/preview'
 import Donate from "./normal_pages/donate"
 export default function Home() {
-  // let darkThemeBool = false
-  const [darkThemeBool, setDarkThemeBool] = useState(false);
-  useEffect(() => {
-    try {
-      if (window.matchMedia("(prefers-color-scheme: dark)")?.matches) {
-        setDarkThemeBool(true)
-        localStorage.setItem("DARK", '999');
-      } else {
-        setDarkThemeBool(false)
-      }
-    } catch (err) {
-      console.log(err)
-    }
-
-  }, [])
+  // let 
   return (
     <>
       <header>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
         <meta name="msvalidate.01" content="C348576BB92261CC55029F04F308DB94" />
-        <meta name="description" content="Pratyay Mitra Mustafi's Portfolio" />
+        <meta name="description" content="Pratyay Mitra Mustafi's portfolio website" />
         <meta name="author" content="Pratyay Mitra Mustafi" />
       </header>
-      <div className={darkThemeBool ? "bg-stone-950" : "bg-yellow-100"}>
+      <div>
         <section id="photo" className="snap-center justify-center">
           <Photo />
         </section>
