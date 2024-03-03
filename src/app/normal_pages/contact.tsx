@@ -21,22 +21,11 @@ export default function Contact() {
         }
         fetchData();
     }, []);
-    const [darkValue, setDarkValue] = useState(false);
-    useEffect(() => {
-        try {
-            if (localStorage.getItem("DARK")) {
-                setDarkValue(true);
-            } else {
-                setDarkValue(false)
-            }
-        } catch (err) {
-            console.log(err);
-        }
-    }, [])
+    
     return (
         <>
-            <SkeletonTheme baseColor={darkValue ? "#202020" : "#A5A5A5"} highlightColor={darkValue ? "444444" : "#8e8e8e"}>
-                <h1 className={darkValue ? "text-center items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl lg:text-4xl font-bold" : "text-center items-center justify-center top-36 tracking-[20px] text-gray-900 text-3xl lg:text-4xl font-bold"}>CONTACT ME</h1>
+            <SkeletonTheme baseColor="#202020" highlightColor="#444444">
+                <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl lg:text-4xl font-bold">CONTACT ME</h1>
                 {/*  */}
                 {loading &&
                     (

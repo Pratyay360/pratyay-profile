@@ -10,6 +10,7 @@
     "pages:build": "npx @cloudflare/next-on-pages"
   },
   "dependencies": {
+    "@bufferhead/nightowl": "^0.0.14",
     "@jridgewell/sourcemap-codec": "^1.4.15",
     "@rollup/plugin-terser": "^0.4.4",
     "@supabase/supabase-js": "^2.39.3",

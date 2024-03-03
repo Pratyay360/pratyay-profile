@@ -21,22 +21,11 @@ export default function Skills() {
         }
         fetchData();
     }, []);
-    const [darkValue, setDarkValue] = useState(false);
-    useEffect(() => {
-        try {
-            if (localStorage.getItem("DARK")) {
-                setDarkValue(true);
-            } else {
-                setDarkValue(false)
-            }
-        } catch (err) {
-            console.log(err);
-        }
-    }, [])
+    
     return (
         <>
-            <SkeletonTheme baseColor={darkValue ? "#202020" : "#A5A5A5"} highlightColor={darkValue ? "444444" : "#8e8e8e"}>
-                <h1 className={darkValue ? "text-center items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl lg:text-4xl font-bold" : "text-center items-center justify-center top-36 tracking-[20px] text-gray-900 text-3xl lg:text-4xl font-bold"}>
+            <SkeletonTheme baseColor="#202020" highlightColor="#444444">
+                <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl lg:text-4xl font-bold">
                     SKILLS
                 </h1>
                 {loading && (<div className="p-10 mt-10">
@@ -44,7 +33,7 @@ export default function Skills() {
                 </div>)}
                 <div className="flex flex-wrap text-center px-2 sm:px-10 items-center justify-center ">
                     {technology.map((item, index) => (
-                        <div key={index} className={darkValue ? "cont mr-4 mb-10 mt-10 transform-gpu transition-all hover:scale-125" : "cont mr-4 mb-10 mt-10 transform-gpu transition-all hover:scale-125 drop-shadow-2xl"}>
+                        <div key={index} className="cont mr-4 mb-10 mt-10 transform-gpu transition-all hover:scale-125">
                             <Link href={item.href || ''} target="_blank">
                                 <Image
                                     src={item.src || ''}

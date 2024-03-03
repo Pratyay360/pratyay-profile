@@ -20,22 +20,10 @@ export default function Photo() {
             }
         }
         fetchData();
-    }, []);
-    const [darkValue, setDarkValue] = useState(false);
-    useEffect(() => {
-        try {
-            if (localStorage.getItem("DARK")) {
-                setDarkValue(true);
-            } else {
-                setDarkValue(false)
-            }
-        } catch (err) {
-            console.log(err);
-        }
-    }, [])
+    }, []);      
     return (
         <>
-            <SkeletonTheme baseColor={darkValue ? "#202020" : "#A5A5A5"} highlightColor={darkValue ? "444444" : "#8e8e8e"}>
+            <SkeletonTheme baseColor="#202020" highlightColor="444444">
                 <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
                     <Backgroundcircles />
                     <Image className="object-cover rounded-full transform-gpu transition-all hover:scale-125"
@@ -44,10 +32,10 @@ export default function Photo() {
                         width={300}
                         height={300} />
                     <div className="container my-auto ">
-                        <h1 className={darkValue ? "text-4xl md:text-3xl lg:text-5xl text-gray-300 overflow-visible" : "text-4xl md:text-3xl lg:text-5xl text-gray-900 overflow-visible"}> HI, I am Pratyay Mitra Mustafi 👋👋👋👋</h1>
+                        <h1 className="text-4xl md:text-3xl lg:text-5xl text-gray-300 overflow-visible"> HI, I am Pratyay Mitra Mustafi 👋👋👋👋</h1>
                         <div className="py-10 flex flex-wrap md:flex-nowrap items-center justify-center text-center overflow-visible">
                             <h1 className="font-semibold animate-type group-hover:animate-type-reverse whitespace-break-spaces text-brand-accent">
-                                <span className={darkValue ? "text-2xl md:text-xl lg:text-4xl text-gray-400" : " text-2xl md:text-xl lg:text-4xl text-gray-800"}>
+                                <span className="text-2xl md:text-xl lg:text-4xl text-gray-400">
                                     {loading && <Skeleton count={1} height={50} />}
                                     <Typewriter
                                         options={{
@@ -67,5 +55,3 @@ export default function Photo() {
         </>
     )
 };
-//
-// export default phot;
