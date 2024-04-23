@@ -25,7 +25,7 @@ export default function Skills() {
     return (
         <>
             <SkeletonTheme baseColor="#202020" highlightColor="#444444">
-                <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl lg:text-4xl font-bold">
+                <h1 className="text-center items-center justify-center top-36 tracking-[20px] dark:text-gray-500 text-3xl lg:text-4xl font-bold">
                     SKILLS
                 </h1>
                 {loading && (<div className="p-10 mt-10">

@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Resume() {
 return (
         <>
-            <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl lg:text-4xl font-bold">RESUME</h1>
+            <h1 className="text-center items-center justify-center top-36 tracking-[20px] dark:text-gray-500 text-3xl lg:text-4xl font-bold">RESUME</h1>
             <div className="text-center items-center justify-center top-36 backdrop-blur-30 py-20 ">
                 <Link href={'https://drive.google.com/file/d/1Kb_cOhevNgiif-lV3LPJFPjStCKEd0dt/view?usp=sharing' || ''}><button className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-large text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500
                  group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white/30 dark:text-white focus:ring-4 focus:outline-none

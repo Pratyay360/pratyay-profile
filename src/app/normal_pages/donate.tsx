@@ -25,11 +25,11 @@ export default function Donate() {
     return (
         <>
             <SkeletonTheme baseColor="#202020" highlightColor="#444444">
-                <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-gray-500 text-3xl lg:text-4xl font-bold">Want To Support My Work</h1>
+                <h1 className="text-center items-center justify-center top-36 tracking-[20px] dark:text-gray-500 text-3xl lg:text-4xl font-bold">Want To Support My Work</h1>
                 {loading && ((<div className="p-10 mt-10">
                     <Skeleton count={1} height={500} />
                 </div>))}
-                <section className="text-gray-300 body-font">
+                <section className="dark:text-gray-300 body-font">
                     <div className="container px-5 py-24 mx-auto">
                         <div className="flex flex-wrap -m-4 justify-center">
                             {donate.map((card, index) => (
