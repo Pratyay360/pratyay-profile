@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import React from 'react'
 import Navbar from './navbar/navbar'
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 const inter = Inter({ subsets: ['latin'], display: 'swap', adjustFontFallback: false })
 import { ThemeProvider } from "@/components/theme-provider"
 export const metadata: Metadata = {
@@ -31,6 +32,7 @@ export default function RootLayout({
         {children}
         </ThemeProvider>
         <Analytics />
+        <SpeedInsights />
       </div>
       </body>
     </html>
