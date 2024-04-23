@@ -5,7 +5,7 @@ import React from 'react'
 import Navbar from './navbar/navbar'
 import { Analytics } from '@vercel/analytics/react';
 const inter = Inter({ subsets: ['latin'], display: 'swap', adjustFontFallback: false })
-
+import { ThemeProvider } from "@/components/theme-provider"
 export const metadata: Metadata = {
   title: 'Pratyay Mitra Mustafi',
   description: 'This is portfollio website of Pratyay Mustafi',
@@ -18,11 +18,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-      <div className="bg-stone-950">
+      <div >
+      <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
         <Navbar />
         {children}
+        </ThemeProvider>
         <Analytics />
       </div>
       </body>

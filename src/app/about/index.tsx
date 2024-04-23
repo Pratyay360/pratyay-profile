@@ -32,10 +32,10 @@ export default function Photo() {
                         width={300}
                         height={300} />
                     <div className="container my-auto ">
-                        <h1 className="text-4xl md:text-3xl lg:text-5xl text-gray-300 overflow-visible"> HI, I am Pratyay Mitra Mustafi 👋👋👋👋</h1>
+                        <h1 className="text-4xl md:text-3xl lg:text-5xl dark:text-gray-300 overflow-visible"> HI, I am Pratyay Mitra Mustafi 👋👋👋👋</h1>
                         <div className="py-10 flex flex-wrap md:flex-nowrap items-center justify-center text-center overflow-visible">
                             <h1 className="font-semibold animate-type group-hover:animate-type-reverse whitespace-break-spaces text-brand-accent">
-                                <span className="text-2xl md:text-xl lg:text-4xl text-gray-400">
+                                <span className="text-2xl md:text-xl lg:text-4xl dark:text-gray-400">
                                     {loading && <Skeleton count={1} height={50} />}
                                     <Typewriter
                                         options={{
