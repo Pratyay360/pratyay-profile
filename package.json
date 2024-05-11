@@ -23,7 +23,7 @@
     "clsx": "^2.1.1",
     "lucide-react": "^0.378.0",
     "@vercel/speed-insights": "^1.0.10",
-    "next": "14.2.2",
+    "next": "14.2.3",
     "next-pwa": "^5.6.0",
     "next-themes": "^0.3.0",
     "react": "^18.2.0",
