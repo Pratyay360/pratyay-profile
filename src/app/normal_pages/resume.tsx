@@ -8,7 +8,7 @@ return (
                 <Link href={'https://docs.google.com/document/d/1nnV3faKcmPaUajB3ZTO8n-jtLzomG_77dhrANbKQ_UY/edit?usp=sharing' || ''}><button className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-large text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500
                  group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white/30 dark:text-white focus:ring-4 focus:outline-none
                  focus:ring-purple-200 dark:focus:ring-purple-800 transform-gpu transition-all hover:scale-110">
-                    <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 transform-gpu lg:text-3xl hover:scale-110">Download Resume</span>
+                    <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 transform-gpu lg:text-3xl hover:scale-110">Show Resume</span>
                 </button></Link>
             </div>
         </>
