@@ -79,7 +79,7 @@ export default async function Blog() {
           {!loading && (
             <center>
               <Link href="/blog">
-                <button className="button-30" role="button">
+                <button className="button-30" role="button_more_blogs">
                   See More
                 </button>
               </Link>

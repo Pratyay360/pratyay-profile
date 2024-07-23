@@ -42,7 +42,7 @@ export default async function Projects() {
           {!loading && (
             <center>
               <Link href="/projects">
-                <button className="button-30" role="button">
+                <button className="button-30" role="button_open_projects">
                   See More
                 </button>
               </Link>

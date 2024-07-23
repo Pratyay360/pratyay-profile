@@ -52,7 +52,7 @@ export default async function Certificates() {
                       {!loading && (
                         <center>
                           <Link href="/certificates">
-                            <button className="button-30" role="button">
+                            <button className="button-30" role="button_more_certificate">
                               See More
                             </button>
                           </Link>
