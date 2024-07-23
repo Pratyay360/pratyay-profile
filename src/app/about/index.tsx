@@ -1,27 +1,20 @@
-"use client"
 import Image from "next/image"
-import { useEffect, useState } from 'react';
-import { Database } from '../../../utils/database.types';
-import supabase from '../../../utils/supabase';
+// import { useEffect, useState } from 'react';
+// import { Database } from '../../../utils/database.types';
+// import supabase from '../../../utils/supabase';
+import { createClient } from '@/../utils/supabase/server';
 import Backgroundcircles from "../animation/index"
-import Typewriter from 'typewriter-effect';
+// import Typewriter from 'typewriter-effect';\
+import WordRotate from "@/components/magicui/word-rotate";
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
-export default function Photo() {
-    const [loading, setLoading] = useState(true);
-    const [wor, setText] = useState<Database['public']['Tables']['description']['Row'][]>([]);
-    useEffect(() => {
-        async function fetchData() {
-            const { data, error } = await supabase.from('description').select('word');
-            if (error) {
-                console.log(error)
-            } else {
-                setText(data);
-                setLoading(false);
-            }
-        }
-        fetchData();
-    }, []);      
+export default async function Photo() {
+    const supabase = createClient()
+    let loading = false 
+    const { data: description } = await supabase.from('description').select('word');
+    if(!description){
+        loading = true
+    }
     return (
         <>
             <SkeletonTheme baseColor="#202020" highlightColor="444444">
@@ -38,7 +31,7 @@ export default function Photo() {
                             <h1 className="font-semibold animate-type group-hover:animate-type-reverse whitespace-break-spaces text-brand-accent">
                                 <span className="text-2xl md:text-xl lg:text-4xl dark:text-gray-400">
                                     {loading && <Skeleton count={1} height={50} />}
-                                    <Typewriter
+                                    {/* <Typewriter
                                         options={{
                                             strings: wor.map((c) => (c.word || '')),
                                             autoStart: true,
@@ -46,7 +39,12 @@ export default function Photo() {
                                             deleteSpeed: 50,
                                             delay: 100,
                                         }}
+                                    /> */}
+                                    <WordRotate 
+                                      words={description?.map((c)=>(c.word)) || []}
                                     />
+
+                                    
                                 </span>
                             </h1>
                         </div>

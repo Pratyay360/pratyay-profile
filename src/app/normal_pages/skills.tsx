@@ -2,6 +2,7 @@ import React from 'react';
 import { createClient } from '@/../utils/supabase/server';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Dock, DockIcon } from "@/components/magicui/dock";
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
 export default async function Skills() {
@@ -21,8 +22,10 @@ export default async function Skills() {
                     <Skeleton count={1} height={40} />
                 </div>)}
                 <div className="flex flex-wrap text-center px-2 sm:px-10 items-center justify-center ">
+                <Dock magnification={60} distance={100}>
                     {technology?.map((item, index) => (
-                        <div key={index} className="cont mr-4 mb-10 mt-10 transform-gpu transition-all hover:scale-125">
+                        // <div key={index} className="cont mr-4 mb-10 mt-10 transform-gpu transition-all hover:scale-125">
+                        <DockIcon key={index} className="bg-black/10 dark:bg-white/10 p-3">
                             <Link href={item.href || ''} target="_blank">
                                 <Image
                                     src={item.src || ''}
@@ -32,8 +35,10 @@ export default async function Skills() {
                                 />
                                 {loading && <Skeleton width={40} height={40} />}
                             </Link>
-                        </div>
+                            </DockIcon>
+                        // </div>
                     ))}
+                    </Dock>
                 </div>
             </SkeletonTheme>
         </>
