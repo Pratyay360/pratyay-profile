@@ -1,10 +1,9 @@
 import React from "react";
-import { Dock, DockIcon } from "@/components/magicui/dock";
-import Image from "next/image";
 import { createClient } from "@/../utils/supabase/server";
 import Link from "next/link";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import { ImageCard } from "./cards";
 export default async function Contact() {
   const supabase = createClient();
   let loading = false;
@@ -24,29 +23,19 @@ export default async function Contact() {
             <Skeleton count={1} height={40} />
           </div>
         )}
-        <div className="flex flex-wrap text-center items-center justify-center">
-          <Dock magnification={60} distance={100}>
+        <div className="flex flex-wrap px-2 sm:px-10 text-center items-center justify-center overflow-auto ">
             {social_link?.map((item, index) => (
-              <DockIcon
-                key={index}
-                className="bg-black/10 dark:bg-white/10 p-3"
-              >
-                <Link href={item.link || ""} target="_blank">
-                  <Image
-                    src={item.image || ""}
-                    alt={item.name || ""}
-                    width={40}
-                    height={40}
-                  />
-                  {loading && <Skeleton width={40} height={40} />}
-                </Link>
-              </DockIcon>
+            <div key={index} className="cont mr-4 mb-10 mt-10 transform-gpu transition-all hover:scale-125" style={{ marginRight: "10px" }}>               
+             <ImageCard
+                  image={item.image}
+                  link={item.link}
+                  name={item.name}
+                />
+              </div>
             ))}
-          </Dock>
         </div>
         <div className="flex fles-wrap text-center items-center justify-center p-10">
           <Link href="/message_me">
-            {" "}
             <button className="border border-indigo-600 hover:bg-indigo-600 dark:bg-white text-3xl dark:text-black font-bold py-2 px-4 rounded-full">
               Message Me
             </button>

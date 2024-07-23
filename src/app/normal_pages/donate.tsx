@@ -4,6 +4,7 @@ import { createClient } from '@/../utils/supabase/server';
 import Link from 'next/link';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
+import { DonationCard } from './cards';
 export default async function Donate() {
     const supabase = createClient()
     let loading = false
@@ -21,20 +22,13 @@ export default async function Donate() {
                 <section className="dark:text-gray-300 body-font">
                     <div className="container px-5 py-24 mx-auto">
                         <div className="flex flex-wrap -m-4 justify-center">
-                            {donation?.map((card, index) => (
+                            {donation?.map((donation, index) => (
                                 <div className="p-4 md:w-1/3" key={index}>
-                                    <Link href={card.link || ''} target="_blank">
-                                        <div className="h-full overflow-hidden transform transition-all hover:scale-110">
-                                            <Image
-                                                className="lg:h-48 md:h-36 w-full object-center"
-                                                src={card.image || ''}
-                                                alt={card.name || ''}
-                                                width={200}
-                                                height={45}
-                                            />
-                                            {loading && <Skeleton width={200} height={50} />}
-                                        </div>
-                                    </Link>
+                                    <DonationCard 
+                                    name={donation.name}
+                                    image={donation.image}
+                                    link={donation.link}
+                                    />
                                 </div>
                             ))}
                         </div>

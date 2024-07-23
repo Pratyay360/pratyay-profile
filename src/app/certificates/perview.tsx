@@ -1,82 +1,69 @@
-import React from 'react';
-import { createClient } from '@/../utils/supabase/server';
-import Image from 'next/image';
-import Link from 'next/link';
-import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css'
-import '../stylesheet.css';
+import React from "react";
+import { createClient } from "@/../utils/supabase/server";
+import Image from "next/image";
+import Link from "next/link";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+import "../stylesheet.css";
+import CertCard from "./component";
 export default async function Certificates() {
-    const supabase = createClient()
-    let loading = false
-    const { data: certificate } = await supabase.from('certificate').select('*');
-    const a = certificate?.length ?? 0;
-    if(!certificate){
-        loading=true
-    }
-    return (
-        <>
-            <SkeletonTheme baseColor="#202020" highlightColor="#444444">
-                <div className="flex flex-column text-center items-center justify-center">
-                    <h1 className="text-center items-center justify-center top-36 tracking-[20px] dark:text-gray-500 text-2xl/3 lg:text-4xl font-bold p-3 m-2 overflow-auto">CERTIFICATES</h1>
-                </div>
-                {loading && (
-                    <div className="p-10 mt-10">
-                        <Skeleton height={500} count={1} />
-                    </div>)}
-                <section className="dark:text-gray-300 body-font">
-                    <div className="container px-5 py-24 mx-auto">
-                        <div className="flex flex-wrap -m-4 justify-center whitespace-break-spaces">
-                            {a <= 3 ? certificate?.map((c, index) => (
-                                <div className="p-4 md:w-1/3" key={index}>
-                                    <Link href={c.link || ''} className="block" target="_blank">
-                                        <div className="h-full border-2 dark:border-gray-200 border-gray-900 border-opacity-60 rounded-lg overflow-hidden transform transition-all hover:scale-110 ">
-                                            <Image
-                                                className="lg:h-48 md:h-36 w-full object-cover object-center"
-                                                src={c.imageSrc || ''}
-                                                alt={c.title || ''}
-                                                width={350}
-                                                height={250}
-                                            />
-                                            {loading && <Skeleton width={350} height={250} />}
-                                            <div className="p-6">
-                                                <h1 className="title-font text-lg font-medium dark:text-gray-300 mb-3">
-                                                    {c.title}{loading && <Skeleton count={1} />}
-                                                </h1>
-                                                <p className="leading-relaxed mb-3">{c.description}
-                                                    {loading && <Skeleton count={3} />}
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </Link>
-                                </div>)) : certificate?.slice(0, 3).map((c, index) => (
-                                    <div className="p-4 md:w-1/3" key={index}>
-                                        <Link href={c.link || ''} className="block" target="_blank">
-                                            <div className="h-full border-2 dark:border-gray-200 border-gray-900 border-opacity-60 rounded-lg overflow-hidden transform transition-all hover:scale-110 ">
-                                                <Image
-                                                    className="lg:h-48 md:h-36 w-full object-cover object-center"
-                                                    src={c.imageSrc || ''}
-                                                    alt={c.title || ''}
-                                                    width={350}
-                                                    height={250}
-                                                />
-                                                {loading && <Skeleton width={350} height={250} />}
-                                                <div className="p-6">
-                                                    <h1 className="title-font text-lg font-medium dark:text-gray-300 mb-3">
-                                                        {c.title}{loading && <Skeleton count={1} />}
-                                                    </h1>
-                                                    <p className="leading-relaxed mb-3">{c.description}
-                                                        {loading && <Skeleton count={3} />}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </Link>
-                                        {!loading && <center><Link href="/certificates"><button className="button-30" role="button">See More</button></Link></center>}
-                                    </div>
-                                ))}
-                        </div>
+  const supabase = createClient();
+  let loading = false;
+  const { data: certificate } = await supabase.from("certificate").select("*");
+  const a = certificate?.length ?? 0;
+  if (!certificate) {
+    loading = true;
+  }
+  return (
+    <>
+      <SkeletonTheme baseColor="#202020" highlightColor="#444444">
+        <div className="flex flex-column text-center items-center justify-center">
+          <h1 className="text-center items-center justify-center top-36 tracking-[20px] dark:text-gray-500 text-2xl/3 lg:text-4xl font-bold p-3 m-2 overflow-auto">
+            CERTIFICATES
+          </h1>
+        </div>
+        {loading && (
+          <div className="p-10 mt-10">
+            <Skeleton height={500} count={1} />
+          </div>
+        )}
+        <section className="dark:text-gray-300 body-font">
+          <div className="container px-5 py-24 mx-auto">
+            <div className="flex flex-wrap -m-4 justify-center whitespace-break-spaces">
+              {a <= 3
+                ? certificate?.map((cer, index) => (
+                    <div className="p-4 md:w-1/3" key={index}>
+                      <CertCard
+                        link={cer.link}
+                        imageSrc={cer.imageSrc}
+                        description={cer.description}
+                        title={cer.title}
+                      />
                     </div>
-                </section>
-            </SkeletonTheme>
-        </>
-    )
-};
+                  ))
+                : certificate?.slice(0, 3).map((cer, index) => (
+                    <div className="p-4 md:w-1/3" key={index}>
+                      <CertCard
+                        link={cer.link}
+                        imageSrc={cer.imageSrc}
+                        description={cer.description}
+                        title={cer.title}
+                      />
+                      {!loading && (
+                        <center>
+                          <Link href="/certificates">
+                            <button className="button-30" role="button">
+                              See More
+                            </button>
+                          </Link>
+                        </center>
+                      )}
+                    </div>
+                  ))}
+            </div>
+          </div>
+        </section>
+      </SkeletonTheme>
+    </>
+  );
+}

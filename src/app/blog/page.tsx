@@ -3,6 +3,7 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import Image from "next/image";
 import Link from "next/link";
+import BlogCard from "./component";
 export default async function Home() {
   let loading = false;
   const query = `query Publication {
@@ -62,32 +63,12 @@ export default async function Home() {
                     index: React.Key | null | undefined
                   ) => (
                     <div className="p-4 md:w-1/3" key={index}>
-                      <Link
-                        href={c.node.url || ""}
-                        className="block"
-                        target="_blank"
-                      >
-                        <div className="h-full border-2 dark:border-gray-200 border-gray-900 border-opacity-60 rounded-lg overflow-hidden transform transition-all hover:scale-110 ">
-                          <Image
-                            className="lg:h-48 md:h-36 w-full object-cover object-center "
-                            src={c.node.coverImage.url || ""}
-                            alt={c.node.title || ""}
-                            width={350}
-                            height={250}
-                          />
-                          {loading && <Skeleton width={350} height={250} />}
-                          <div className="p-6">
-                            <h1 className="title-font text-lg font-medium dark:text-gray-300 mb-3">
-                              {c.node.title || ""}
-                              {loading && <Skeleton count={1} />}
-                            </h1>
-                            <p className="leading-tight dark:text-gray-400 mb-3 sm:leading-4">
-                              {c.node.brief || ""}
-                              {loading && <Skeleton count={3} />}
-                            </p>
-                          </div>
-                        </div>
-                      </Link>
+                     <BlogCard 
+                     link={c.node.url}
+                     imageUrl={c.node.coverImage.url}
+                     title={c.node.title}
+                     brief={c.node.brief}
+                     />
                     </div>
                   )
                 )}

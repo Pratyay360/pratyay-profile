@@ -1,10 +1,9 @@
 import React from 'react';
 import { createClient } from '@/../utils/supabase/server';
-import Image from 'next/image';
-import Link from 'next/link';
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
+import { ImageCard } from './cards';
 export default async function Skills() {
     const supabase = createClient()
     let loading = false
@@ -21,24 +20,12 @@ export default async function Skills() {
                 {loading && (<div className="p-10 mt-10">
                     <Skeleton count={1} height={40} />
                 </div>)}
-                <div className="flex flex-wrap text-center px-2 sm:px-10 items-center justify-center ">
-                <Dock magnification={60} distance={100}>
+                <div className="flex flex-wrap text-center px-2 sm:px-10 items-center justify-center overflow-auto">
                     {technology?.map((item, index) => (
-                        // <div key={index} className="cont mr-4 mb-10 mt-10 transform-gpu transition-all hover:scale-125">
-                        <DockIcon key={index} className="bg-black/10 dark:bg-white/10 p-3">
-                            <Link href={item.href || ''} target="_blank">
-                                <Image
-                                    src={item.src || ''}
-                                    alt={item.name || ''}
-                                    width={40}
-                                    height={40}
-                                />
-                                {loading && <Skeleton width={40} height={40} />}
-                            </Link>
-                            </DockIcon>
-                        // </div>
+                        <div key={index} className="cont mr-4 mb-10 mt-10 transform-gpu transition-all hover:scale-125">
+                           <ImageCard link={item.href} image={item.src} name={item.name}/>
+                        </div>
                     ))}
-                    </Dock>
                 </div>
             </SkeletonTheme>
         </>

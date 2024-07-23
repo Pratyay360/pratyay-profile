@@ -1,9 +1,8 @@
 import React from 'react';
-import Image from 'next/image';
 import { createClient } from '@/../utils/supabase/server';
-import Link from 'next/link';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
+import CertCard from './component';
 export default async function Certificates() {
     const supabase = createClient()
     let loading = false;
@@ -14,9 +13,8 @@ export default async function Certificates() {
     return (
         <>
             <SkeletonTheme baseColor="#202020" highlightColor="#444">
-                <div className="flex flex-column text-center items-center justify-center">
-                    <h1 className="top-36 p-10 text-center items-center justify-center  tracking-[20px] dark:text-gray-500 lg:text-5xl font-bold text-3xl ml-3">CERTIFICATES</h1>
-                </div>
+                    <h1 className="text-center items-center justify-center top-36 tracking-[20px] dark:text-gray-500 sm:text-xl text-3xl lg:text-4xl font-bold p-3">
+                        CERTIFICATES</h1>
                 {loading && (
                     <div className="p-10 mt-10">
                         <Skeleton height={500} count={1} />
@@ -24,28 +22,14 @@ export default async function Certificates() {
                 <section className=" body-font">
                     <div className="container px-5 py-24 mx-auto">
                         <div className="flex flex-wrap -m-4 justify-center whitespace-break-spaces">
-                            {certificate?.map((c, index) => (
+                            {certificate?.map((cer, index) => (
                                 <div className="p-4 md:w-1/3" key={index}>
-                                    <Link href={c.link || ''} className="block" target="_blank">
-                                        <div className="h-full border-2 dark:border-gray-200 border-gray-900 border-opacity-60 rounded-lg overflow-hidden transform transition-all hover:scale-110 ">
-                                            <Image
-                                                className="lg:h-48 md:h-36 w-full object-cover object-center"
-                                                src={c.imageSrc || ''}
-                                                alt={c.title || ''}
-                                                width={350}
-                                                height={250}
-                                            />
-                                            {loading && <Skeleton width={350} height={250} />}
-                                            <div className="p-6">
-                                                <h1 className="title-font text-lg font-medium dark:text-gray-300 mb-3">
-                                                    {c.title}{loading && <Skeleton count={1} />}
-                                                </h1>
-                                                <p className="leading-relaxed mb-3">{c.description}
-                                                    {loading && <Skeleton count={3} />}
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </Link>
+                                   <CertCard 
+                                    link={cer.link}
+                                    imageSrc={cer.imageSrc} 
+                                    description={cer.description}
+                                    title={cer.title}
+                                    />
                                 </div>
                             ))}
                         </div>
