@@ -1,6 +1,5 @@
 import React from 'react';
 import { createClient } from '@/../utils/supabase/server';
-import { Dock, DockIcon } from "@/components/magicui/dock";
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
 import { ImageCard } from './cards';
