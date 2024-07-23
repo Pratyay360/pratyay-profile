@@ -1,27 +1,16 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
-import { Database } from '../../../utils/database.types';
 import Image from 'next/image';
-import supabase from '../../../utils/supabase';
+import { createClient } from '@/../utils/supabase/server';
 import Link from 'next/link';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
-export default function Donate() {
-    const [donate, setDonate] = useState<Database['public']['Tables']['donation']['Row'][]>([]);
-    const [loading, setLoading] = useState(true);
-    useEffect(() => {
-        async function fetchData() {
-            const { data, error } = await supabase.from('donation').select('*');
-            if (error) {
-                console.log(error)
-            } else {
-                setDonate(data);
-                setLoading(false);
-            }
-        }
-        fetchData();
-    }, []);
-    
+export default async function Donate() {
+    const supabase = createClient()
+    let loading = false
+    const { data: donation } = await supabase.from('donation').select('*');    
+    if(!donation){
+        loading = true
+    }
     return (
         <>
             <SkeletonTheme baseColor="#202020" highlightColor="#444444">
@@ -32,7 +21,7 @@ export default function Donate() {
                 <section className="dark:text-gray-300 body-font">
                     <div className="container px-5 py-24 mx-auto">
                         <div className="flex flex-wrap -m-4 justify-center">
-                            {donate.map((card, index) => (
+                            {donation?.map((card, index) => (
                                 <div className="p-4 md:w-1/3" key={index}>
                                     <Link href={card.link || ''} target="_blank">
                                         <div className="h-full overflow-hidden transform transition-all hover:scale-110">

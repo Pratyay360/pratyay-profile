@@ -1,29 +1,16 @@
-"use client";
 import React from 'react';
-import { useEffect, useState } from 'react';
-import { Database } from '../../../utils/database.types';
 import Image from 'next/image';
 import Link from 'next/link';
-import supabase from '../../../utils/supabase';
-// import { block } from 'million/react'
+import { createClient } from '@/../utils/supabase/server';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
-export default function Projects() {
-    const [project, setProject] = useState<Database['public']['Tables']['project']['Row'][]>([]);
-    const [loading, setLoading] = useState(true);
-    useEffect(() => {
-        async function fetchData() {
-            const { data, error } = await supabase.from('project').select('*');
-            if (error) {
-                console.log(error)
-            } else {
-                setProject(data);
-                setLoading(false);
-            }
-        }
-        fetchData();
-    }, []);
-    
+export default async function Projects() {
+    let loading = false
+    const supabase = createClient();
+    const { data: project } = await supabase.from('project').select('*');
+    if(!project){
+        loading = true
+    }
     return (
         <>
             <SkeletonTheme baseColor="#202020" highlightColor="#444444">
@@ -34,7 +21,7 @@ export default function Projects() {
                 <section className="dark:text-gray-300 body-font" >
                     <div className="container px-5 py-24 mx-auto">
                         <div className="flex flex-wrap -m-4 justify-center">
-                            {project.map((card, index) => (
+                            {project?.map((card, index) => (
                                 <div className="p-4 md:w-1/3" key={index}>
                                     <Link href={card.link || ''} className="block" target="_blank">
                                         <div className="h-full border-2 dark:border-gray-200 border-gray-900 border-opacity-60 rounded-lg overflow-hidden transform transition-all hover:scale-110">

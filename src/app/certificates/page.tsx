@@ -1,28 +1,16 @@
-"use client"
 import React from 'react';
-import { useEffect, useState } from 'react';
-import { Database } from '../../../utils/database.types';
 import Image from 'next/image';
-import supabase from '../../../utils/supabase';
+import { createClient } from '@/../utils/supabase/server';
 import Link from 'next/link';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
-export default function Certificates() {
-    const [certificate, cert] = useState<Database['public']['Tables']['certificate']['Row'][]>([]);
-    const [loading, setLoading] = useState(true);
-    useEffect(() => {
-        async function fetchData() {
-            const { data, error } = await supabase.from('certificate').select('*');
-            if (error) {
-                console.log(error)
-            } else {
-                cert(data);
-                setLoading(false);
-            }
-        }
-        fetchData();
-    }, []);
-    
+export default async function Certificates() {
+    const supabase = createClient()
+    let loading = false;
+    const { data: certificate } = await supabase.from('certificate').select('*');
+    if(!certificate){
+        loading=true
+    }    
     return (
         <>
             <SkeletonTheme baseColor="#202020" highlightColor="#444">
@@ -36,7 +24,7 @@ export default function Certificates() {
                 <section className=" body-font">
                     <div className="container px-5 py-24 mx-auto">
                         <div className="flex flex-wrap -m-4 justify-center whitespace-break-spaces">
-                            {certificate.map((c, index) => (
+                            {certificate?.map((c, index) => (
                                 <div className="p-4 md:w-1/3" key={index}>
                                     <Link href={c.link || ''} className="block" target="_blank">
                                         <div className="h-full border-2 dark:border-gray-200 border-gray-900 border-opacity-60 rounded-lg overflow-hidden transform transition-all hover:scale-110 ">

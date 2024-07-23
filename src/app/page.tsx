@@ -1,5 +1,4 @@
-"use client"
-import React, { useState, useEffect } from "react"
+
 import Projects from './projects/preview'
 import Contact from './normal_pages/contact'
 import Education from './normal_pages/education'
