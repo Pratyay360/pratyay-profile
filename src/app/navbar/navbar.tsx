@@ -1,6 +1,6 @@
 import Link from "next/link";
 import "./styles1.css";
-import { ModeToggle } from "./themer";
+import { ModeToggle } from "@/components/themer/themer";
 export default function Navbar() {
   return (
     <div className="sticky top-0 navheader z-50 backdrop-blur-md flex flex-col font-bold">

@@ -3,7 +3,7 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import "../stylesheet.css";
 import Link from "next/link";
-import BlogCard from "./component";
+import BlogCard from "@/components/normaluicomponents/blogCard";
 export default async function Blog() {
   let loading = false;
   const query = `query Publication {

@@ -2,7 +2,7 @@ import React from "react";
 import { createClient } from '@/../utils/supabase/server';
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import { EducationCard } from "./cards";
+import { EducationCard } from "@/components/normaluicomponents/generalUiComponent";
 export default async function Education() {
   const supabase = createClient();
   let loading = false;

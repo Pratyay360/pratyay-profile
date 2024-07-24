@@ -2,7 +2,7 @@ import React from "react";
 import { createClient } from "@/../utils/supabase/server";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import ProjectCards from "./card";
+import ProjectCards from "@/components/normaluicomponents/projectCard";
 export default async function Projects() {
   let loading = false;
   const supabase = createClient();

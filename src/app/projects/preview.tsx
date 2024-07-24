@@ -3,7 +3,7 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import Link from "next/link";
 import "../stylesheet.css";
-import ProjectCards from './card';
+import ProjectCards from '../../components/normaluicomponents/projectCard';
 export default async function Projects() {
   const supabase = createClient()
   let loading = false;

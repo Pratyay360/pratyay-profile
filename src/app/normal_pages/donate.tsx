@@ -4,7 +4,7 @@ import { createClient } from '@/../utils/supabase/server';
 import Link from 'next/link';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
-import { DonationCard } from './cards';
+import { DonationCard } from '@/components/normaluicomponents/generalUiComponent';
 export default async function Donate() {
     const supabase = createClient()
     let loading = false

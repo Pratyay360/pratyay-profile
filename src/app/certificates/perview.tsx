@@ -1,11 +1,10 @@
 import React from "react";
 import { createClient } from "@/../utils/supabase/server";
-import Image from "next/image";
 import Link from "next/link";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import "../stylesheet.css";
-import CertCard from "./component";
+import CertCard from "@/components/normaluicomponents/certificateCard";
 export default async function Certificates() {
   const supabase = createClient();
   let loading = false;
