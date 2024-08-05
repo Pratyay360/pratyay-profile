@@ -8,7 +8,7 @@ export default async function Blog() {
   let loading = false;
   const query = `query Publication {
         publication(host:"pratyaywrites.hashnode.dev") {
-          posts (first:10){
+          posts (first:4){
             edges{
               node {
                 coverImage {
