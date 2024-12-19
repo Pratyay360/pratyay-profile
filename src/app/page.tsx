@@ -9,8 +9,10 @@ import Aboutme from './about/aboutme'
 import Certificates from './certificates/perview'
 import BlogsPreview from './blog/preview'
 import Donate from "./normal_pages/donate"
+import Clarity from '@microsoft/clarity';
 export default function Home() {
-  // let 
+  const projectId = "pfel8j4noi"
+  Clarity.init(projectId);
   return (
     <>
       <header>
