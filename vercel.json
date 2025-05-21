@@ -1,0 +1,12 @@
+{
+  "name": "pratyay-profile",
+  "version": 2,
+  "buildCommand": "next build --turbopack",
+  "regions": ["iad1"],
+  "functions": {
+    "src/app/message_me/page.tsx": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  }
+}

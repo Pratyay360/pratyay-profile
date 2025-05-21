@@ -22,6 +22,8 @@ const nextConfig = {
       },
     },
   },
+  // Add output configuration for Vercel deployment
+  output: 'standalone',
 };
 
 export default nextConfig;
