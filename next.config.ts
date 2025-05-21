@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from 'next'
+const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
     remotePatterns: [
@@ -13,14 +14,17 @@ const nextConfig = {
       { hostname: "fonts.googleapis.com" },
     ],
   },
-  turbopack: {
-    // Optional: Add Turbopack-specific configurations here
+turbopack: {
     rules: {
-      // Example: Configure specific loaders if needed
-      "*.md": {
-        loaders: ["raw-loader"],
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: '*.js',
       },
     },
+    resolveAlias: {
+      underscore: 'lodash',
+    },
+    resolveExtensions: ['.mdx', '.tsx', '.ts', '.jsx', '.js', '.json'],
   },
 };
 

@@ -7,17 +7,27 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 const inter = Inter({ subsets: ['latin'], display: 'swap', adjustFontFallback: false })
 import { ThemeProvider } from "@/components/theme-provider"
+import type { Viewport } from 'next' // Import Viewport type
+
 export const metadata: Metadata = {
   title: 'Pratyay Mitra Mustafi',
   description: 'Pratyay Mitra Mustafi\'s portfolio website',
   authors: [{ name: 'Pratyay Mitra Mustafi' }],
-  viewport: 'width=device-width, initial-scale=1',
   verification: {
     other: {
       "msvalidate.01": "C348576BB92261CC55029F04F308DB94"
     }
   }
 }
+
+// Add generateViewport function
+export function generateViewport(): Viewport {
+  return {
+    width: 'device-width',
+    initialScale: 1,
+  }
+}
+
 export const runtime = "edge";
 export default function RootLayout({
   children,
@@ -27,15 +37,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-      <div >
-      <ThemeProvider
+      <div>
+        <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
-        <Navbar />
-        {children}
+          <Navbar />
+          {children}
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
