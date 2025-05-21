@@ -26,10 +26,6 @@ const nextConfig: NextConfig = {
     },
     resolveExtensions: ['.mdx', '.tsx', '.ts', '.jsx', '.js', '.json'],
   },
-  experimental: {
-    serverActions: {},
-    typedRoutes: true,
-  },
 };
 
 export default nextConfig;
