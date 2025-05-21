@@ -3,9 +3,9 @@
   "version": "1.0.3",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "start": "next start --turbopack",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "lint": "next lint",
     "pages:build": "npx @cloudflare/next-on-pages"
   },

@@ -14,18 +14,6 @@ const nextConfig: NextConfig = {
       { hostname: "fonts.googleapis.com" },
     ],
   },
-  turbopack: {
-    rules: {
-      '*.svg': {
-        loaders: ['@svgr/webpack'],
-        as: '*.js',
-      },
-    },
-    resolveAlias: {
-      underscore: 'lodash',
-    },
-    resolveExtensions: ['.mdx', '.tsx', '.ts', '.jsx', '.js', '.json'],
-  },
 };
 
 export default nextConfig;
