@@ -35,8 +35,9 @@
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
     "typewriter-effect": "^2.22.0",
-    "workbox-background-sync": "^7.3.0",
-    "workbox-build": "^7.3.0"
+    "workbox-core": "^7.3.0",
+    "workbox-routing": "^7.3.0",
+    "workbox-strategies": "^7.3.0"
   },
   "devDependencies": {
     "@types/node": "^22.15.21",
@@ -47,6 +48,9 @@
     "autoprefixer": "^10.4.21",
     "eslint": "^9.27.0",
     "eslint-config-next": "^15.3.2",
+    "glob": "^10.3.10",
+    "lru-cache": "^10.1.0",
+    "rimraf": "^5.0.5",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.3"
