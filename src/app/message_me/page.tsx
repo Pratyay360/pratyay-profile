@@ -9,9 +9,9 @@ export default function Home() {
     async function Submit(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
-        const name = formData.get("Name") as string;
-        const email = formData.get("Email") as string;
-        const message = formData.get("Message") as string;
+        const name = formData.get("Name") as string || "";
+        const email = formData.get("Email") as string || "";
+        const message = formData.get("Message") as string || "";
         
         if (!name || name.trim() === "" || !email || !message) {
             toast.error("Please fill all the fields");

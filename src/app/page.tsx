@@ -1,4 +1,3 @@
-
 import Projects from './projects/preview'
 import Contact from './normal_pages/contact'
 import Education from './normal_pages/education'
@@ -9,19 +8,12 @@ import Aboutme from './about/aboutme'
 import Certificates from './certificates/perview'
 import BlogsPreview from './blog/preview'
 import Donate from "./normal_pages/donate"
-import Clarity from '@microsoft/clarity';
+import ClarityAnalytics from '@/components/clarity-analytics'
+
 export default function Home() {
-  const projectId = "pfel8j4noi"
-  Clarity.init(projectId);
   return (
     <>
-      <header>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charSet="utf-8" />
-        <meta name="msvalidate.01" content="C348576BB92261CC55029F04F308DB94" />
-        <meta name="description" content="Pratyay Mitra Mustafi's portfolio website" />
-        <meta name="author" content="Pratyay Mitra Mustafi" />
-      </header>
+      <ClarityAnalytics />
       <div>
         <section id="photo" className="snap-center justify-center">
           <Photo />
@@ -56,4 +48,4 @@ export default function Home() {
       </div>
     </>
   );
-};
+}

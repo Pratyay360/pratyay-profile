@@ -9,7 +9,14 @@ const inter = Inter({ subsets: ['latin'], display: 'swap', adjustFontFallback: f
 import { ThemeProvider } from "@/components/theme-provider"
 export const metadata: Metadata = {
   title: 'Pratyay Mitra Mustafi',
-  description: 'This is portfollio website of Pratyay Mustafi',
+  description: 'Pratyay Mitra Mustafi\'s portfolio website',
+  authors: [{ name: 'Pratyay Mitra Mustafi' }],
+  viewport: 'width=device-width, initial-scale=1',
+  verification: {
+    other: {
+      "msvalidate.01": "C348576BB92261CC55029F04F308DB94"
+    }
+  }
 }
 export const runtime = "edge";
 export default function RootLayout({
