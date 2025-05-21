@@ -5,7 +5,7 @@ import Link from "next/link";
 import "../stylesheet.css";
 import ProjectCards from '../../components/normaluicomponents/projectCard';
 export default async function Projects() {
-  const supabase = createClient()
+  const supabase = await createClient()
   let loading = false;
   const { data: project } = await supabase.from("project").select("*");
   if (!project) {

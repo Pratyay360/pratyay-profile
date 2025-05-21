@@ -6,7 +6,7 @@ import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
 import { DonationCard } from '@/components/normaluicomponents/generalUiComponent';
 export default async function Donate() {
-    const supabase = createClient()
+    const supabase = await createClient()
     let loading = false
     const { data: donation } = await supabase.from('donation').select('*');    
     if(!donation){

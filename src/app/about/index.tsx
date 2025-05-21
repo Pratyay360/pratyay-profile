@@ -5,12 +5,21 @@ import WordRotate from "@/components/magicui/word-rotate";
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
 export default async function Photo() {
-    const supabase = createClient()
+    const supabase = await createClient()
     let loading = false 
-    const { data: description } = await supabase.from('description').select('word');
-    if(!description){
+    let description = null
+    
+    try {
+        const { data } = await supabase.from('description').select('word');
+        description = data
+        if(!data || data.length === 0){
+            loading = true
+        }
+    } catch (error) {
+        console.error("Error fetching data:", error)
         loading = true
     }
+    
     return (
         <>
             <SkeletonTheme baseColor="#202020" highlightColor="444444">

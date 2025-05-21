@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 import withPWA from "next-pwa";
+
 const nextConfig = {
   reactStrictMode: true,
   images: {
@@ -13,6 +14,15 @@ const nextConfig = {
       { hostname: "fonts.gstatic.com" },
       { hostname: "fonts.googleapis.com" },
     ],
+  },
+  turbopack: {
+    // Optional: Add Turbopack-specific configurations here
+    rules: {
+      // Example: Configure specific loaders if needed
+      "*.md": {
+        loaders: ["raw-loader"],
+      },
+    },
   },
 };
 

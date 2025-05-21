@@ -5,7 +5,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 import ProjectCards from "@/components/normaluicomponents/projectCard";
 export default async function Projects() {
   let loading = false;
-  const supabase = createClient();
+  const supabase = await createClient();
   const { data: project } = await supabase.from("project").select("*");
   if (!project) {
     loading = true;

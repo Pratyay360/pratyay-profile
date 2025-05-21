@@ -4,7 +4,7 @@ import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
 import CertCard from '@/components/normaluicomponents/certificateCard';
 export default async function Certificates() {
-    const supabase = createClient()
+    const supabase = await createClient()
     let loading = false;
     const { data: certificate } = await supabase.from('certificate').select('*');
     if(!certificate){

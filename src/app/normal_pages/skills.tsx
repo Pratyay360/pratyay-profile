@@ -5,7 +5,7 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { ImageCard } from "@/components/normaluicomponents/generalUiComponent";
 export default async function Skills() {
-  const supabase = createClient();
+  const supabase = await createClient();
   let loading = false;
   const { data: technology } = await supabase.from("technology").select("*");
   if (!technology) {

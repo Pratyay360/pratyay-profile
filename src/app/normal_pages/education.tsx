@@ -4,7 +4,7 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { EducationCard } from "@/components/normaluicomponents/generalUiComponent";
 export default async function Education() {
-  const supabase = createClient();
+  const supabase = await createClient();
   let loading = false;
   const { data: education } = await supabase
     .from("education")

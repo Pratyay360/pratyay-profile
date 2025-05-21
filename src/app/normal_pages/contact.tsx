@@ -7,7 +7,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 import { ImageCard } from "@/components/normaluicomponents/generalUiComponent";
 
 export default async function Contact() {
-  const supabase = createClient();
+  const supabase = await createClient();
   let loading = false;
   const { data: social_link } = await supabase.from("social_link").select("*");
   if (!social_link) {

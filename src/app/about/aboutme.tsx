@@ -4,7 +4,7 @@ import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 export default async function Aboutme() {
     // const supabase = getSupabaseServerComponentClient()
-    const supabase = createClient();
+    const supabase = await createClient();
     const { data: about } = await supabase.from('about').select('*');
     let loading = false;
     if(!about){
