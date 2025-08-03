@@ -1,13 +1,13 @@
 import Projects from './projects/preview'
-import Contact from './normal_pages/contact'
-import Education from './normal_pages/education'
+import Contact from './sections/contact'
+import Education from './sections/education'
 import Photo from './about/index'
-import Resume from './normal_pages/resume'
-import Skills from './normal_pages/skills'
+import Resume from './sections/resume'
+import Skills from './sections/skills'
 import Aboutme from './about/aboutme'
 import Certificates from './certificates/perview'
 import BlogsPreview from './blog/preview'
-import Donate from "./normal_pages/donate"
+import Donate from "./sections/donate"
 import ClarityAnalytics from '@/components/clarity-analytics'
 
 export default function Home() {

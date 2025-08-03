@@ -1,7 +1,7 @@
 import React from "react";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import "../stylesheet.css";
+import "@/styles/button.css";
 import Link from "next/link";
 import BlogCard from "@/components/normaluicomponents/blogCard";
 export default async function Blog() {
@@ -38,8 +38,8 @@ export default async function Blog() {
   }
   return (
     <>
-      <SkeletonTheme baseColor="#202020" highlightColor="#444444">
-        <h1 className="text-center items-center justify-center top-36 tracking-[20px] dark:text-gray-500 text-3xl lg:text-4xl font-bold">
+      <SkeletonTheme baseColor="#e0e0e0" highlightColor="#f5f5f5">
+        <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-3xl lg:text-4xl font-bold">
           Blogs
         </h1>
         {loading && (

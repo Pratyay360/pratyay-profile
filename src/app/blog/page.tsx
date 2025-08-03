@@ -1,80 +1,90 @@
-import React from "react";
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
-import BlogCard from "@/components/normaluicomponents/blogCard";
-export default async function Home() {
-  let loading = false;
-  const query = `query Publication {
-    publication(host:"pratyaywrites.hashnode.dev") {
-      posts (first:50){
-        edges{
-          node {
-            coverImage {
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
+import BlogCard from '@/components/normaluicomponents/blogCard';
+
+const ENDPOINT = 'https://gql.hashnode.com';
+
+interface PostNode {
+  url: string;
+  coverImage: { url: string } | null;
+  title: string;
+  brief: string;
+}
+
+export default async function BlogPage() {
+  const query = `
+    query Publication {
+      publication(host: "pratyaywrites.hashnode.dev") {
+        posts(first: 50) {
+          edges {
+            node {
+              coverImage { url }
+              title
+              brief
               url
-            },
-            title,
-            brief,
-            url
+            }
           }
         }
       }
     }
-  }
   `;
-  const response = await fetch("https://gql.hashnode.com", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ query }),
-  });
-  const result = await response.json();
-  const post = result.data.publication.posts.edges;
-  if (!post) {
-    loading = true;
+
+  let posts: PostNode[] = [];
+  let failed = false;
+
+  try {
+    const res = await fetch(ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query }),
+      next: { revalidate: 3600 },
+    });
+
+    const json = await res.json();
+    if (json.errors) throw json.errors;
+    posts = json.data?.publication?.posts?.edges.map((e: any) => e.node) ?? [];
+  } catch (e) {
+    console.error(e);
+    failed = true;
   }
+
   return (
-    <>
-      <div>
-        <SkeletonTheme baseColor="#202020" highlightColor="#444444">
-          <h1 className="top-36 p-10 text-center items-center justify-center  tracking-[20px] dark:text-gray-500 lg:text-5xl font-bold text-3xl ml-3">
-            Blogs By Pratyay Mitra Mustafi
-          </h1>
-          {loading && (
-            <div className="p-10 mt-10">
-              <Skeleton height={500} count={1} />
+    <main className="min-h-screen bg-background px-4 py-24">
+      <h1 className="text-4xl md:text-5xl font-bold text-center tracking-wider mb-16">
+        Blogs by Pratyay Mitra Mustafi
+      </h1>
+
+      {failed && (
+        <div className="text-center text-destructive">
+          <p className="text-xl">Couldn`t fetch posts. Try again later.</p>
+        </div>
+      )}
+
+      {!failed && posts.length === 0 && (
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <div key={i} className="space-y-3">
+              <Skeleton height={220} className="rounded-xl" />
+              <Skeleton height={24} width="70%" />
+              <Skeleton count={2} />
             </div>
-          )}
-          <section className="body-font">
-            <div className="container px-5 py-24 mx-auto">
-              <div className="flex flex-wrap -m-4 justify-center whitespace-break-spaces">
-                {post?.map(
-                  (
-                    c: {
-                      node: {
-                        url: any;
-                        coverImage: { url: any };
-                        title: any;
-                        brief: any;
-                      };
-                    },
-                    index: React.Key | null | undefined
-                  ) => (
-                    <div className="p-4 md:w-1/3" key={index}>
-                     <BlogCard 
-                     link={c.node.url}
-                     imageUrl={c.node.coverImage.url}
-                     title={c.node.title}
-                     brief={c.node.brief}
-                     />
-                    </div>
-                  )
-                )}
-              </div>
-            </div>
-          </section>
-        </SkeletonTheme>
-      </div>
-    </>
+          ))}
+        </div>
+      )}
+
+      {posts.length > 0 && (
+        <section className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+          {posts.filter(p => p.coverImage?.url).map((post) => (
+            <BlogCard
+              key={post.url}
+              link={post.url}
+              imageUrl={post.coverImage!.url}
+              title={post.title}
+              brief={post.brief}
+            />
+          ))}
+        </section>
+      )}
+    </main>
   );
 }
