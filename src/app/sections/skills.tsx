@@ -1,6 +1,6 @@
 import React from "react";
 import { Dock, DockIcon } from "@/components/magicui/dock";
-import { createClient } from "@/../utils/supabase/server";
+import { createClient } from "@/utils/supabase/server";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { ImageCard } from "@/components/normaluicomponents/generalUiComponent";
@@ -13,8 +13,8 @@ export default async function Skills() {
   }
   return (
     <>
-      <SkeletonTheme baseColor="#202020" highlightColor="#444444">
-        <h1 className="text-center items-center justify-center top-36 tracking-[20px] dark:text-gray-500 text-3xl lg:text-4xl font-bold">
+      <SkeletonTheme baseColor="#e0e0e0" highlightColor="#f5f5f5">
+        <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-3xl lg:text-4xl font-bold">
           SKILLS
         </h1>
         {loading && (

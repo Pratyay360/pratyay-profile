@@ -1,35 +1,54 @@
-import Image from "next/image";
-import Link from "next/link";
-interface ProjectCardInterface {
+'use client';
+
+import Link from 'next/link';
+import Image from 'next/image';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { ExternalLink } from 'lucide-react';
+
+interface ProjectCardProps {
   link: string;
   imageSrc: string;
   title: string;
   category: string;
   description: string;
 }
-export default function ProjectCards(props: ProjectCardInterface) {
+export default function ProjectCard({
+  link,
+  imageSrc,
+  title,
+  category,
+  description,
+}: ProjectCardProps) {
   return (
-    <>
-      <Link href={props.link || ""} className="block" target="_blank">
-        <div className="h-full border-2 dark:border-gray-200 border-gray-900 border-opacity-60 rounded-lg overflow-hidden transform transition-all hover:scale-110">
+      <Link href={link} target="_blank" rel="noopener noreferrer">
+    <Card className="group relative h-full overflow-hidden transition-transform hover:scale-105">
+        <AspectRatio ratio={16 / 9}>
           <Image
-            className="lg:h-48 md:h-36 w-full object-cover object-center"
-            src={props.imageSrc || ""}
-            alt={props.title || ""}
-            width={300}
-            height={200}
+            src={imageSrc}
+            alt={title}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
-          <div className="p-6">
-            <h2 className="tracking-widest text-xs title-font font-medium dark:text-gray-400 mb-1">
-              {props.category || ""}
-            </h2>
-            <h1 className="title-font text-lg font-medium dark:text-gray-300 mb-3">
-              {props.title || ""}
-            </h1>
-            <p className="leading-relaxed mb-3">{props.description || ""}</p>
-          </div>
-        </div>
+        </AspectRatio>
+
+      <CardHeader>
+        <CardDescription className="text-xs tracking-widest uppercase">
+          {category}
+        </CardDescription>
+        <CardTitle className="text-lg line-clamp-2">{title}</CardTitle>
+        <p className="text-sm text-muted-foreground line-clamp-3">
+          {description}
+        </p>
+      </CardHeader>
+    </Card>
       </Link>
-    </>
   );
 }

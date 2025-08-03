@@ -1,5 +1,5 @@
 import React from 'react';
-import { createClient } from '@/../utils/supabase/server';
+import { createClient } from '@/utils/supabase/server';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
 import CertCard from '@/components/normaluicomponents/certificateCard';
@@ -12,8 +12,8 @@ export default async function Certificates() {
     }    
     return (
         <>
-            <SkeletonTheme baseColor="#202020" highlightColor="#444">
-                    <h1 className="text-center items-center justify-center top-36 tracking-[20px] dark:text-gray-500 sm:text-xl text-3xl lg:text-4xl font-bold p-3">
+            <SkeletonTheme baseColor="#e0e0e0" highlightColor="#f5f5f5">
+                    <h1 className="text-center items-center justify-center top-36 tracking-[20px] sm:text-xl text-3xl lg:text-4xl font-bold p-3">
                         CERTIFICATES</h1>
                 {loading && (
                     <div className="p-10 mt-10">

@@ -1,5 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 // Donation
 interface DonationCardInterface {
   link: string;
@@ -26,33 +34,36 @@ export function DonationCard(props: DonationCardInterface) {
 
 // Education
 
-interface EducationCardInterface {
+/* ---------- Education ---------- */
+
+interface EducationCardProps {
   date_from: string;
   date_to: string;
   category: string;
   title: string;
   description: string;
 }
-export function EducationCard(item: EducationCardInterface) {
+
+export function EducationCard({
+  date_from,
+  date_to,
+  category,
+  title,
+  description,
+}: EducationCardProps) {
   return (
-    <>
-      <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-        <span className="font-semibold title-font dark:text-gray-200 text-2xl">
-          {item.category || ""}
-        </span>
-        <span className="mt-1 dark:text-gray-400 text-md">
-          {item.date_from || ""}-{item.date_to || ""}
-        </span>
-      </div>
-      <div className="md:flex-grow">
-        <h2 className="font-medium dark:text-gray-100 text-2xl title-font mb-2">
-          {item.title || ""}
-        </h2>
-        <p className="leading-relaxed text-xl dark:text-gray-300">
-          {item.description || ""}
+    <Card className="flex flex-col md:flex-row gap-4 p-4">
+      <CardHeader className="md:w-64 flex-shrink-0">
+        <CardTitle className="text-xl">{category}</CardTitle>
+        <p className="text-sm ">
+          {date_from} – {date_to}
         </p>
-      </div>
-    </>
+      </CardHeader>
+      <CardContent className="flex-1">
+        <h3 className="text-lg font-semibold mb-1">{title}</h3>
+        <p className="text-lg text-muted-foreground">{description}</p>
+      </CardContent>
+    </Card>
   );
 }
 

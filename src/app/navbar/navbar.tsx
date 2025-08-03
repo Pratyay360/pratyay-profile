@@ -1,94 +1,110 @@
-'use client'; // Mark as client component
+'use client';
 
-import Link from "next/link";
-import { useState } from "react";
-import { ModeToggle } from "@/components/themer/themer";
-import "./styles1.css";
+import Link from 'next/link';
+import { Menu } from 'lucide-react';
+import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+} from '@/components/ui/navigation-menu';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
+import { ModeToggle } from '@/components/themer/themer';
+
+const navItems = [
+  { label: 'About Me', href: '/#aboutme' },
+  { label: 'Education', href: '/#education' },
+  { label: 'Skills', href: '/#skills' },
+  { label: 'Certificates', href: '/#certificate' },
+  { label: 'Projects', href: '/#projects' },
+  { label: 'Blogs', href: '/#blogs' },
+  { label: 'Resume', href: '/#resume' },
+  { label: 'Donate', href: '/#donate' },
+  { label: 'Contact Me', href: '/#contact' },
+];
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
-
-  const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
-    <Link href={href} passHref>
-      <span
-        className="block px-4 py-2 text-lg dark:text-white hover:text-gray-500 cursor-pointer md:text-base md:py-0"
-        onClick={() => setIsOpen(false)}
-      >
-        {children}
-      </span>
-    </Link>
-  );
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
-    <nav className="sticky top-0 navheader z-50 backdrop-blur-md font-bold">
-      <div className="container mx-auto p-5">
-        <div className="flex items-center justify-between md:justify-center">
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
-            aria-label="Toggle navigation menu"
-          >
-            {isOpen ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            )}
-          </button>
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 items-center justify-center">
+        <NavigationMenu className="hidden md:flex flex-1 justify-center">
+          <NavigationMenuList className="gap-x-6">
+            {navItems.map(({ label, href }) => (
+              <NavigationMenuItem key={label}>
+                <NavigationMenuLink asChild>
+                  <Link
+                    href={href}
+                    className={cn(
+                      'relative px-2 py-1 text-sm font-medium transition-colors',
+                      pathname === href
+                        ? 'text-primary'
+                        : 'text-muted-foreground hover:text-primary',
+                    )}
+                  >
+                    {label}
+                    <span
+                      className={cn(
+                        'absolute bottom-0 left-0 h-0.5 w-full scale-x-0 bg-primary transition-transform duration-200',
+                        pathname === href && 'scale-x-100',
+                      )}
+                    />
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            ))}
+          </NavigationMenuList>
+        </NavigationMenu>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex flex-wrap items-center justify-center gap-x-6 text-xl">
-            <NavLink href="/#aboutme">About Me</NavLink>
-            <NavLink href="/#education">Education</NavLink>
-            <NavLink href="/#skills">Skills</NavLink>
-            <NavLink href="/#certificate">Certificates</NavLink>
-            <NavLink href="/#projects">Projects</NavLink>
-            <NavLink href="/#blogs">Blogs</NavLink>
-            <NavLink href="/#resume">Resume</NavLink>
-            <NavLink href="/#donate">Donate</NavLink>
-            <NavLink href="/#contact">Contact Me</NavLink>
-            <ModeToggle />
-          </div>
+        <div className="flex items-center gap-2">
+          <ModeToggle />
 
-          {/* Mobile Navigation */}
-          {isOpen && (
-            <div className="absolute top-full left-0 w-full bg-white dark:bg-gray-900 md:hidden shadow-lg">
-              <div className="flex flex-col items-center py-4">
-                <NavLink href="/#aboutme">About Me</NavLink>
-                <NavLink href="/#education">Education</NavLink>
-                <NavLink href="/#skills">Skills</NavLink>
-                <NavLink href="/#certificate">Certificates</NavLink>
-                <NavLink href="/#projects">Projects</NavLink>
-                <NavLink href="/#blogs">Blogs</NavLink>
-                <NavLink href="/#resume">Resume</NavLink>
-                <NavLink href="/#donate">Donate</NavLink>
-                <NavLink href="/#contact">Contact Me</NavLink>
-                <div className="mt-4">
+          <div className="md:hidden">
+            <Sheet open={open} onOpenChange={setOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" aria-label="Open menu">
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </SheetTrigger>
+
+              <SheetContent side="right" className="w-64">
+                <SheetHeader>
+                  <SheetTitle>Menu</SheetTitle>
+                </SheetHeader>
+
+                <nav className="mt-6 flex flex-col space-y-3 text-gray-900 dark:text-gray-200">
+                  {navItems.map(({ label, href }) => (
+                    <Link
+                      key={label}
+                      href={href}
+                      onClick={() => setOpen(false)}
+                      className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                    >
+                      {label}
+                    </Link>
+                  ))}
+                </nav>
+
+                <div className="mt-8 border-t pt-4">
                   <ModeToggle />
                 </div>
-              </div>
-            </div>
-          )}
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
-    </nav>
+    </header>
   );
 }

@@ -12,6 +12,7 @@ const nextConfig: NextConfig = {
       { hostname: "script.google.com" },
       { hostname: "fonts.gstatic.com" },
       { hostname: "fonts.googleapis.com" },
+      { hostname: "cdn.jsdelivr.net" },
     ],
   },
 };

@@ -1,9 +1,9 @@
 import React from "react";
-import { createClient } from "@/../utils/supabase/server";
+import { createClient } from "@/utils/supabase/server";
 import Link from "next/link";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import "../stylesheet.css";
+import "@/styles/button.css";
 import CertCard from "@/components/normaluicomponents/certificateCard";
 export default async function Certificates() {
   const supabase = await createClient();
@@ -15,9 +15,9 @@ export default async function Certificates() {
   }
   return (
     <>
-      <SkeletonTheme baseColor="#202020" highlightColor="#444444">
+      <SkeletonTheme baseColor="#e0e0e0" highlightColor="#f5f5f5">
         <div className="flex flex-column text-center items-center justify-center">
-          <h1 className="text-center items-center justify-center top-36 tracking-[20px] dark:text-gray-500 text-2xl/3 lg:text-4xl font-bold p-3 m-2 overflow-auto">
+          <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-2xl/3 lg:text-4xl font-bold p-3 m-2 overflow-auto">
             CERTIFICATES
           </h1>
         </div>
@@ -26,7 +26,7 @@ export default async function Certificates() {
             <Skeleton height={500} count={1} />
           </div>
         )}
-        <section className="dark:text-gray-300 body-font">
+        <section className="body-font">
           <div className="container px-5 py-24 mx-auto">
             <div className="flex flex-wrap -m-4 justify-center whitespace-break-spaces">
               {a <= 3

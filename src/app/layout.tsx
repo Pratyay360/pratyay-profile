@@ -2,11 +2,12 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import React from 'react'
-import Navbar from './navbar/navbar'
+import Navbar from '@/app/navbar/navbar'
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 const inter = Inter({ subsets: ['latin'], display: 'swap', adjustFontFallback: false })
 import { ThemeProvider } from "@/components/theme-provider"
+import { Toaster } from "@/components/ui/sonner"
 import type { Viewport } from 'next' // Import Viewport type
 
 export const metadata: Metadata = {
@@ -49,6 +50,7 @@ export default function RootLayout({
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
+      <Toaster richColors closeButton position="bottom-right" expand={true} />
       </div>
       </body>
     </html>
