@@ -1,14 +1,17 @@
-import Projects from './projects/preview'
-import Contact from './sections/contact'
-import Education from './sections/education'
+import dynamic from 'next/dynamic'
 import Photo from './about/index'
-import Resume from './sections/resume'
-import Skills from './sections/skills'
 import Aboutme from './about/aboutme'
-import Certificates from './certificates/perview'
-import BlogsPreview from './blog/preview'
-import Donate from "./sections/donate"
 import ClarityAnalytics from '@/components/clarity-analytics'
+
+// Dynamic imports for better performance
+const Education = dynamic(() => import('./sections/education'), { ssr: true })
+const Skills = dynamic(() => import('./sections/skills'), { ssr: true })
+const Certificates = dynamic(() => import('./certificates/perview'), { ssr: true })
+const Projects = dynamic(() => import('./projects/preview'), { ssr: true })
+const BlogsPreview = dynamic(() => import('./blog/preview'), { ssr: true })
+const Resume = dynamic(() => import('./sections/resume'), { ssr: true })
+const Donate = dynamic(() => import('./sections/donate'), { ssr: true })
+const Contact = dynamic(() => import('./sections/contact'), { ssr: true })
 
 export default function Home() {
   return (
