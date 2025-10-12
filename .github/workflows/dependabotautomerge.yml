@@ -1,5 +1,4 @@
-# filepath: /home/warlokk/Documents/pratyay-profile/.github/workflows/dependabotautomerge.yml
-name: Dependabot auto-approve
+name: Dependabot auto-approve and auto-merge
 on: pull_request
 
 permissions:
@@ -15,8 +14,16 @@ jobs:
         uses: dependabot/fetch-metadata@v1
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
-      - name: Approve a PR
+
+      - name: Approve PR
         run: gh pr review --approve "$PR_URL"
         env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Auto-merge PR to master
+        if: ${{ github.event.pull_request.base.ref == 'master' }}
+        run: gh pr merge "$PR_URL" --merge --auto
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

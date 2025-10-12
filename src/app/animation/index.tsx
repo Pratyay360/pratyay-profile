@@ -1,13 +1,30 @@
-import React from 'react'
-export default function Backgroundcircles() {
+'use client';
+
+export default function BackgroundCircles() {
   return (
-    <div className="relative flex flex-wrap justify-center items-center">
-        <div className="absolute border border-gray-500 rounded-full h-[330px] w-[330px] mt-52 animate-bounce"/>
-        <div className="absolute border border-red-500 rounded-full h-[400px] w-[400px] mt-52 animate-pulse"/>
-        <div className="absolute border border-orange-500 rounded-full h-[500px] w-[500px] mt-52 animate-bounce" />
-        <div className="absolute rounded-full border border-yellow-500 opacity-50 h-[650px] w-[650px] animate-pulse"/>
-        <div className="absolute rounded-full border border-green-700 opacity-30 h-[700px] w-[700px] animate-bounce"/>
-        <div className="absolute rounded-full border border-white-500 opacity-20 h-[850px] w-[850px] animate-pulse"/>
+    <div className="absolute inset-0 -z-10 flex items-center justify-center overflow-hidden">
+      {[
+        { size: 330, color: 'border-gray-400/30 dark:border-gray-600/30', animate: 'animate-ping' },
+        { size: 400, color: 'border-red-400/40 dark:border-red-500/40', animate: 'animate-pulse' },
+        { size: 500, color: 'border-orange-400/40 dark:border-orange-500/40', animate: 'animate-ping' },
+        { size: 650, color: 'border-yellow-400/30 dark:border-yellow-500/30', animate: 'animate-pulse' },
+        { size: 700, color: 'border-green-500/20 dark:border-green-400/20', animate: 'animate-ping' },
+        { size: 850, color: 'border-gray-300/10 dark:border-white/10', animate: 'animate-pulse' },
+      ].map(({ size, color, animate }, i) => (
+        <div
+          key={i}
+          className={`absolute rounded-full border ${color} ${animate} blur-[2px] opacity-70`}
+          style={{
+            width: `${size}px`,
+            height: `${size}px`,
+            animationDuration: `${4 + i * 0.5}s`,
+            animationDelay: `${i * 0.2}s`,
+            borderStyle: 'solid',
+            borderWidth: `${1 + i * 0.5}px`,
+          }}
+        />
+      ))}
+      <div className="absolute w-[900px] h-[900px] rounded-full border border-gray-300/5 dark:border-white/5 blur-[1px]" />
     </div>
-  )
-};
+  );
+}

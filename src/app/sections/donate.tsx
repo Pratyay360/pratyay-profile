@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { createClient } from '@/../utils/supabase/server';
+import { createClient } from '@/utils/supabase/server';
 import Link from 'next/link';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
@@ -14,12 +14,12 @@ export default async function Donate() {
     }
     return (
         <>
-            <SkeletonTheme baseColor="#202020" highlightColor="#444444">
-                <h1 className="text-center items-center justify-center top-36 tracking-[20px] dark:text-gray-500 text-3xl lg:text-4xl font-bold">Want To Support My Work</h1>
+            <SkeletonTheme baseColor="#e0e0e0" highlightColor="#f5f5f5">
+                <h1 className="text-center items-center justify-center top-36 tracking-[20px] text-3xl lg:text-4xl font-bold">Want To Support My Work</h1>
                 {loading && ((<div className="p-10 mt-10">
                     <Skeleton count={1} height={500} />
                 </div>))}
-                <section className="dark:text-gray-300 body-font">
+                <section className=" body-font">
                     <div className="container px-5 py-24 mx-auto">
                         <div className="flex flex-wrap -m-4 justify-center">
                             {donation?.map((donation, index) => (

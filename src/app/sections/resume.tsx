@@ -2,7 +2,7 @@ import Link from "next/link";
 export default function Resume() {
   return (
     <>
-      <h1 className="text-center items-center justify-center top-36 tracking-[20px] dark:text-gray-500 text-3xl lg:text-4xl font-bold">
+      <h1 className="text-center items-center justify-center top-36 tracking-[20px]  text-3xl lg:text-4xl font-bold">
         RESUME
       </h1>
       <div className="text-center items-center justify-center top-36 backdrop-blur-30 py-20 ">

@@ -29,10 +29,12 @@ export default function NotFound() {
         </p>
 
         {/* Home Button */}
-        <Link href="/">
-          <button className="bg-transparent hover:bg-yellow-300 text-yellow-300 hover:text-white rounded-lg shadow-md hover:shadow-lg py-2 px-6 border border-yellow-300 hover:border-transparent transition-all duration-300">
-            Return to Home
-          </button>
+        <Link 
+          href="/"
+          className="bg-transparent hover:bg-yellow-300 text-yellow-300 hover:text-white rounded-lg shadow-md hover:shadow-lg py-2 px-6 border border-yellow-300 hover:border-transparent transition-all duration-300 inline-block focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2"
+          aria-label="Return to homepage"
+        >
+          Return to Home
         </Link>
       </div>
     </div>
