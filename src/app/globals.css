@@ -1,4 +1,6 @@
 @import "tailwindcss";
+/* Tailwind CSS v4 compatible animations (replaces tailwindcss-animate plugin) */
+@import "tw-animate-css";
 
   @layer base {
     :root {
