@@ -1,0 +1,7 @@
+[tools]
+bun = "latest"
+aube = "latest"
+wrangler = { version = "latest", allow_builds = ["esbuild", "sharp", "workerd"] }
+
+[deps]
+bun = { auto = true }
