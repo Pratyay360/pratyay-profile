@@ -1,16 +1,30 @@
-import { createClient } from '@/utils/supabase/server';
+"use client";
+
+import { useState, useEffect } from "react";
+import { createClient } from "@/utils/db/server";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import Link from "next/link";
-// import "../stylesheet.css";
-import ProjectCards from '../../components/normaluicomponents/projectCard';
-export default async function Projects() {
-  const supabase = await createClient()
-  let loading = false;
-  const { data: project } = await supabase.from("project").select("*");
-  if (!project) {
-    loading = true;
-  }
+import { Link } from "@tanstack/react-router";
+import ProjectCards from "../../components/normaluicomponents/projectCard";
+
+export default function Projects() {
+  const [project, setProject] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchProjects() {
+      try {
+        const supabase = await createClient();
+        const { data } = await supabase.from("project").select("*");
+        if (data) setProject(data);
+      } catch (err) {
+        console.error("Error fetching projects:", err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchProjects();
+  }, []);
 
   return (
     <>
@@ -26,14 +40,14 @@ export default async function Projects() {
         <section className="body-font">
           <div className="container px-5 py-24 mx-auto">
             <div className="flex flex-wrap -m-4 justify-center">
-              {project?.slice(0, 3).map((proj, index) => (
+              {project.slice(0, 3).map((proj, index) => (
                 <div className="p-4 md:w-1/3" key={index}>
                   <ProjectCards
-                  imageSrc={proj.imageSrc}
-                  title={proj.title}
-                  category={proj.category}
-                  description={proj.description}
-                  link={proj.link}
+                    imageSrc={proj.imageSrc}
+                    title={proj.title}
+                    category={proj.category}
+                    description={proj.description}
+                    link={proj.link}
                   />
                 </div>
               ))}
@@ -41,7 +55,7 @@ export default async function Projects() {
           </div>
           {!loading && (
             <center>
-              <Link href="/projects">
+              <Link to="/projects">
                 <button className="button-30" role="button_open_projects">
                   See More
                 </button>

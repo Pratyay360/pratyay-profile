@@ -1,0 +1,13 @@
+{
+  "quoteStyle": "double",
+  "semi": true,
+  "trailingCommas": "all",
+  "tabWidth": 2,
+  "arrowParens": "always",
+  "moduleImportPrefix": "relative",
+  "routesDirectory": "./src/app",
+  "generatedRouteTree": "./src/routeTree.gen.ts",
+  "disableLogging": false,
+  "routeFileIgnorePattern": "components|sections|animation|navbar|about|preview|perview|not-found|page",
+  "exclude": ["**/node_modules/**", "**/*.test.*", "**/*.spec.*"]
+}

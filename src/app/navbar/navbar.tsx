@@ -1,41 +1,35 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { Menu } from 'lucide-react';
-import { useState } from 'react';
-import { usePathname } from 'next/navigation';
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
+import { Link, useLocation } from "@tanstack/react-router";
+import { Menu } from "lucide-react";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from '@/components/ui/navigation-menu';
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from '@/components/ui/sheet';
-import { ModeToggle } from '@/components/themer/themer';
+} from "@/components/ui/navigation-menu";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { ModeToggle } from "@/components/themer/themer";
 
 const navItems = [
-  { label: 'About Me', href: '/#aboutme' },
-  { label: 'Education', href: '/#education' },
-  { label: 'Skills', href: '/#skills' },
-  { label: 'Certificates', href: '/#certificate' },
-  { label: 'Projects', href: '/#projects' },
-  { label: 'Blogs', href: '/#blogs' },
-  { label: 'Resume', href: '/#resume' },
-  { label: 'Donate', href: '/#donate' },
-  { label: 'Contact Me', href: '/#contact' },
+  { label: "About Me", href: "/#aboutme" },
+  { label: "Education", href: "/#education" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Certificates", href: "/#certificate" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Blogs", href: "/#blogs" },
+  { label: "Resume", href: "/#resume" },
+  { label: "Donate", href: "/#donate" },
+  { label: "Contact Me", href: "/#contact" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const pathname = usePathname();
+  const location = useLocation();
+  const pathname = location.pathname;
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -46,19 +40,19 @@ export default function Navbar() {
               <NavigationMenuItem key={label}>
                 <NavigationMenuLink asChild>
                   <Link
-                    href={href}
+                    to={href}
                     className={cn(
-                      'relative px-2 py-1 text-sm font-medium transition-colors',
+                      "relative px-2 py-1 text-sm font-medium transition-colors",
                       pathname === href
-                        ? 'text-primary'
-                        : 'text-muted-foreground hover:text-primary',
+                        ? "text-primary"
+                        : "text-muted-foreground hover:text-primary",
                     )}
                   >
                     {label}
                     <span
                       className={cn(
-                        'absolute bottom-0 left-0 h-0.5 w-full scale-x-0 bg-primary transition-transform duration-200',
-                        pathname === href && 'scale-x-100',
+                        "absolute bottom-0 left-0 h-0.5 w-full scale-x-0 bg-primary transition-transform duration-200",
+                        pathname === href && "scale-x-100",
                       )}
                     />
                   </Link>
@@ -88,7 +82,7 @@ export default function Navbar() {
                   {navItems.map(({ label, href }) => (
                     <Link
                       key={label}
-                      href={href}
+                      to={href}
                       onClick={() => setOpen(false)}
                       className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
                     >

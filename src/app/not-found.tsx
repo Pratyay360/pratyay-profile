@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@tanstack/react-router";
 
 export default function NotFound() {
   return (
@@ -24,13 +24,11 @@ export default function NotFound() {
         </svg>
 
         {/* Message */}
-        <p className="text-lg md:text-xl text-yellow-300 mb-6">
-          Oops! You seem to be lost. 🥲
-        </p>
+        <p className="text-lg md:text-xl text-yellow-300 mb-6">Oops! You seem to be lost. 🥲</p>
 
         {/* Home Button */}
-        <Link 
-          href="/"
+        <Link
+          to="/"
           className="bg-transparent hover:bg-yellow-300 text-yellow-300 hover:text-white rounded-lg shadow-md hover:shadow-lg py-2 px-6 border border-yellow-300 hover:border-transparent transition-all duration-300 inline-block focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2"
           aria-label="Return to homepage"
         >

@@ -1,4 +1,4 @@
-# This is the personal portfolio website of mine  
+# This is the personal portfolio website of mine
 
 ## I have created this website with next js
 

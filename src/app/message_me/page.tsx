@@ -5,63 +5,57 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Loader2 } from "lucide-react";
 
 const SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_FORM_URL!;
 
 export default function ContactPage() {
   const [loading, setLoading] = useState(false);
-  
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  if (loading) return;
+    e.preventDefault();
+    if (loading) return;
 
-  setLoading(true);
+    setLoading(true);
 
-  const form = e.currentTarget;
-  const formData = new FormData(form);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
-  const istFormatter = new Intl.DateTimeFormat("en-IN", {
-    timeZone: "Asia/Kolkata",
-    dateStyle: "full",
-    timeStyle: "long",
-  });
-  const timestamp = istFormatter.format(new Date());
-  formData.append("Time", timestamp);
-
-  const name = formData.get("Name")?.toString().trim() || "";
-  const email = formData.get("Email")?.toString().trim() || "";
-  const message = formData.get("Message")?.toString().trim() || "";
-
-  if (!name || !email || !message) {
-    toast.error("Please fill all fields.");
-    setLoading(false);
-    return;
-  }
-
-  try {
-    await fetch(SCRIPT_URL, {
-      method: "POST",
-      mode: "no-cors",
-      body: formData,
+    const istFormatter = new Intl.DateTimeFormat("en-IN", {
+      timeZone: "Asia/Kolkata",
+      dateStyle: "full",
+      timeStyle: "long",
     });
+    const timestamp = istFormatter.format(new Date());
+    formData.append("Time", timestamp);
 
-    toast.success("Message sent!");
-    form.reset();
-  } catch (error) {
-    console.error("Submission error:", error);
-    toast.error("Failed to send message. Please try again later.");
-  } finally {
-    setLoading(false);
-  }
-};
+    const name = formData.get("Name")?.toString().trim() || "";
+    const email = formData.get("Email")?.toString().trim() || "";
+    const message = formData.get("Message")?.toString().trim() || "";
+
+    if (!name || !email || !message) {
+      toast.error("Please fill all fields.");
+      setLoading(false);
+      return;
+    }
+
+    try {
+      await fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        body: formData,
+      });
+
+      toast.success("Message sent!");
+      form.reset();
+    } catch (error) {
+      console.error("Submission error:", error);
+      toast.error("Failed to send message. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <main className="min-h-screen bg-background flex items-center justify-center p-4">
@@ -78,10 +72,7 @@ export default function ContactPage() {
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label
-                htmlFor="name"
-                className="text-sm font-medium text-foreground"
-              >
+              <label htmlFor="name" className="text-sm font-medium text-foreground">
                 Name
               </label>
               <Input
@@ -94,10 +85,7 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <label
-                htmlFor="email"
-                className="text-sm font-medium text-foreground"
-              >
+              <label htmlFor="email" className="text-sm font-medium text-foreground">
                 Email
               </label>
               <Input
@@ -111,10 +99,7 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <label
-                htmlFor="message"
-                className="text-sm font-medium text-foreground"
-              >
+              <label htmlFor="message" className="text-sm font-medium text-foreground">
                 Message
               </label>
               <Textarea

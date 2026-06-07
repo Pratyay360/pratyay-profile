@@ -1,41 +1,61 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import React from "react";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import "@/styles/button.css";
-import Link from "next/link";
+import { Link } from "@tanstack/react-router";
 import BlogCard from "@/components/normaluicomponents/blogCard";
-export default async function Blog() {
-  let loading = false;
-  const query = `query Publication {
-        publication(host:"pratyaywrites.hashnode.dev") {
-          posts (first:4){
-            edges{
-              node {
-                coverImage {
+
+interface PostNode {
+  url: string;
+  coverImage: { url: string } | null;
+  title: string;
+  brief: string;
+}
+
+export default function Blog() {
+  const [posts, setPosts] = useState<PostNode[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchPosts() {
+      try {
+        const query = `query Publication {
+          publication(host:"pratyaywrites.hashnode.dev") {
+            posts (first:4){
+              edges{
+                node {
+                  coverImage {
+                    url
+                  },
+                  title,
+                  brief,
                   url
-                },
-                title,
-                brief,
-                url
+                }
               }
             }
           }
         }
+        `;
+        const response = await fetch("https://gql.hashnode.com", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query }),
+        });
+        const result = await response.json();
+        const edges = result.data?.publication?.posts?.edges ?? [];
+        setPosts(edges.map((e: any) => e.node));
+      } catch (err) {
+        console.error("Error fetching blog posts:", err);
+      } finally {
+        setLoading(false);
       }
-      `;
+    }
+    fetchPosts();
+  }, []);
 
-  const response = await fetch("https://gql.hashnode.com", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ query }),
-  });
-  const result = await response.json();
-  const post = result.data.publication.posts.edges;
-  if (!post) {
-    loading = true;
-  }
   return (
     <>
       <SkeletonTheme baseColor="#e0e0e0" highlightColor="#f5f5f5">
@@ -50,35 +70,21 @@ export default async function Blog() {
         <section className="body-font">
           <div className="container px-5 py-24 mx-auto">
             <div className="flex flex-wrap -m-4 justify-center whitespace-break-spaces">
-              {post
-                .slice(0, 3)
-                .map(
-                  (
-                    c: {
-                      node: {
-                        url: any;
-                        coverImage: { url: any };
-                        title: any;
-                        brief: any;
-                      };
-                    },
-                    index: React.Key | null | undefined
-                  ) => (
-                    <div className="p-4 md:w-1/3" key={index}>
-                     <BlogCard 
-                     link={c.node.url}
-                     imageUrl={c.node.coverImage.url}
-                     title={c.node.title}
-                     brief={c.node.brief}
-                     />
-                    </div>
-                  )
-                )}
+              {posts.slice(0, 3).map((post, index) => (
+                <div className="p-4 md:w-1/3" key={index}>
+                  <BlogCard
+                    link={post.url}
+                    imageUrl={post.coverImage?.url ?? ""}
+                    title={post.title}
+                    brief={post.brief}
+                  />
+                </div>
+              ))}
             </div>
           </div>
           {!loading && (
             <center>
-              <Link href="/blog">
+              <Link to="/blog">
                 <button className="button-30" role="button_more_blogs">
                   See More
                 </button>

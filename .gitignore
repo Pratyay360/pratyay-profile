@@ -11,12 +11,10 @@ yarn.lock
 # testing
 /coverage
 
-# next.js
-/.next/
 /out/
 .swc/
 .turbo/
-.next-on-pages/
+
 
 # production
 /build
@@ -50,8 +48,6 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
-
 # PWA files
 **/public/workbox-*.js
 **/public/sw.js
@@ -84,10 +80,6 @@ logs
 # OS generated files
 ehthumbs.db
 desktop.ini
-
-# OpenNext
-.open-next
-
 # wrangler files
 .wrangler
 .dev.vars*

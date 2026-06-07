@@ -1,13 +1,6 @@
-import Link from "next/link";
-import Image from "next/image";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Link } from "@tanstack/react-router";
+import { Image } from "@unpic/react";
+import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 // Donation
 interface DonationCardInterface {
   link: string;
@@ -17,7 +10,7 @@ interface DonationCardInterface {
 export function DonationCard(props: DonationCardInterface) {
   return (
     <>
-      <Link href={props.link} target="_blank">
+      <Link to={props.link} target="_blank">
         <div className="h-full overflow-hidden transform transition-all hover:scale-110">
           <Image
             className="lg:h-48 md:h-36 w-full object-center"
@@ -53,7 +46,7 @@ export function EducationCard({
 }: EducationCardProps) {
   return (
     <Card className="flex flex-col md:flex-row gap-4 p-4">
-      <CardHeader className="md:w-64 flex-shrink-0">
+      <CardHeader className="md:w-64 shrink-0">
         <CardTitle className="text-xl">{category}</CardTitle>
         <p className="text-sm ">
           {date_from} – {date_to}
@@ -67,7 +60,6 @@ export function EducationCard({
   );
 }
 
-
 // scroll card
 interface ImageCardInterface {
   image: string;
@@ -77,13 +69,8 @@ interface ImageCardInterface {
 export function ImageCard(props: ImageCardInterface) {
   return (
     <>
-      <Link href={props.link || ""} target="_blank">
-        <Image
-          src={props.image || ""}
-          alt={props.name || ""}
-          width={40}
-          height={40}
-        />
+      <Link to={props.link || ""} target="_blank">
+        <Image src={props.image || ""} alt={props.name || ""} width={40} height={40} />
       </Link>
     </>
   );

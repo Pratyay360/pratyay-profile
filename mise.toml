@@ -2,6 +2,8 @@
 bun = "latest"
 aube = "latest"
 wrangler = { version = "latest", allow_builds = ["esbuild", "sharp", "workerd"] }
+deno = "latest"
+viteplus = "latest"
 
 [deps]
 bun = { auto = true }
