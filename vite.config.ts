@@ -13,7 +13,10 @@ export default defineConfig({
   },
 
   server: {
-    port: 3000,
+  allowedHosts: [
+      '.supabase.co',
+      'pratyay.bond'
+    ]
   },
   resolve: {
     tsconfigPaths: true,
