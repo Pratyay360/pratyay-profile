@@ -1,6 +1,7 @@
 import { o as __toESM } from "../../_runtime.mjs";
-import { a as createSlot, c as require_react, s as require_jsx_runtime } from "./react-aspect-ratio+[...].mjs";
-//#region node_modules/.vlt/~npm~@radix-ui+react-context@1.1.4~peer.2/node_modules/@radix-ui/react-context/dist/index.mjs
+import { s as require_react } from "../phosphor-icons__react+react.mjs";
+import { a as createSlot, l as require_jsx_runtime, s as useComposedRefs } from "./react-aspect-ratio+[...].mjs";
+//#region node_modules/@radix-ui/react-context/dist/index.mjs
 var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
 var import_jsx_runtime = require_jsx_runtime();
 function createContext2(rootComponentName, defaultContext) {
@@ -87,33 +88,7 @@ function composeContextScopes(...scopes) {
 	return createScope;
 }
 //#endregion
-//#region node_modules/.vlt/~npm~@radix-ui+react-compose-refs@1.1.3~peer.2/node_modules/@radix-ui/react-compose-refs/dist/index.mjs
-function setRef(ref, value) {
-	if (typeof ref === "function") return ref(value);
-	else if (ref !== null && ref !== void 0) ref.current = value;
-}
-function composeRefs(...refs) {
-	return (node) => {
-		let hasCleanup = false;
-		const cleanups = refs.map((ref) => {
-			const cleanup = setRef(ref, node);
-			if (!hasCleanup && typeof cleanup == "function") hasCleanup = true;
-			return cleanup;
-		});
-		if (hasCleanup) return () => {
-			for (let i = 0; i < cleanups.length; i++) {
-				const cleanup = cleanups[i];
-				if (typeof cleanup == "function") cleanup();
-				else setRef(refs[i], null);
-			}
-		};
-	};
-}
-function useComposedRefs(...refs) {
-	return import_react.useCallback(composeRefs(...refs), refs);
-}
-//#endregion
-//#region node_modules/.vlt/~npm~@radix-ui+react-collection@1.1.9~peer.6/node_modules/@radix-ui/react-collection/dist/index.mjs
+//#region node_modules/@radix-ui/react-collection/dist/index.mjs
 function createCollection(name) {
 	const PROVIDER_NAME = name + "CollectionProvider";
 	const [createCollectionContext, createCollectionScope] = createContextScope(PROVIDER_NAME);
@@ -185,4 +160,4 @@ function createCollection(name) {
 	];
 }
 //#endregion
-export { createContextScope as i, useComposedRefs as n, createContext2 as r, createCollection as t };
+export { createContext2 as n, createContextScope as r, createCollection as t };

@@ -1,5 +1,5 @@
 import { o as __toESM } from "../_runtime.mjs";
-import { c as require_react } from "./@radix-ui/react-aspect-ratio+[...].mjs";
+import { s as require_react } from "./phosphor-icons__react+react.mjs";
 //#region node_modules/next-themes/dist/index.mjs
 var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
 var M = (e, i, s, u, m, a, l, h) => {

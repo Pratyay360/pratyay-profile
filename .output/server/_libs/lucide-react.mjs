@@ -1,6 +1,6 @@
 import { o as __toESM } from "../_runtime.mjs";
-import { c as require_react } from "./@radix-ui/react-aspect-ratio+[...].mjs";
-//#region node_modules/.vlt/~npm~lucide-react@0.556.0/node_modules/lucide-react/dist/esm/shared/src/utils.js
+import { s as require_react } from "./phosphor-icons__react+react.mjs";
+//#region node_modules/lucide-react/dist/esm/shared/src/utils.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 /**
 * @license lucide-react v0.556.0 - ISC
@@ -21,7 +21,7 @@ var hasA11yProp = (props) => {
 	for (const prop in props) if (prop.startsWith("aria-") || prop === "role" || prop === "title") return true;
 };
 //#endregion
-//#region node_modules/.vlt/~npm~lucide-react@0.556.0/node_modules/lucide-react/dist/esm/defaultAttributes.js
+//#region node_modules/lucide-react/dist/esm/defaultAttributes.js
 /**
 * @license lucide-react v0.556.0 - ISC
 *
@@ -40,7 +40,7 @@ var defaultAttributes = {
 	strokeLinejoin: "round"
 };
 //#endregion
-//#region node_modules/.vlt/~npm~lucide-react@0.556.0/node_modules/lucide-react/dist/esm/Icon.js
+//#region node_modules/lucide-react/dist/esm/Icon.js
 /**
 * @license lucide-react v0.556.0 - ISC
 *
@@ -59,7 +59,7 @@ var Icon = (0, import_react.forwardRef)(({ color = "currentColor", size = 24, st
 	...rest
 }, [...iconNode.map(([tag, attrs]) => (0, import_react.createElement)(tag, attrs)), ...Array.isArray(children) ? children : [children]]));
 //#endregion
-//#region node_modules/.vlt/~npm~lucide-react@0.556.0/node_modules/lucide-react/dist/esm/createLucideIcon.js
+//#region node_modules/lucide-react/dist/esm/createLucideIcon.js
 /**
 * @license lucide-react v0.556.0 - ISC
 *
@@ -162,18 +162,5 @@ var Sun = createLucideIcon("sun", [
 		key: "1shlcs"
 	}]
 ]);
-/**
-* @license lucide-react v0.556.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
-var X = createLucideIcon("x", [["path", {
-	d: "M18 6 6 18",
-	key: "1bl5f8"
-}], ["path", {
-	d: "m6 6 12 12",
-	key: "d8bk6v"
-}]]);
 //#endregion
-export { LoaderCircle as a, Menu as i, Sun as n, Moon as r, X as t };
+export { LoaderCircle as i, Moon as n, Menu as r, Sun as t };

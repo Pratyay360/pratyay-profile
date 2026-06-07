@@ -1,6 +1,7 @@
 import { o as __toESM } from "../_runtime.mjs";
-import { c as require_react, o as require_react_dom } from "./@radix-ui/react-aspect-ratio+[...].mjs";
-//#region node_modules/.vlt/~npm~sonner@2.0.7/node_modules/sonner/dist/index.mjs
+import { s as require_react } from "./phosphor-icons__react+react.mjs";
+import { c as require_react_dom } from "./@radix-ui/react-aspect-ratio+[...].mjs";
+//#region node_modules/sonner/dist/index.mjs
 var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
 var import_react_dom = /* @__PURE__ */ __toESM(require_react_dom(), 1);
 function __insertCSS(code) {

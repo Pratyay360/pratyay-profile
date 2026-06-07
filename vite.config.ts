@@ -9,6 +9,7 @@ export default defineConfig({
   staged: {
     "*": "vp check --fix",
   },
+
   server: {
     port: 3000,
   },
@@ -16,6 +17,7 @@ export default defineConfig({
     tsconfigPaths: true,
   },
   plugins: [
+    nitro(),
     tailwindcss(),
     tanstackStart({
       srcDirectory: "src",
@@ -24,6 +26,5 @@ export default defineConfig({
       },
     }),
     viteReact(),
-    nitro(),
   ],
 });

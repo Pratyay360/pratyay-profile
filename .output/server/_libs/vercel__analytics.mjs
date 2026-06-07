@@ -1,6 +1,6 @@
 import { o as __toESM } from "../_runtime.mjs";
-import { c as require_react } from "./@radix-ui/react-aspect-ratio+[...].mjs";
-//#region node_modules/.vlt/~npm~@vercel+analytics@1.6.1/node_modules/@vercel/analytics/dist/react/index.mjs
+import { s as require_react } from "./phosphor-icons__react+react.mjs";
+//#region node_modules/@vercel/analytics/dist/react/index.mjs
 var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
 var name = "@vercel/analytics";
 var version = "1.6.1";

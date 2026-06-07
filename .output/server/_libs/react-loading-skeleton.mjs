@@ -1,6 +1,6 @@
 import { o as __toESM } from "../_runtime.mjs";
-import { c as require_react } from "./@radix-ui/react-aspect-ratio+[...].mjs";
-//#region node_modules/.vlt/~npm~react-loading-skeleton@3.5.0/node_modules/react-loading-skeleton/dist/index.js
+import { s as require_react } from "./phosphor-icons__react+react.mjs";
+//#region node_modules/react-loading-skeleton/dist/index.js
 var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
 /**
 * @internal

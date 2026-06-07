@@ -1,11 +1,11 @@
 import { __awaiter } from "tslib";
-//#region node_modules/.vlt/~npm~@supabase+functions-js@2.107.0/node_modules/@supabase/functions-js/dist/module/helper.js
+//#region node_modules/@supabase/functions-js/dist/module/helper.js
 var resolveFetch = (customFetch) => {
 	if (customFetch) return (...args) => customFetch(...args);
 	return (...args) => fetch(...args);
 };
 //#endregion
-//#region node_modules/.vlt/~npm~@supabase+functions-js@2.107.0/node_modules/@supabase/functions-js/dist/module/types.js
+//#region node_modules/@supabase/functions-js/dist/module/types.js
 /**
 * Base error for Supabase Edge Function invocations.
 *
@@ -96,7 +96,7 @@ var FunctionRegion;
 	FunctionRegion["UsWest2"] = "us-west-2";
 })(FunctionRegion || (FunctionRegion = {}));
 //#endregion
-//#region node_modules/.vlt/~npm~@supabase+functions-js@2.107.0/node_modules/@supabase/functions-js/dist/module/FunctionsClient.js
+//#region node_modules/@supabase/functions-js/dist/module/FunctionsClient.js
 /**
 * Client for invoking Supabase Edge Functions.
 */
