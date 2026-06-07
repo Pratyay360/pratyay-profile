@@ -7,7 +7,7 @@ import { pipeline } from "node:stream/promises";
 import nodeHTTPS from "node:https";
 import nodeHTTP2 from "node:http2";
 import nodeCrypto from "node:crypto";
-//#region node_modules/srvx/dist/_chunks/_url.mjs
+//#region node_modules/.aube/srvx@0.11.16/node_modules/srvx/dist/_chunks/_url.mjs
 function lazyInherit(target, source, sourceKey) {
 	for (const key of [...Object.getOwnPropertyNames(source), ...Object.getOwnPropertySymbols(source)]) {
 		if (key === "constructor") continue;
@@ -139,7 +139,7 @@ var FastURL = /* @__PURE__ */ (() => {
 	return FastURL;
 })();
 //#endregion
-//#region node_modules/srvx/dist/_chunks/_utils2.mjs
+//#region node_modules/.aube/srvx@0.11.16/node_modules/srvx/dist/_chunks/_utils2.mjs
 function resolvePortAndHost(opts) {
 	const _port = opts.port ?? globalThis.process?.env.PORT ?? 3e3;
 	const port = typeof _port === "number" ? _port : Number.parseInt(_port, 10);
@@ -210,7 +210,7 @@ function createWaitUntil() {
 	};
 }
 //#endregion
-//#region node_modules/srvx/dist/_chunks/_utils.mjs
+//#region node_modules/.aube/srvx@0.11.16/node_modules/srvx/dist/_chunks/_utils.mjs
 var noColor = /* @__PURE__ */ (() => {
 	const env = globalThis.process?.env ?? {};
 	return env.NO_COLOR === "1" || env.TERM === "dumb";
@@ -221,7 +221,7 @@ var red = /* @__PURE__ */ _c(31);
 var green = /* @__PURE__ */ _c(32);
 var gray = /* @__PURE__ */ _c(90);
 //#endregion
-//#region node_modules/srvx/dist/_chunks/_plugins.mjs
+//#region node_modules/.aube/srvx@0.11.16/node_modules/srvx/dist/_chunks/_plugins.mjs
 function wrapFetch(server) {
 	const fetchHandler = server.options.fetch;
 	const middleware = server.options.middleware || [];
@@ -277,7 +277,7 @@ var gracefulShutdownPlugin = (server) => {
 	for (const sig of ["SIGINT", "SIGTERM"]) globalThis.process.on(sig, shutdown);
 };
 //#endregion
-//#region node_modules/srvx/dist/adapters/node.mjs
+//#region node_modules/.aube/srvx@0.11.16/node_modules/srvx/dist/adapters/node.mjs
 async function sendNodeResponse(nodeRes, webRes) {
 	if (!webRes) {
 		nodeRes.statusCode = 500;
@@ -796,13 +796,13 @@ var NodeServer = class {
 	}
 };
 //#endregion
-//#region node_modules/rou3/dist/index.mjs
+//#region node_modules/.aube/rou3@0.8.1/node_modules/rou3/dist/index.mjs
 var NullProtoObj = /* @__PURE__ */ (() => {
 	const e = function() {};
 	return e.prototype = Object.create(null), Object.freeze(e.prototype), e;
 })();
 //#endregion
-//#region node_modules/h3/dist/h3.mjs
+//#region node_modules/.aube/h3@2.0.1-rc.22_crossws@0.4.5_srvx@0.11.16_/node_modules/h3/dist/h3.mjs
 function decodePathname(pathname) {
 	return decodeURI(pathname.includes("%25") ? pathname.replace(/%25/g, "%2525") : pathname);
 }
@@ -2935,4 +2935,4 @@ var eventHandler = defineEventHandler;
 globalThis.Headers;
 globalThis.Response;
 //#endregion
-export { sendRedirect as $, getResponseStatusText as A, parseCookies as B, getRequestIP as C, getResponseHeader as D, getRequestWebStream as E, getValidatedRouterParams as F, readRawBody as G, readBody as H, handleCacheHeaders as I, sealSession as J, readValidatedBody as K, handleCors as L, getRouterParams as M, getSession as N, getResponseHeaders as O, getValidatedQuery as P, sendProxy as Q, isMethod as R, getRequestHost as S, FastURL as St, getRequestURL as T, readFormData as U, proxyRequest as V, readMultipartFormData as W, sendError as X, send as Y, sendNoContent as Z, getProxyRequestHeaders as _, toEventHandler as _t, appendHeaders as a, setResponseHeader as at, getRequestHeader as b, NodeResponse as bt, assertMethod as c, unsealSession as ct, defaultContentType as d, useSession as dt, sendStream as et, deleteCookie as f, writeEarlyHints as ft, getHeaders as g, defineLazyEventHandler as gt, getHeader as h, defineHandler as ht, appendHeader as i, setHeaders as it, getRouterParam as j, getResponseStatus as k, clearResponseHeaders as l, updateSession as lt, getCookie as m, HTTPError as mt, appendCorsHeaders as n, setCookie as nt, appendResponseHeader as o, setResponseHeaders as ot, fetchWithEvent as p, H3Core as pt, removeResponseHeader as q, appendCorsPreflightHeaders as r, setHeader as rt, appendResponseHeaders as s, setResponseStatus as st, H3Event as t, sendWebResponse as tt, clearSession as u, useBase as ut, getQuery as v, toRequest as vt, getRequestProtocol as w, getRequestHeaders as x, serve as xt, getRequestFingerprint as y, NullProtoObj as yt, isPreflightRequest as z };
+export { sendRedirect as $, getResponseStatusText as A, parseCookies as B, getRequestIP as C, getResponseHeader as D, getRequestWebStream as E, getValidatedRouterParams as F, readRawBody as G, readBody as H, handleCacheHeaders as I, sealSession as J, readValidatedBody as K, handleCors as L, getRouterParams as M, getSession as N, getResponseHeaders as O, getValidatedQuery as P, sendProxy as Q, isMethod as R, getRequestHost as S, getRequestURL as T, readFormData as U, proxyRequest as V, readMultipartFormData as W, sendError as X, send as Y, sendNoContent as Z, getProxyRequestHeaders as _, toEventHandler as _t, appendHeaders as a, setResponseHeader as at, getRequestHeader as b, serve as bt, assertMethod as c, unsealSession as ct, defaultContentType as d, useSession as dt, sendStream as et, deleteCookie as f, writeEarlyHints as ft, getHeaders as g, defineLazyEventHandler as gt, getHeader as h, defineHandler as ht, appendHeader as i, setHeaders as it, getRouterParam as j, getResponseStatus as k, clearResponseHeaders as l, updateSession as lt, getCookie as m, HTTPError as mt, appendCorsHeaders as n, setCookie as nt, appendResponseHeader as o, setResponseHeaders as ot, fetchWithEvent as p, H3Core as pt, removeResponseHeader as q, appendCorsPreflightHeaders as r, setHeader as rt, appendResponseHeaders as s, setResponseStatus as st, H3Event as t, sendWebResponse as tt, clearSession as u, useBase as ut, getQuery as v, toRequest as vt, getRequestProtocol as w, getRequestHeaders as x, getRequestFingerprint as y, NodeResponse as yt, isPreflightRequest as z };

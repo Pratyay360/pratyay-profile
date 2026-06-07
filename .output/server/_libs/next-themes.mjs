@@ -1,6 +1,6 @@
 import { o as __toESM } from "../_runtime.mjs";
 import { s as require_react } from "./phosphor-icons__react+react.mjs";
-//#region node_modules/next-themes/dist/index.mjs
+//#region node_modules/.aube/next-themes@0.4.6_react@19.2.7_react-dom@19.2.7_react@19.2.7_/node_modules/next-themes/dist/index.mjs
 var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
 var M = (e, i, s, u, m, a, l, h) => {
 	let d = document.documentElement, w = ["light", "dark"];

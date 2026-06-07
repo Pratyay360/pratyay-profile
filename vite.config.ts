@@ -5,6 +5,8 @@ import viteReact from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { nitro } from "nitro/vite";
 
+import { cloudflare } from "@cloudflare/vite-plugin";
+
 export default defineConfig({
   staged: {
     "*": "vp check --fix",
@@ -17,7 +19,6 @@ export default defineConfig({
     tsconfigPaths: true,
   },
   plugins: [
-    nitro(),
     tailwindcss(),
     tanstackStart({
       srcDirectory: "src",
@@ -26,5 +27,10 @@ export default defineConfig({
       },
     }),
     viteReact(),
+    cloudflare({
+      viteEnvironment: {
+        name: "ssr"
+      }
+    }),
   ],
 });

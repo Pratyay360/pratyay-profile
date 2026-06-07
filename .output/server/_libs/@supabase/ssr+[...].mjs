@@ -3,7 +3,7 @@ import { t as FunctionsClient } from "../supabase__functions-js.mjs";
 import { t as PostgrestClient } from "../supabase__postgrest-js.mjs";
 import { t as RealtimeClient } from "../supabase__realtime-js.mjs";
 import { t as AuthClient } from "../supabase__auth-js.mjs";
-//#region node_modules/iceberg-js/dist/index.mjs
+//#region node_modules/.aube/iceberg-js@0.8.1/node_modules/iceberg-js/dist/index.mjs
 var IcebergError = class extends Error {
 	constructor(message, opts) {
 		super(message);
@@ -500,7 +500,7 @@ var IcebergRestCatalog = class {
 	}
 };
 //#endregion
-//#region node_modules/@supabase/storage-js/dist/index.mjs
+//#region node_modules/.aube/@supabase+storage-js@2.107.0/node_modules/@supabase/storage-js/dist/index.mjs
 function _typeof$1(o) {
 	"@babel/helpers - typeof";
 	return _typeof$1 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o$1) {
@@ -3382,7 +3382,7 @@ var StorageClient = class extends StorageBucketApi {
 	}
 };
 //#endregion
-//#region node_modules/@supabase/supabase-js/dist/index.mjs
+//#region node_modules/.aube/@supabase+supabase-js@2.107.0/node_modules/@supabase/supabase-js/dist/index.mjs
 var version = "2.107.0";
 var JS_ENV = "";
 var JS_RUNTIME_VERSION;
@@ -4213,10 +4213,10 @@ function shouldShowDeprecationWarning() {
 }
 if (shouldShowDeprecationWarning()) console.warn("⚠️  Node.js 18 and below are deprecated and will no longer be supported in future versions of @supabase/supabase-js. Please upgrade to Node.js 20 or later. For more information, visit: https://github.com/orgs/supabase/discussions/37217");
 //#endregion
-//#region node_modules/@supabase/ssr/dist/module/version.js
+//#region node_modules/.aube/@supabase+ssr@0.8.0_@supabase+supabase-js@2.107.0/node_modules/@supabase/ssr/dist/module/version.js
 var VERSION = "0.8.0";
 //#endregion
-//#region node_modules/cookie/dist/index.js
+//#region node_modules/.aube/cookie@1.1.1/node_modules/cookie/dist/index.js
 var require_dist = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.parse = parseCookie;
@@ -4423,7 +4423,7 @@ var require_dist = /* @__PURE__ */ __commonJSMin(((exports) => {
 	}
 }));
 //#endregion
-//#region node_modules/@supabase/ssr/dist/module/utils/helpers.js
+//#region node_modules/.aube/@supabase+ssr@0.8.0_@supabase+supabase-js@2.107.0/node_modules/@supabase/ssr/dist/module/utils/helpers.js
 function isBrowser() {
 	return typeof window !== "undefined" && typeof window.document !== "undefined";
 }
@@ -4445,7 +4445,7 @@ function memoryLocalStorageAdapter(store = {}) {
 	};
 }
 //#endregion
-//#region node_modules/@supabase/ssr/dist/module/utils/constants.js
+//#region node_modules/.aube/@supabase+ssr@0.8.0_@supabase+supabase-js@2.107.0/node_modules/@supabase/ssr/dist/module/utils/constants.js
 var DEFAULT_COOKIE_OPTIONS = {
 	path: "/",
 	sameSite: "lax",
@@ -4503,7 +4503,7 @@ async function combineChunks(key, retrieveChunk) {
 	return null;
 }
 //#endregion
-//#region node_modules/@supabase/ssr/dist/module/utils/base64url.js
+//#region node_modules/.aube/@supabase+ssr@0.8.0_@supabase+supabase-js@2.107.0/node_modules/@supabase/ssr/dist/module/utils/base64url.js
 /**
 * Avoid modifying this file. It's part of
 * https://github.com/supabase-community/base64url-js.  Submit all fixes on
@@ -4669,7 +4669,7 @@ function stringFromUTF8(byte, state, emit) {
 	}
 }
 //#endregion
-//#region node_modules/@supabase/ssr/dist/module/cookies.js
+//#region node_modules/.aube/@supabase+ssr@0.8.0_@supabase+supabase-js@2.107.0/node_modules/@supabase/ssr/dist/module/cookies.js
 var import_dist = /* @__PURE__ */ __toESM(require_dist());
 var BASE64_PREFIX = "base64-";
 /**
@@ -4898,7 +4898,7 @@ async function applyServerStorage({ getAll, setAll, setItems, removedItems }, op
 	}))]);
 }
 //#endregion
-//#region node_modules/@supabase/ssr/dist/module/createServerClient.js
+//#region node_modules/.aube/@supabase+ssr@0.8.0_@supabase+supabase-js@2.107.0/node_modules/@supabase/ssr/dist/module/createServerClient.js
 function createServerClient(supabaseUrl, supabaseKey, options) {
 	if (!supabaseUrl || !supabaseKey) throw new Error(`Your project's URL and Key are required to create a Supabase client!\n\nCheck your Supabase project's API settings to find these values\n\nhttps://supabase.com/dashboard/project/_/settings/api`);
 	const { storage, getAll, setAll, setItems, removedItems } = createStorageFromOptions({
@@ -4939,7 +4939,7 @@ function createServerClient(supabaseUrl, supabaseKey, options) {
 	return client;
 }
 //#endregion
-//#region node_modules/@supabase/ssr/dist/module/index.js
+//#region node_modules/.aube/@supabase+ssr@0.8.0_@supabase+supabase-js@2.107.0/node_modules/@supabase/ssr/dist/module/index.js
 if (typeof process !== "undefined" && process.env?.npm_package_name) {
 	const packageName = process.env.npm_package_name;
 	if ([

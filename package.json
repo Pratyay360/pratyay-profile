@@ -2,12 +2,12 @@
   "name": "pratyay-profile",
   "version": "1.0.4",
   "description": "",
-  "main": "index.js",
   "author": {
     "name": "PRATYAY MUSTAFI",
     "email": "pratyaymustafi@outlook.com"
   },
   "type": "module",
+  "main": "index.js",
   "scripts": {
     "build": "vp build",
     "dev": "vp dev",
@@ -15,10 +15,8 @@
     "lint": "oxlint .",
     "lint:fix": "oxlint . --fix",
     "format": "oxfmt --write .",
-    "preview": "bun run build && wrangler dev",
     "deploy": "bun run build && wrangler deploy",
-    "upload": "wrangler upload",
-    "prepare": "vp config",
+    "preview": "bun run build && wrangler dev",
     "cf-typegen": "wrangler types"
   },
   "dependencies": {
@@ -81,7 +79,6 @@
     "oxfmt": "^0.53.0",
     "oxlint": "^1.68.0",
     "vite-plus": "latest",
-    "vlt": "^1.0.0-rc.32",
     "wrangler": "^4.98.0"
   },
   "overrides": {

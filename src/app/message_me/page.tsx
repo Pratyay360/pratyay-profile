@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Loader2 } from "lucide-react";
 
-const SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_FORM_URL!;
+const SCRIPT_URL = import.meta.env.GOOGLE_FORM_URL!;
 
 export default function ContactPage() {
   const [loading, setLoading] = useState(false);

@@ -1,4 +1,4 @@
-//#region node_modules/@unpic/core/dist/chunk-7DG3H6KO.mjs
+//#region node_modules/.aube/@unpic+core@1.0.3/node_modules/@unpic/core/dist/chunk-7DG3H6KO.mjs
 var getSizes = (width, layout) => {
 	if (!width || !layout) return;
 	switch (layout) {
@@ -211,7 +211,7 @@ function transformBaseSourceProps({ media, type, ...props }) {
 	return returnObject;
 }
 //#endregion
-//#region node_modules/unpic/esm/data/domains.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/data/domains.js
 var domains_default = {
 	"images.ctfassets.net": "contentful",
 	"cdn.builder.io": "builder.io",
@@ -229,7 +229,7 @@ var domains_default = {
 	"wsrv.nl": "wsrv"
 };
 //#endregion
-//#region node_modules/unpic/esm/data/subdomains.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/data/subdomains.js
 var subdomains_default = {
 	"imgix.net": "imgix",
 	"wp.com": "wordpress",
@@ -247,7 +247,7 @@ var subdomains_default = {
 	"graphassets.com": "hygraph"
 };
 //#endregion
-//#region node_modules/unpic/esm/data/paths.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/data/paths.js
 var paths_default = {
 	"/cdn-cgi/image/": "cloudflare",
 	"/cdn-cgi/imagedelivery/": "cloudflare_images",
@@ -262,7 +262,7 @@ var paths_default = {
 	"/v1/storage/buckets/": "appwrite"
 };
 //#endregion
-//#region node_modules/unpic/esm/src/utils.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/utils.js
 function roundIfNumeric(value) {
 	if (!value) return value;
 	const num = Number(value);
@@ -455,7 +455,7 @@ function createExtractAndGenerate(extract, generate) {
 	});
 }
 //#endregion
-//#region node_modules/unpic/esm/src/detect.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/detect.js
 var cdnDomains = new Map(Object.entries(domains_default));
 var cdnSubdomains = Object.entries(subdomains_default);
 var cdnPaths = Object.entries(paths_default);
@@ -480,7 +480,7 @@ function getProviderForUrlByPath(url) {
 	return cdnPaths.find(([path]) => pathname.startsWith(path))?.[1] || false;
 }
 //#endregion
-//#region node_modules/unpic/esm/src/providers/appwrite.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/appwrite.js
 var VIEW_URL_SUFFIX = "/view?";
 var PREVIEW_URL_SUFFIX = "/preview?";
 var { operationsGenerator: operationsGenerator$25, operationsParser: operationsParser$20 } = createOperationsHandlers({
@@ -510,7 +510,7 @@ var extract$26 = (url) => {
 };
 var transform$27 = createExtractAndGenerate(extract$26, generate$26);
 //#endregion
-//#region node_modules/unpic/esm/src/providers/astro.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/astro.js
 var DEFAULT_ENDPOINT = "/_image";
 var { operationsParser: operationsParser$19, operationsGenerator: operationsGenerator$24 } = createOperationsHandlers({
 	keyMap: {
@@ -549,7 +549,7 @@ var transform$26 = (src, operations, options = {}) => {
 	}, options);
 };
 //#endregion
-//#region node_modules/unpic/esm/src/providers/builder.io.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/builder.io.js
 var operationsGenerator$23 = createOperationsGenerator({ defaults: {
 	fit: "cover",
 	format: "webp",
@@ -564,7 +564,7 @@ var generate$24 = (src, modifiers) => {
 };
 var transform$25 = createExtractAndGenerate(extract$24, generate$24);
 //#endregion
-//#region node_modules/unpic/esm/src/providers/bunny.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/bunny.js
 var operationsGenerator$22 = createOperationsGenerator({ keyMap: { format: "output" } });
 var extract$23 = extractFromURL;
 var generate$23 = (src, modifiers) => {
@@ -580,7 +580,7 @@ var transform$24 = (src, operations) => {
 	return extractAndGenerate$1(src, operations);
 };
 //#endregion
-//#region node_modules/unpic/esm/src/providers/cloudflare.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/cloudflare.js
 var { operationsGenerator: operationsGenerator$21, operationsParser: operationsParser$18 } = createOperationsHandlers({
 	keyMap: { "format": "f" },
 	defaults: {
@@ -610,7 +610,7 @@ var extract$22 = (url, options) => {
 };
 var transform$23 = createExtractAndGenerate(extract$22, generate$22);
 //#endregion
-//#region node_modules/unpic/esm/src/providers/cloudflare_images.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/cloudflare_images.js
 var cloudflareImagesRegex = /https?:\/\/(?<host>[^\/]+)\/cdn-cgi\/imagedelivery\/(?<accountHash>[^\/]+)\/(?<imageId>[^\/]+)\/*(?<transformations>[^\/]+)*$/g;
 var imagedeliveryRegex = /https?:\/\/(?<host>imagedelivery.net)\/(?<accountHash>[^\/]+)\/(?<imageId>[^\/]+)\/*(?<transformations>[^\/]+)*$/g;
 var { operationsGenerator: operationsGenerator$20, operationsParser: operationsParser$17 } = createOperationsHandlers({
@@ -671,7 +671,7 @@ var transform$22 = (src, operations, options = {}) => {
 	});
 };
 //#endregion
-//#region node_modules/unpic/esm/src/providers/cloudimage.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/cloudimage.js
 var { operationsGenerator: operationsGenerator$19, operationsParser: operationsParser$16 } = createOperationsHandlers({
 	keyMap: {
 		format: "force_format",
@@ -713,7 +713,7 @@ var extract$20 = (src, options = {}) => {
 };
 var transform$21 = createExtractAndGenerate(extract$20, generate$20);
 //#endregion
-//#region node_modules/unpic/esm/src/providers/cloudinary.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/cloudinary.js
 var publicRegex = /https?:\/\/(?<host>res\.cloudinary\.com)\/(?<cloudName>[a-zA-Z0-9-]+)\/(?<assetType>image|video|raw)\/(?<deliveryType>upload|fetch|private|authenticated|sprite|facebook|twitter|youtube|vimeo)\/?(?<signature>s\-\-[a-zA-Z0-9]+\-\-)?\/?(?<transformations>(?:[^_\/]+_[^,\/]+,?)*)?\/(?:(?<version>v\d+)\/)?(?<id>(?:[^\s\/]+\/)*[^\s\/]+(?:\.[a-zA-Z0-9]+)?)$/;
 var privateRegex = /https?:\/\/(?<host>(?<cloudName>[a-zA-Z0-9-]+)-res\.cloudinary\.com|[a-zA-Z0-9.-]+)\/(?<assetType>image|video|raw)\/(?<deliveryType>upload|fetch|private|authenticated|sprite|facebook|twitter|youtube|vimeo)\/?(?<signature>s\-\-[a-zA-Z0-9]+\-\-)?\/?(?<transformations>(?:[^_\/]+_[^,\/]+,?)*)?\/(?:(?<version>v\d+)\/)?(?<id>(?:[^\s\/]+\/)*[^\s\/]+(?:\.[a-zA-Z0-9]+)?)$/;
 var { operationsGenerator: operationsGenerator$18, operationsParser: operationsParser$15 } = createOperationsHandlers({
@@ -759,7 +759,7 @@ var transform$20 = (src, operations) => {
 	return formatCloudinaryUrl(group);
 };
 //#endregion
-//#region node_modules/unpic/esm/src/providers/contentful.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/contentful.js
 var operationsGenerator$17 = createOperationsGenerator({
 	keyMap: {
 		format: "fm",
@@ -785,7 +785,7 @@ var transform$19 = (src, operations) => {
 	});
 };
 //#endregion
-//#region node_modules/unpic/esm/src/providers/contentstack.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/contentstack.js
 var operationsGenerator$16 = createOperationsGenerator({ defaults: {
 	auto: "webp",
 	disable: "upscale"
@@ -813,7 +813,7 @@ var extract$18 = (url) => {
 };
 var transform$18 = createExtractAndGenerate(extract$18, generate$18);
 //#endregion
-//#region node_modules/unpic/esm/src/providers/directus.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/directus.js
 var operationsGenerator$15 = createOperationsGenerator({ defaults: {
 	withoutEnlargement: true,
 	fit: "cover"
@@ -836,7 +836,7 @@ var extract$17 = (url) => {
 };
 var transform$17 = createExtractAndGenerate(extract$17, generate$17);
 //#endregion
-//#region node_modules/unpic/esm/src/providers/hygraph.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/hygraph.js
 var hygraphRegex = /https:\/\/(?<region>[a-z0-9-]+)\.graphassets\.com\/(?<envId>[a-zA-Z0-9]+)(?:\/(?<transformations>.*?))?\/(?<handle>[a-zA-Z0-9]+)$/;
 var { operationsGenerator: operationsGenerator$14, operationsParser: operationsParser$14 } = createOperationsHandlers({
 	keyMap: {
@@ -899,7 +899,7 @@ var generate$16 = (src, operations, options = {}) => {
 };
 var transform$16 = createExtractAndGenerate(extract$16, generate$16);
 //#endregion
-//#region node_modules/unpic/esm/src/providers/imageengine.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/imageengine.js
 var { operationsGenerator: operationsGenerator$13, operationsParser: operationsParser$13 } = createOperationsHandlers({
 	keyMap: {
 		width: "w",
@@ -929,7 +929,7 @@ var extract$15 = (url) => {
 };
 var transform$15 = createExtractAndGenerate(extract$15, generate$15);
 //#endregion
-//#region node_modules/unpic/esm/src/providers/imagekit.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/imagekit.js
 var { operationsGenerator: operationsGenerator$12, operationsParser: operationsParser$12 } = createOperationsHandlers({
 	keyMap: {
 		width: "w",
@@ -975,7 +975,7 @@ var extract$14 = (url) => {
 };
 var transform$14 = createExtractAndGenerate(extract$14, generate$14);
 //#endregion
-//#region node_modules/unpic/esm/src/providers/imgix.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/imgix.js
 var { operationsGenerator: operationsGenerator$11, operationsParser: operationsParser$11 } = createOperationsHandlers({
 	keyMap: {
 		format: "fm",
@@ -1006,7 +1006,7 @@ var generate$13 = (src, operations) => {
 };
 var transform$13 = createExtractAndGenerate(extract$13, generate$13);
 //#endregion
-//#region node_modules/unpic/esm/src/providers/ipx.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/ipx.js
 var { operationsGenerator: operationsGenerator$10, operationsParser: operationsParser$10 } = createOperationsHandlers({
 	keyMap: {
 		width: "w",
@@ -1059,7 +1059,7 @@ var transform$12 = (src, operations, options) => {
 	return generate$12(src, operations, { baseURL });
 };
 //#endregion
-//#region node_modules/unpic/esm/src/providers/keycdn.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/keycdn.js
 var BOOLEAN_PARAMS = [
 	"enlarge",
 	"flip",
@@ -1097,7 +1097,7 @@ var extract$11 = (url) => {
 };
 var transform$11 = createExtractAndGenerate(extract$11, generate$11);
 //#endregion
-//#region node_modules/unpic/esm/src/providers/kontent.ai.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/kontent.ai.js
 var { operationsGenerator: operationsGenerator$8, operationsParser: operationsParser$8 } = createOperationsHandlers({
 	formatMap: { jpg: "jpeg" },
 	keyMap: {
@@ -1126,7 +1126,7 @@ var extract$10 = (url) => {
 };
 var transform$10 = createExtractAndGenerate(extract$10, generate$10);
 //#endregion
-//#region node_modules/unpic/esm/src/providers/netlify.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/netlify.js
 var { operationsGenerator: operationsGenerator$7, operationsParser: operationsParser$7 } = createOperationsHandlers({
 	defaults: { fit: "cover" },
 	keyMap: {
@@ -1157,7 +1157,7 @@ var extract$9 = (url) => {
 };
 var transform$9 = createExtractAndGenerate(extract$9, generate$9);
 //#endregion
-//#region node_modules/unpic/esm/src/providers/vercel.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/vercel.js
 var { operationsGenerator: operationsGenerator$6, operationsParser: operationsParser$6 } = createOperationsHandlers({
 	keyMap: {
 		width: "w",
@@ -1188,7 +1188,7 @@ var extract$8 = (url, options = {}) => {
 };
 var transform$8 = createExtractAndGenerate(extract$8, generate$8);
 //#endregion
-//#region node_modules/unpic/esm/src/providers/nextjs.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/nextjs.js
 var generate$7 = (src, operations, options = {}) => generate$8(src, operations, {
 	...options,
 	prefix: "_next"
@@ -1196,7 +1196,7 @@ var generate$7 = (src, operations, options = {}) => generate$8(src, operations, 
 var extract$7 = (url, options) => extract$8(url, options);
 var transform$7 = createExtractAndGenerate(extract$7, generate$7);
 //#endregion
-//#region node_modules/unpic/esm/src/providers/scene7.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/scene7.js
 var { operationsGenerator: operationsGenerator$5, operationsParser: operationsParser$5 } = createOperationsHandlers({
 	keyMap: {
 		width: "wid",
@@ -1224,7 +1224,7 @@ var extract$6 = (url) => {
 };
 var transform$6 = createExtractAndGenerate(extract$6, generate$6);
 //#endregion
-//#region node_modules/unpic/esm/src/providers/shopify.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/shopify.js
 var shopifyRegex = /(.+?)(?:_(?:(pico|icon|thumb|small|compact|medium|large|grande|original|master)|(\d*)x(\d*)))?(?:_crop_([a-z]+))?(\.[a-zA-Z]+)(\.png|\.jpg|\.webp|\.avif)?$/;
 var { operationsGenerator: operationsGenerator$4, operationsParser: operationsParser$4 } = createOperationsHandlers({ keyMap: { format: false } });
 var generate$5 = (src, operations) => {
@@ -1260,7 +1260,7 @@ var extract$5 = (url) => {
 };
 var transform$5 = createExtractAndGenerate(extract$5, generate$5);
 //#endregion
-//#region node_modules/unpic/esm/src/providers/storyblok.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/storyblok.js
 var storyBlokAssets = /(?<id>\/f\/\d+\/\d+x\d+\/\w+\/[^\/]+)\/?(?<modifiers>m\/?(?<crop>\d+x\d+:\d+x\d+)?\/?(?<resize>(?<flipx>\-)?(?<width>\d+)x(?<flipy>\-)?(?<height>\d+))?\/?(filters\:(?<filters>[^\/]+))?)?$/;
 var storyBlokImg2 = /^(?<modifiers>\/(?<crop>\d+x\d+:\d+x\d+)?\/?(?<resize>(?<flipx>\-)?(?<width>\d+)x(?<flipy>\-)?(?<height>\d+))?\/?(filters\:(?<filters>[^\/]+))?\/?)?(?<id>\/f\/.+)$/;
 var filterSplitterRegex = /:(?![^(]*\))/;
@@ -1315,7 +1315,7 @@ var generate$4 = (src, operations) => {
 };
 var transform$4 = createExtractAndGenerate(extract$4, generate$4);
 //#endregion
-//#region node_modules/unpic/esm/src/providers/supabase.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/supabase.js
 var STORAGE_URL_PREFIX = "/storage/v1/object/public/";
 var RENDER_URL_PREFIX = "/storage/v1/render/image/public/";
 var isRenderUrl = (url) => url.pathname.startsWith(RENDER_URL_PREFIX);
@@ -1343,7 +1343,7 @@ var extract$3 = (url) => {
 };
 var transform$3 = createExtractAndGenerate(extract$3, generate$3);
 //#endregion
-//#region node_modules/unpic/esm/src/providers/uploadcare.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/uploadcare.js
 var uploadcareRegex = /^https?:\/\/(?<host>[^\/]+)\/(?<uuid>[^\/]+)(?:\/(?<filename>[^\/]+)?)?/;
 var { operationsGenerator: operationsGenerator$2, operationsParser: operationsParser$2 } = createOperationsHandlers({
 	keyMap: {
@@ -1388,7 +1388,7 @@ var generate$2 = (src, operations, options = {}) => {
 };
 var transform$2 = createExtractAndGenerate(extract$2, generate$2);
 //#endregion
-//#region node_modules/unpic/esm/src/providers/wordpress.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/wordpress.js
 var { operationsGenerator: operationsGenerator$1, operationsParser: operationsParser$1 } = createOperationsHandlers({
 	keyMap: {
 		width: "w",
@@ -1415,7 +1415,7 @@ var extract$1 = (url) => {
 };
 var transform$1 = createExtractAndGenerate(extract$1, generate$1);
 //#endregion
-//#region node_modules/unpic/esm/src/providers/wsrv.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/providers/wsrv.js
 var { operationsGenerator, operationsParser } = createOperationsHandlers({
 	keyMap: {
 		width: "w",
@@ -1448,7 +1448,7 @@ var generate = (src, operations) => {
 	return toCanonicalUrlString(url);
 };
 //#endregion
-//#region node_modules/unpic/esm/src/transform.js
+//#region node_modules/.aube/unpic@4.2.2/node_modules/unpic/esm/src/transform.js
 var transformerMap = {
 	appwrite: transform$27,
 	astro: transform$26,
@@ -1487,7 +1487,7 @@ function getTransformerForCdn(cdn) {
 	return transformerMap[cdn];
 }
 //#endregion
-//#region node_modules/@unpic/core/dist/auto.mjs
+//#region node_modules/.aube/@unpic+core@1.0.3/node_modules/@unpic/core/dist/auto.mjs
 function transformProps({ cdn, fallback, operations = {}, options, ...props }) {
 	cdn ??= getProviderForUrl(props.src) || fallback;
 	if (!cdn) return props;

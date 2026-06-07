@@ -1,6 +1,6 @@
 import { o as __toESM } from "../_runtime.mjs";
 import { s as require_react } from "./phosphor-icons__react+react.mjs";
-//#region node_modules/react-loading-skeleton/dist/index.js
+//#region node_modules/.aube/react-loading-skeleton@3.5.0_react@19.2.7/node_modules/react-loading-skeleton/dist/index.js
 var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
 /**
 * @internal

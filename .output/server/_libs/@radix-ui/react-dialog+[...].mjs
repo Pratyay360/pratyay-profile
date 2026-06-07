@@ -4,11 +4,11 @@ import { a as createSlot, c as require_react_dom, l as require_jsx_runtime, n as
 import { n as createContext2, r as createContextScope } from "./react-collection+[...].mjs";
 import { t as composeEventHandlers } from "../radix-ui__primitive.mjs";
 import { __assign, __rest, __spreadArray } from "tslib";
-//#region node_modules/@radix-ui/react-use-layout-effect/dist/index.mjs
+//#region node_modules/.aube/@radix-ui+react-use-layout-effect@1.1.2_@types+react@19.2.17_react@19.2.7/node_modules/@radix-ui/react-use-layout-effect/dist/index.mjs
 var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
 var useLayoutEffect2 = globalThis?.document ? import_react.useLayoutEffect : () => {};
 //#endregion
-//#region node_modules/@radix-ui/react-use-controllable-state/dist/index.mjs
+//#region node_modules/.aube/@radix-ui+react-use-controllable-state@1.2.3_@types+react@19.2.17_react@19.2.7/node_modules/@radix-ui/react-use-controllable-state/dist/index.mjs
 var useInsertionEffect = import_react[" useInsertionEffect ".trim().toString()] || useLayoutEffect2;
 function useControllableState({ prop, defaultProp, onChange = () => {}, caller }) {
 	const [uncontrolledProp, setUncontrolledProp, onChangeRef] = useUncontrolledState({
@@ -60,7 +60,7 @@ function isFunction(value) {
 	return typeof value === "function";
 }
 //#endregion
-//#region node_modules/@radix-ui/react-presence/dist/index.mjs
+//#region node_modules/.aube/@radix-ui+react-presence@1.1.6_@types+react@19.2.17_@types+react-dom@19.2.3_@types+reac_34724422382559430b18d900546cad34/node_modules/@radix-ui/react-presence/dist/index.mjs
 var import_jsx_runtime = require_jsx_runtime();
 var import_react_dom = /* @__PURE__ */ __toESM(require_react_dom(), 1);
 function useStateMachine(initialState, machine) {
@@ -185,7 +185,7 @@ function getElementRef(element) {
 	return element.props.ref || element.ref;
 }
 //#endregion
-//#region node_modules/@radix-ui/react-id/dist/index.mjs
+//#region node_modules/.aube/@radix-ui+react-id@1.1.2_@types+react@19.2.17_react@19.2.7/node_modules/@radix-ui/react-id/dist/index.mjs
 var useReactId = import_react[" useId ".trim().toString()] || (() => void 0);
 var count$1 = 0;
 function useId(deterministicId) {
@@ -196,7 +196,7 @@ function useId(deterministicId) {
 	return deterministicId || (id ? `radix-${id}` : "");
 }
 //#endregion
-//#region node_modules/@radix-ui/react-use-callback-ref/dist/index.mjs
+//#region node_modules/.aube/@radix-ui+react-use-callback-ref@1.1.2_@types+react@19.2.17_react@19.2.7/node_modules/@radix-ui/react-use-callback-ref/dist/index.mjs
 function useCallbackRef$1(callback) {
 	const callbackRef = import_react.useRef(callback);
 	import_react.useEffect(() => {
@@ -205,7 +205,7 @@ function useCallbackRef$1(callback) {
 	return import_react.useMemo(() => ((...args) => callbackRef.current?.(...args)), []);
 }
 //#endregion
-//#region node_modules/@radix-ui/react-use-escape-keydown/dist/index.mjs
+//#region node_modules/.aube/@radix-ui+react-use-escape-keydown@1.1.2_@types+react@19.2.17_react@19.2.7/node_modules/@radix-ui/react-use-escape-keydown/dist/index.mjs
 function useEscapeKeydown(onEscapeKeyDownProp, ownerDocument = globalThis?.document) {
 	const onEscapeKeyDown = useCallbackRef$1(onEscapeKeyDownProp);
 	import_react.useEffect(() => {
@@ -217,7 +217,7 @@ function useEscapeKeydown(onEscapeKeyDownProp, ownerDocument = globalThis?.docum
 	}, [onEscapeKeyDown, ownerDocument]);
 }
 //#endregion
-//#region node_modules/@radix-ui/react-dismissable-layer/dist/index.mjs
+//#region node_modules/.aube/@radix-ui+react-dismissable-layer@1.1.12_@types+react@19.2.17_@types+react-dom@19.2.3_@_de9eaf6ed7adb28d9a4badbd4145201c/node_modules/@radix-ui/react-dismissable-layer/dist/index.mjs
 var DISMISSABLE_LAYER_NAME = "DismissableLayer";
 var CONTEXT_UPDATE = "dismissableLayer.update";
 var POINTER_DOWN_OUTSIDE = "dismissableLayer.pointerDownOutside";
@@ -394,7 +394,7 @@ function handleAndDispatchCustomEvent(name, handler, detail, { discrete }) {
 	else target.dispatchEvent(event);
 }
 //#endregion
-//#region node_modules/@radix-ui/react-focus-scope/dist/index.mjs
+//#region node_modules/.aube/@radix-ui+react-focus-scope@1.1.9_@types+react@19.2.17_@types+react-dom@19.2.3_@types+r_bba025dd8c0880b2c11917ec8e17b17e/node_modules/@radix-ui/react-focus-scope/dist/index.mjs
 var AUTOFOCUS_ON_MOUNT = "focusScope.autoFocusOnMount";
 var AUTOFOCUS_ON_UNMOUNT = "focusScope.autoFocusOnUnmount";
 var EVENT_OPTIONS = {
@@ -583,7 +583,7 @@ function removeLinks(items) {
 	return items.filter((item) => item.tagName !== "A");
 }
 //#endregion
-//#region node_modules/@radix-ui/react-portal/dist/index.mjs
+//#region node_modules/.aube/@radix-ui+react-portal@1.1.11_@types+react@19.2.17_@types+react-dom@19.2.3_@types+react_fe5bec7f0f71a71899e4ad85a8f9e3df/node_modules/@radix-ui/react-portal/dist/index.mjs
 var PORTAL_NAME$1 = "Portal";
 var Portal$1 = import_react.forwardRef((props, forwardedRef) => {
 	const { container: containerProp, ...portalProps } = props;
@@ -597,7 +597,7 @@ var Portal$1 = import_react.forwardRef((props, forwardedRef) => {
 });
 Portal$1.displayName = PORTAL_NAME$1;
 //#endregion
-//#region node_modules/@radix-ui/react-focus-guards/dist/index.mjs
+//#region node_modules/.aube/@radix-ui+react-focus-guards@1.1.4_@types+react@19.2.17_react@19.2.7/node_modules/@radix-ui/react-focus-guards/dist/index.mjs
 var count = 0;
 var guards = null;
 function useFocusGuards() {
@@ -631,7 +631,7 @@ function createFocusGuard() {
 	return element;
 }
 //#endregion
-//#region node_modules/react-remove-scroll-bar/dist/es2015/constants.js
+//#region node_modules/.aube/react-remove-scroll-bar@2.3.8_@types+react@19.2.17_react@19.2.7/node_modules/react-remove-scroll-bar/dist/es2015/constants.js
 var zeroRightClassName = "right-scroll-bar-position";
 var fullWidthClassName = "width-before-scroll-bar";
 var noScrollbarsClassName = "with-scroll-bars-hidden";
@@ -641,7 +641,7 @@ var noScrollbarsClassName = "with-scroll-bars-hidden";
 */
 var removedBarSizeVariable = "--removed-body-scroll-bar-size";
 //#endregion
-//#region node_modules/use-callback-ref/dist/es2015/assignRef.js
+//#region node_modules/.aube/use-callback-ref@1.3.3_@types+react@19.2.17_react@19.2.7/node_modules/use-callback-ref/dist/es2015/assignRef.js
 /**
 * Assigns a value for a given ref, no matter of the ref format
 * @param {RefObject} ref - a callback function or ref object
@@ -661,7 +661,7 @@ function assignRef(ref, value) {
 	return ref;
 }
 //#endregion
-//#region node_modules/use-callback-ref/dist/es2015/useRef.js
+//#region node_modules/.aube/use-callback-ref@1.3.3_@types+react@19.2.17_react@19.2.7/node_modules/use-callback-ref/dist/es2015/useRef.js
 /**
 * creates a MutableRef with ref change callback
 * @param initialValue - initial ref value
@@ -699,7 +699,7 @@ function useCallbackRef(initialValue, callback) {
 	return ref.facade;
 }
 //#endregion
-//#region node_modules/use-callback-ref/dist/es2015/useMergeRef.js
+//#region node_modules/.aube/use-callback-ref@1.3.3_@types+react@19.2.17_react@19.2.7/node_modules/use-callback-ref/dist/es2015/useMergeRef.js
 var useIsomorphicLayoutEffect = typeof window !== "undefined" ? import_react.useLayoutEffect : import_react.useEffect;
 var currentValues = /* @__PURE__ */ new WeakMap();
 /**
@@ -740,7 +740,7 @@ function useMergeRefs(refs, defaultValue) {
 	return callbackRef;
 }
 //#endregion
-//#region node_modules/use-sidecar/dist/es2015/medium.js
+//#region node_modules/.aube/use-sidecar@1.1.3_@types+react@19.2.17_react@19.2.7/node_modules/use-sidecar/dist/es2015/medium.js
 function ItoI(a) {
 	return a;
 }
@@ -820,7 +820,7 @@ function createSidecarMedium(options) {
 	return medium;
 }
 //#endregion
-//#region node_modules/use-sidecar/dist/es2015/exports.js
+//#region node_modules/.aube/use-sidecar@1.1.3_@types+react@19.2.17_react@19.2.7/node_modules/use-sidecar/dist/es2015/exports.js
 var SideCar = function(_a) {
 	var sideCar = _a.sideCar, rest = __rest(_a, ["sideCar"]);
 	if (!sideCar) throw new Error("Sidecar: please provide `sideCar` property to import the right car");
@@ -834,10 +834,10 @@ function exportSidecar(medium, exported) {
 	return SideCar;
 }
 //#endregion
-//#region node_modules/react-remove-scroll/dist/es2015/medium.js
+//#region node_modules/.aube/react-remove-scroll@2.7.2_@types+react@19.2.17_react@19.2.7/node_modules/react-remove-scroll/dist/es2015/medium.js
 var effectCar = createSidecarMedium();
 //#endregion
-//#region node_modules/react-remove-scroll/dist/es2015/UI.js
+//#region node_modules/.aube/react-remove-scroll@2.7.2_@types+react@19.2.17_react@19.2.7/node_modules/react-remove-scroll/dist/es2015/UI.js
 var nothing = function() {};
 /**
 * Removes scrollbar from the page and contain the scroll within the Lock
@@ -893,14 +893,14 @@ RemoveScroll.classNames = {
 	zeroRight: zeroRightClassName
 };
 //#endregion
-//#region node_modules/get-nonce/dist/es2015/index.js
+//#region node_modules/.aube/get-nonce@1.0.1/node_modules/get-nonce/dist/es2015/index.js
 var currentNonce;
 var getNonce = function() {
 	if (currentNonce) return currentNonce;
 	if (typeof __webpack_nonce__ !== "undefined") return __webpack_nonce__;
 };
 //#endregion
-//#region node_modules/react-style-singleton/dist/es2015/singleton.js
+//#region node_modules/.aube/react-style-singleton@2.2.3_@types+react@19.2.17_react@19.2.7/node_modules/react-style-singleton/dist/es2015/singleton.js
 function makeStyleTag() {
 	if (!document) return null;
 	var tag = document.createElement("style");
@@ -939,7 +939,7 @@ var stylesheetSingleton = function() {
 	};
 };
 //#endregion
-//#region node_modules/react-style-singleton/dist/es2015/hook.js
+//#region node_modules/.aube/react-style-singleton@2.2.3_@types+react@19.2.17_react@19.2.7/node_modules/react-style-singleton/dist/es2015/hook.js
 /**
 * creates a hook to control style singleton
 * @see {@link styleSingleton} for a safer component version
@@ -961,7 +961,7 @@ var styleHookSingleton = function() {
 	};
 };
 //#endregion
-//#region node_modules/react-style-singleton/dist/es2015/component.js
+//#region node_modules/.aube/react-style-singleton@2.2.3_@types+react@19.2.17_react@19.2.7/node_modules/react-style-singleton/dist/es2015/component.js
 /**
 * create a Component to add styles on demand
 * - styles are added when first instance is mounted
@@ -978,7 +978,7 @@ var styleSingleton = function() {
 	return Sheet;
 };
 //#endregion
-//#region node_modules/react-remove-scroll-bar/dist/es2015/utils.js
+//#region node_modules/.aube/react-remove-scroll-bar@2.3.8_@types+react@19.2.17_react@19.2.7/node_modules/react-remove-scroll-bar/dist/es2015/utils.js
 var zeroGap = {
 	left: 0,
 	top: 0,
@@ -1013,7 +1013,7 @@ var getGapWidth = function(gapMode) {
 	};
 };
 //#endregion
-//#region node_modules/react-remove-scroll-bar/dist/es2015/component.js
+//#region node_modules/.aube/react-remove-scroll-bar@2.3.8_@types+react@19.2.17_react@19.2.7/node_modules/react-remove-scroll-bar/dist/es2015/component.js
 var Style = styleSingleton();
 var lockAttribute = "data-scroll-locked";
 var getStyles = function(_a, allowRelative, gapMode, important) {
@@ -1051,7 +1051,7 @@ var RemoveScrollBar = function(_a) {
 	return import_react.createElement(Style, { styles: getStyles(gap, !noRelative, gapMode, !noImportant ? "!important" : "") });
 };
 //#endregion
-//#region node_modules/react-remove-scroll/dist/es2015/aggresiveCapture.js
+//#region node_modules/.aube/react-remove-scroll@2.7.2_@types+react@19.2.17_react@19.2.7/node_modules/react-remove-scroll/dist/es2015/aggresiveCapture.js
 var passiveSupported = false;
 if (typeof window !== "undefined") try {
 	var options = Object.defineProperty({}, "passive", { get: function() {
@@ -1065,7 +1065,7 @@ if (typeof window !== "undefined") try {
 }
 var nonPassive = passiveSupported ? { passive: false } : false;
 //#endregion
-//#region node_modules/react-remove-scroll/dist/es2015/handleScroll.js
+//#region node_modules/.aube/react-remove-scroll@2.7.2_@types+react@19.2.17_react@19.2.7/node_modules/react-remove-scroll/dist/es2015/handleScroll.js
 var alwaysContainsScroll = function(node) {
 	return node.tagName === "TEXTAREA";
 };
@@ -1148,7 +1148,7 @@ var handleScroll = function(axis, endTarget, event, sourceDelta, noOverscroll) {
 	return shouldCancelScroll;
 };
 //#endregion
-//#region node_modules/react-remove-scroll/dist/es2015/SideEffect.js
+//#region node_modules/.aube/react-remove-scroll@2.7.2_@types+react@19.2.17_react@19.2.7/node_modules/react-remove-scroll/dist/es2015/SideEffect.js
 var getTouchXY = function(event) {
 	return "changedTouches" in event ? [event.changedTouches[0].clientX, event.changedTouches[0].clientY] : [0, 0];
 };
@@ -1303,10 +1303,10 @@ function getOutermostShadowParent(node) {
 	return shadowParent;
 }
 //#endregion
-//#region node_modules/react-remove-scroll/dist/es2015/sidecar.js
+//#region node_modules/.aube/react-remove-scroll@2.7.2_@types+react@19.2.17_react@19.2.7/node_modules/react-remove-scroll/dist/es2015/sidecar.js
 var sidecar_default = exportSidecar(effectCar, RemoveScrollSideCar);
 //#endregion
-//#region node_modules/react-remove-scroll/dist/es2015/Combination.js
+//#region node_modules/.aube/react-remove-scroll@2.7.2_@types+react@19.2.17_react@19.2.7/node_modules/react-remove-scroll/dist/es2015/Combination.js
 var ReactRemoveScroll = import_react.forwardRef(function(props, ref) {
 	return import_react.createElement(RemoveScroll, __assign({}, props, {
 		ref,
@@ -1315,7 +1315,7 @@ var ReactRemoveScroll = import_react.forwardRef(function(props, ref) {
 });
 ReactRemoveScroll.classNames = RemoveScroll.classNames;
 //#endregion
-//#region node_modules/aria-hidden/dist/es2015/index.js
+//#region node_modules/.aube/aria-hidden@1.2.6/node_modules/aria-hidden/dist/es2015/index.js
 var getDefaultParent = function(originalTarget) {
 	if (typeof document === "undefined") return null;
 	return (Array.isArray(originalTarget) ? originalTarget[0] : originalTarget).ownerDocument.body;
@@ -1421,7 +1421,7 @@ var hideOthers = function(originalTarget, parentNode, markerName) {
 	return applyAttributeToOthers(targets, activeParentNode, markerName, "aria-hidden");
 };
 //#endregion
-//#region node_modules/@radix-ui/react-dialog/dist/index.mjs
+//#region node_modules/.aube/@radix-ui+react-dialog@1.1.16_@types+react@19.2.17_@types+react-dom@19.2.3_@types+react_1f093188ba2f2ec73357096e3843525d/node_modules/@radix-ui/react-dialog/dist/index.mjs
 var DIALOG_NAME = "Dialog";
 var [createDialogContext, createDialogScope] = createContextScope(DIALOG_NAME);
 var [DialogProvider, useDialogContext] = createDialogContext(DIALOG_NAME);

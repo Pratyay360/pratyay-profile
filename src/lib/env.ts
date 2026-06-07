@@ -1,7 +1,7 @@
 // Environment variable validation
 export const env = {
-  NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+  VITE_SUPABASE_URL: import.meta.env.VITE_SUPABASE_URL!,
+  VITE_SUPABASE_KEY: import.meta.env.VITE_SUPABASE_KEY!,
 } as const;
 
 // Validate required environment variables
@@ -11,7 +11,9 @@ function validateEnv() {
     .map(([key]) => key);
 
   if (missing.length > 0) {
-    throw new Error(`Missing required environment variables: ${missing.join(", ")}`);
+    throw new Error(
+      `Missing required environment variables: ${missing.join(", ")}`,
+    );
   }
 }
 

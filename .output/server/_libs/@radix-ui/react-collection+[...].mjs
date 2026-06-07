@@ -1,7 +1,7 @@
 import { o as __toESM } from "../../_runtime.mjs";
 import { s as require_react } from "../phosphor-icons__react+react.mjs";
 import { a as createSlot, l as require_jsx_runtime, s as useComposedRefs } from "./react-aspect-ratio+[...].mjs";
-//#region node_modules/@radix-ui/react-context/dist/index.mjs
+//#region node_modules/.aube/@radix-ui+react-context@1.1.4_@types+react@19.2.17_react@19.2.7/node_modules/@radix-ui/react-context/dist/index.mjs
 var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
 var import_jsx_runtime = require_jsx_runtime();
 function createContext2(rootComponentName, defaultContext) {
@@ -88,7 +88,7 @@ function composeContextScopes(...scopes) {
 	return createScope;
 }
 //#endregion
-//#region node_modules/@radix-ui/react-collection/dist/index.mjs
+//#region node_modules/.aube/@radix-ui+react-collection@1.1.9_@types+react@19.2.17_@types+react-dom@19.2.3_@types+re_e62f1860e9e8b8b9589a67940b32b211/node_modules/@radix-ui/react-collection/dist/index.mjs
 function createCollection(name) {
 	const PROVIDER_NAME = name + "CollectionProvider";
 	const [createCollectionContext, createCollectionScope] = createContextScope(PROVIDER_NAME);

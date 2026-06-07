@@ -5,7 +5,7 @@ import { r as createContextScope, t as createCollection } from "./react-collecti
 import { t as composeEventHandlers } from "../radix-ui__primitive.mjs";
 import { c as DismissableLayer, d as Presence, f as useControllableState, l as useCallbackRef, p as useLayoutEffect2, u as useId } from "./react-dialog+[...].mjs";
 import { t as useDirection } from "../radix-ui__react-direction.mjs";
-//#region node_modules/@radix-ui/react-visually-hidden/dist/index.mjs
+//#region node_modules/.aube/@radix-ui+react-visually-hidden@1.2.5_@types+react@19.2.17_@types+react-dom@19.2.3_@typ_ed7039ed38104ff8612af03b8d430ecb/node_modules/@radix-ui/react-visually-hidden/dist/index.mjs
 var import_react_dom = /* @__PURE__ */ __toESM(require_react_dom(), 1);
 var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
 var import_jsx_runtime = require_jsx_runtime();
@@ -35,7 +35,7 @@ var VisuallyHidden = import_react.forwardRef((props, forwardedRef) => {
 VisuallyHidden.displayName = NAME;
 var Root = VisuallyHidden;
 //#endregion
-//#region node_modules/@radix-ui/react-use-previous/dist/index.mjs
+//#region node_modules/.aube/@radix-ui+react-use-previous@1.1.2_@types+react@19.2.17_react@19.2.7/node_modules/@radix-ui/react-use-previous/dist/index.mjs
 function usePrevious(value) {
 	const ref = import_react.useRef({
 		value,
@@ -50,7 +50,7 @@ function usePrevious(value) {
 	}, [value]);
 }
 //#endregion
-//#region node_modules/@radix-ui/react-navigation-menu/dist/index.mjs
+//#region node_modules/.aube/@radix-ui+react-navigation-menu@1.2.15_@types+react@19.2.17_@types+react-dom@19.2.3_@ty_5366b4fd3ea28cd1e65956f5e575d977/node_modules/@radix-ui/react-navigation-menu/dist/index.mjs
 var NAVIGATION_MENU_NAME = "NavigationMenu";
 var [Collection, useCollection, createCollectionScope] = createCollection(NAVIGATION_MENU_NAME);
 var [FocusGroupCollection, useFocusGroupCollection, createFocusGroupCollectionScope] = createCollection(NAVIGATION_MENU_NAME);
