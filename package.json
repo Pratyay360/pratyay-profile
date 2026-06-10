@@ -76,7 +76,7 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "daisyui": "^5.5.23",
-    "oxfmt": "^0.53.0",
+    "oxfmt": "^0.54.0",
     "oxlint": "^1.68.0",
     "vite-plus": "latest",
     "wrangler": "^4.98.0"
